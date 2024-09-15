@@ -5,6 +5,16 @@
     
 }
 
+/*flecha left*/
+
+.flecha {
+   
+    font-size: 30px;
+    height: 30px;
+    margin:  20% 10%;
+    color: #A435F0;
+    text-decoration: none;
+}
 
 
 /*SECCION FORMULARIO*/
@@ -54,6 +64,8 @@
    /* border: 1.5px solid #017bfe26;     */
     height: 550px; 
 }
+
+
 .form .form_input input, textarea{
     width: 70%;
     background-color: transparent;
@@ -62,9 +74,20 @@
     border-radius: 5px;
     outline:none;
     box-shadow: 1px 2px 2px #a0a1a1; 
+    text-align: center;
+ 
+  
+
+}
+
+
+.form .form_input input::placeholder, textarea::placeholder{
+   color: rgba(0, 0, 0, 0.79);
 
 
 }
+
+
 
 
 .form .form_input textarea {
@@ -72,6 +95,7 @@
     resize: none;
     min-height: 36px;
     border-radius: 5px;
+    resize: vertical;
     
 }
 
@@ -84,13 +108,17 @@
 
 
 .form .button_submit{
-    padding: 6px;
-    margin-top: 5px;
+    padding: 0 16px;
+    height: 8px;
+    margin-top: 7px;
+    font-weight: bold;
+   
     background-color: transparent;
     border-radius: 5px;
     border: none;
     box-shadow: 1px 1px 1px grey;
     height: 30px;
+    color:rgba(0, 0, 0, 0.79);
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease; 
 } 
