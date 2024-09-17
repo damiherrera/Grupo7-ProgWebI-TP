@@ -7,13 +7,13 @@
     <title>UDEMY - Cursos Online</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./styles/index.css">
-    
+
 </head>
 
 <body>
     <header class="header">
         <div class="header-container">
-            <img src="./img/logoUdemy.png" class="header_logo" alt="Logo">
+            <a href="./index.html"><img src="./img/logoUdemy.png" class="header_logo" alt="Logo"></a>
             <div class="search-container">
                 <i class="fas fa-search search-icon"></i>
                 <input type="text" class="search-bar" placeholder="Buscar...">
@@ -26,11 +26,12 @@
         </div>
         <nav class="nav-bar">
             <ul class="nav-bar__menu">
-                <li class="nav-bar__menu-item"><a class="button" href="#">Inicio</a></li>
-                <li class="nav-bar__menu-item"><a class="button" href="#">Categorias</a></li>
-                <li class="nav-bar__menu-item"><a class="button" href="./vistas/calendario.html">Proximos Cursos</a></li>
+                <li class="nav-bar__menu-item"><a class="button" href="./index.html">Inicio</a></li>
+                <li class="nav-bar__menu-item"><a class="button" href="./vistas/calendario.html">Proximos Cursos</a>
+                </li>
                 <li class="nav-bar__menu-item"><a class="button" href="./vistas/gift-card.html">Gift Card</a></li>
-                <li class="nav-bar__menu-item"><a class="button" href="./vistas/inscripcion-empresa.html">Inscripción para empresas</a></li>
+                <li class="nav-bar__menu-item"><a class="button" href="./vistas/inscripcion-empresa.html">Inscripción
+                        para empresas</a></li>
             </ul>
         </nav>
     </header>
@@ -48,53 +49,120 @@
                 </button>
             </div>
         </section>
+
+        <h2>ESTUDIAR ON-LINE NUNCA FUE TAN SENCILLO...</h2>
         <section class="pasos-section">
             <div class="paso">
+                <div class="paso-numero">1</div>
                 <img src="./img/Registrate.svg" alt="Registrate">
                 <h3>Regístrate</h3>
                 <p>Simplemente, haz click <a href="#">aquí</a></p>
             </div>
             <div class="paso">
+                <div class="paso-numero">2</div>
                 <img src="./img/seleccionar-curs.png" alt="Seleccionar Curso">
                 <h3>Selecciona el curso de tu interés</h3>
                 <p>Elige entre decenas de curos dictados por los mejores profesionales.</p>
             </div>
-
             <div class="paso">
+                <div class="paso-numero">3</div>
                 <img src="./img/MetodoDePago.png" alt="Metodo de pago">
                 <h3>Elige un medio de pago</h3>
                 <p>Descuentos y promociones con todas las entidades bancarias</p>
             </div>
-            <div class="paso"><img src="./img/ListoParaAprender.png" alt="">
-                <h3>¡Ya estás listo para aprender!</h3>
+        </section>
+
+        <h2>CURSOS DESTACADOS</h2>
+
+        <section class="cursos-destacados-section">
+            <div class="cursos-destacados__container">
+                <img src="./img/disenio-web.jpg" alt="Curso 1">
+                <span class="precio">$50</span>
+                <div class="cursos-destacados__info">
+                    <span class="horas">20hs.</span>
+                    <div class="cursos-destacados__info-nombre">
+                        <h3>Curso de Diseño Web</h3>
+                        <a href="#">Ver detalles</a>
+                        <a href="#"><input class="boton-comprar" type="button" value="Comprar" id="boton-comprar"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cursos-destacados__container">
+                <img src="./img/JavaScript.jpg" alt="Curso 1">
+                <span class="precio">$80</span>
+                <div class="cursos-destacados__info">
+                    <span class="horas">30hs.</span>
+                    <div class="cursos-destacados__info-nombre">
+                        <h3>Curso de JavasScript</h3>
+                        <a href="#">Ver detalles</a>
+                        <a href="#"><input class="boton-comprar" type="button" value="Comprar" id="boton-comprar"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cursos-destacados__container">
+                <img src="./img/python.jpg" alt="Curso 1">
+                <span class="precio">$100</span>
+                <div class="cursos-destacados__info">
+                    <span class="horas">40hs.</span>
+                    <div class="cursos-destacados__info-nombre">
+                        <h3>Curso de Python</h3>
+                        <a href="#">Ver detalles</a>
+                        <a href="#"><input class="boton-comprar" type="button" value="Comprar" id="boton-comprar"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cursos-destacados__container">
+                <img src="./img/React.jpg" alt="Curso 1">
+                <span class="precio">$60</span>
+                <div class="cursos-destacados__info">
+                    <span class="horas">40hs.</span>
+                    <div class="cursos-destacados__info-nombre">
+                        <h3>Curso de React</h3>
+                        <a href="#">Ver detalles</a>
+                        <a href="#"><input class="boton-comprar" type="button" value="Comprar" id="boton-comprar"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cursos-destacados__container">
+                <img src="./img/java.jpg" alt="Curso 1">
+                <span class="precio">$80</span>
+                <div class="cursos-destacados__info">
+                    <span class="horas">60hs.</span>
+                    <div class="cursos-destacados__info-nombre">
+                        <h3>Curso de Java</h3>
+                        <a href="#">Ver detalles</a>
+                        <a href="#"><input class="boton-comprar" type="button" value="Comprar" id="boton-comprar"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cursos-destacados__container">
+                <img src="./img/BasesDeDatosjpeg.jpeg" alt="Curso 1">
+                <span class="precio">$90</span>
+                <div class="cursos-destacados__info">
+                    <span class="horas">30hs.</span>
+                    <div class="cursos-destacados__info-nombre">
+                        <h3>Curso de Bases de Datos</h3>
+                        <a href="#">Ver detalles</a>
+                        <a href="#"><input class="boton-comprar" type="button" value="Comprar" id="boton-comprar"></a>
+                    </div>
+                </div>
             </div>
         </section>
-        <div class="curso-destacado-titulo">
-            <h3>CURSOS DESTACADOS</h3>
-        </div>
-        <section class="cursos-destacados-section">
-            <article class="cursos-destacados__container">
-                <div class="cursos-destacados__container-imagen">
-                    <img src="" alt="">
-                    <div class="cursos-destacados__container-imagen__precio">
-                        <p>$50.-</p>
-                    </div>
-                </div>
-                <div class="cursos-destacados__descripcion">
-                    <div class="cursos-destacados__descripcion__horas">
-                        <p>60 hs.</p>
-                    </div>
-                    <div class="cursos-destacados__descripcion__NombreCurso">
-                        <p>Nombre del Curso</p>
-                    </div>
-                    <div class="cursos-destacados__descripcion__detalle-curso">
-                        <a href="./vistas/detalleCurso.html">Ver Detalle</a>
-                    </div>
-                    <div class="cursos-destacados__descripcion__comprar">
-                        <a href="./vistas/comprar-curso.html"><button>Comprar</button></a>
-                    </div>
-                </div>
-            </article>
+
+        <section class="medios-pago">
+            <h2>MEDIOS DE PAGO</h2>
+            <div class="imagenes-pago">
+                <img src="./img/Visa.png" alt="Visa">
+                <img src="./img/MasterCard.png" alt="Master Card">
+                <img src="img/amercianexpress.png" alt="American Express">
+                <img src="./img/paypal.png" alt="PayPal">
+            </div>
+
         </section>
 
 
@@ -123,7 +191,7 @@
                         <p>12345</p>
                     </div>
                 </div>
-                
+
                 <div class="footer-row__box">
                     <h4>Menu Inferior</h4>
                     <ul>
@@ -143,8 +211,8 @@
                         <a href="#"><i class="fab fa-instagram"></i>Instagram</a>
                         <a href="#"><i class="fa-brands fa-twitter"></i>Twitter / X</a>
                     </div>
-                </div>   
-            </div>      
+                </div>
+            </div>
         </div>
     </footer>
 </body>
