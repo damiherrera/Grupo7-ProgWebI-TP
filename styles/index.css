@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
 }
 
 
@@ -124,6 +125,7 @@
     height: 40px;
     width: 40px;
     z-index: 10;
+    border-style: none;
 }
 
 .arrow-left{
@@ -169,4 +171,66 @@
 .paso p{
     font: 14px;
     color: #666;;
+}
+
+
+
+
+/* FOOTER */
+
+.footer{
+    background-color: #edededae;
+    padding: 2em 5em;
+}
+
+.footer-row{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-row__box{
+    width: 25%;
+}
+
+.footer-row--social{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-row ul li a:hover, .footer-row--social a:hover{
+    color: rgb(175, 55, 244);
+    transition: all .2s ease;
+    padding-left: .07em;
+}
+
+.footer-row ul li a:hover, .footer-row--social a:active{
+    color: rgb(125, 0, 198);
+}
+
+.footer-row__box h4{
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding-bottom: .4em;
+}
+
+.footer-row ul li a, .footer-row ul li, .footer-row--social a, .footer-row__box__integrante{
+    text-decoration: none;
+    font-size: .95rem;
+    padding: .4em 0;
+    color: rgb(74, 74, 74);
+}
+
+.footer-row i{
+    padding-right: .2em;
+}
+
+.footer-row__box__integrante{
+    font-size: .90rem;
+    border-top: .1em solid rgba(105, 105, 105, 0.5) ;
+}
+
+.footer-row__box__integrante:nth-child(2){
+    border-style:none;
 }

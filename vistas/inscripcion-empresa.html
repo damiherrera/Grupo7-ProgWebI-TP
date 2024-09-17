@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,8 +26,8 @@
                 <ul class="nav-bar__menu">
                     <li class="nav-bar__menu-item"><a class="button" href="../index.html">Inicio</a></li>
                     <li class="nav-bar__menu-item"><a class="button" href="#">Categorias</a></li>
-                    <li class="nav-bar__menu-item"><a class="button" href="#">Proximos Cursos</a></li>
-                    <li class="nav-bar__menu-item"><a class="button" href="#">Gift Card</a></li>
+                    <li class="nav-bar__menu-item"><a class="button" href="./calendario.html">Proximos Cursos</a></li>
+                    <li class="nav-bar__menu-item"><a class="button" href="./gift-card.html">Gift Card</a></li>
                     <li class="nav-bar__menu-item"><a class="button" href="#">Inscripción para empresas</a></li>
                 </ul>
             </nav>
@@ -35,45 +35,92 @@
 
         <main>
             <section class="inscripcion">
-                <form action="get" class="form-reg">
-                    <div class="titulos">                    <!--nombre placeholder, cambiar mas adelante-->
+                <form action="get" class="form">
+                    <div class="titulos">                    <!--nombre placeholder, cambiar en otro momento-->
                         <h2>TITULO CURSO</h2>
                         <h3>INSCRIPCION</h3>
                         <p>Complete los campos con los datos requeridos</p>
                     </div>
 
-                    <div class="form-reg__row-info">
-                        <input type="text" class="form-reg__row-info__field" name="nombre" id="nombre" placeholder="Nombre">
-                        <input type="text" class="form-reg__row-info__field" name="apellido" id="Apellido" placeholder="Apellido">
-                        <input type="text" class="form-reg__row-info__field" name="dni" id="dni" placeholder="Numero de documento">
+                    <div class="form-row">
+                        <input type="text" class="form-row__input" name="nombre" id="nombre" placeholder="Nombre">
+                        <input type="text" class="form-row__input" name="apellido" id="Apellido" placeholder="Apellido">
+                        <input type="text" class="form-row__input" name="dni" id="dni" placeholder="Numero de documento">
                         <button type="button" class="btn-round" alt="Eliminar fila"> - </button>
                     </div>
 
-                    <div class="form-reg__row-info">
-                        <input type="text" class="form-reg__row-info__field" name="nombre" id="nombre" placeholder="Nombre">
-                        <input type="text" class="form-reg__row-info__field" name="apellido" id="Apellido" placeholder="Apellido">
-                        <input type="text" class="form-reg__row-info__field" name="dni" id="dni" placeholder="Numero de documento">
+                    <div class="form-row">
+                        <input type="text" class="form-row__input" name="nombre" id="nombre" placeholder="Nombre">
+                        <input type="text" class="form-row__input" name="apellido" id="Apellido" placeholder="Apellido">
+                        <input type="text" class="form-row__input" name="dni" id="dni" placeholder="Numero de documento">
                         <button type="button" class="btn-round" alt="Eliminar fila"> - </button>
                     </div>
                     
-                    <div class="form-reg__row-info">
-                        <input type="text" class="form-reg__row-info__field" name="nombre" id="nombre" placeholder="Nombre">
-                        <input type="text" class="form-reg__row-info__field" name="apellido" id="Apellido" placeholder="Apellido">
-                        <input type="text" class="form-reg__row-info__field" name="dni" id="dni" placeholder="Numero de documento">
+                    <div class="form-row">
+                        <input type="text" class="form-row__input" name="nombre" id="nombre" placeholder="Nombre">
+                        <input type="text" class="form-row__input" name="apellido" id="Apellido" placeholder="Apellido">
+                        <input type="text" class="form-row__input" name="dni" id="dni" placeholder="Numero de documento">
                         <button type="button" class="btn-round" alt="Boton de Eliminar fila"> - </button>
                     </div>
                     
-                    <div class="form-reg__row-add">
+                    <div class="form-row__add">
                         <button type="button" class="btn-round" alt="Boton de Anadir persona"> + </button>
                         <p>Agregar Persona</p> 
                     </div>
 
-                    <div class="form-reg__register-end">
+                    <div class="form__end">
                         <p>$00000.-</p>
                         <button type="submit" class="">INSCRIBIRSE</button>
                     </div>
                 </form>
             </section>
         </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-row">
+                    <div class="footer-row__box">
+                        <h4>Grupo 7</h4>
+                        <div class="footer-row__box__integrante">
+                            <p>Integrante 1</p>
+                            <p>12345</p>
+                        </div>
+                        <div class="footer-row__box__integrante">
+                            <p>Integrante 2</p>
+                            <p>12345</p>
+                        </div>
+                        <div class="footer-row__box__integrante">
+                            <p>Integrante 3</p>
+                            <p>12345</p>
+                        </div>
+                        <div class="footer-row__box__integrante">
+                            <p>Integrante 4</p>
+                            <p>12345</p>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-row__box">
+                        <h4>Menu Inferior</h4>
+                        <ul>
+                            <li><a href="../index.html">Inicio</a></li>
+                            <li><a href="./calendario.html">Proximos Cursos</a></li>
+                            <li><a href="./gift-card.html">Gift Card</a></li>
+                            <li><a href="#">Inscripcion para empresas</a></li>
+                            <li><a href="./contacto.html">Contactate con nosotros</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-row__box">
+                        <div class="footer-row--social">
+                            <h4>Seguinos en nuestras redes</h4>
+                            <a href="#"><i class="fab fa-facebook"></i>Facebook</a>
+                            <a href="#"><i class="fab fa-youtube"></i>Youtube</a>
+                            <a href="#"><i class="fab fa-instagram"></i>Instagram</a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i>Twitter / X</a>
+                        </div>
+                    </div>   
+                </div>      
+            </div>
+        </footer>
     </body>
 </html>
