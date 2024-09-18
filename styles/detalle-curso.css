@@ -1,20 +1,23 @@
-.caja-contenidos{
-    width: 300px;
-    border: 1px sold #ddd;
+.caja-curso {
+    width: 100%;
+    max-width: 600px;
+    border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0 2px 5px rgba (0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     background-color: #fff;
+    margin: 20px auto;
 }
 
-.contenidos-menu{
-    position: relative;
+.menu-container {
     margin-bottom: 10px;
-
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
 }
 
-.boton.menu{
-    background-color: #007bff;
+.menu-button {
+    background-color: violet;
     color: white;
     border: none;
     padding: 10px;
@@ -24,70 +27,51 @@
     width: 100%;
     text-align: left;
     outline: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.menu-contenido{
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 100%;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    border-radius: 4px;
-    z-index: 1;
-    top: 100%;
-    left: 0;
+
+.menu-content .subopcion {
+    display: flex;
+    align-items: center;
     padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-decoration: none;
+    color: black;
 }
 
-.menu-contenido .submenu{
-   display: flex; 
-   align-items: center;
-   padding: 10px;
-   border-bottom: 1px solid #ddd;
-   text-decoration: none;
-   color: black;
-}
-
-.menu-contenido .submenu:last-child{
+.menu-content .subopcion:last-child {
     border-bottom: none;
 }
 
-.submenu img.icon{
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-}
-
-.submenu .submenu-texto{
+.subopcion .texto {
     flex: 1;
     display: flex;
     align-items: center;
-
+    justify-content: space-between;
+    gap: 5px;
 }
 
-.submenu .submenu-texto .duracion{
+.subopcion .texto .duracion {
     display: flex;
     align-items: center;
     margin-left: 10px;
     font-size: 14px;
-    color: #666
-
+    color: #666;
 }
 
-.submenu .submenu-texto .duracion img{
+.subopcion .texto .duracion img {
     width: 16px;
     height: 16px;
     margin-right: 5px;
 }
 
-.subopcion input[type="checkbox"]{
-    accent-color: #007bff;
+.subopcion input[type="checkbox"] {
+    accent-color: violet;
     margin-left: 10px;
     width: 20px;
     height: 20px;
-}
-
-.contenidos-menu:hover .menu-contenido{
-    display: block;
 }
 
