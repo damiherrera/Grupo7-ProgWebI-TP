@@ -236,10 +236,11 @@
 .section-map{
    width: 80%;
    height: 700px;
-   margin: 0 auto;
+   margin: 100px auto;
    /* border: 1px solid;   */
    display: flex;
    flex-direction: column;
+
 
 }
 
