@@ -1,0 +1,93 @@
+.caja-contenidos{
+    width: 300px;
+    border: 1px sold #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba (0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.contenidos-menu{
+    position: relative;
+    margin-bottom: 10px;
+
+}
+
+.boton.menu{
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    text-align: left;
+    outline: none;
+}
+
+.menu-contenido{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    border-radius: 4px;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    padding: 10px;
+}
+
+.menu-contenido .submenu{
+   display: flex; 
+   align-items: center;
+   padding: 10px;
+   border-bottom: 1px solid #ddd;
+   text-decoration: none;
+   color: black;
+}
+
+.menu-contenido .submenu:last-child{
+    border-bottom: none;
+}
+
+.submenu img.icon{
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.submenu .submenu-texto{
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+}
+
+.submenu .submenu-texto .duracion{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    font-size: 14px;
+    color: #666
+
+}
+
+.submenu .submenu-texto .duracion img{
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+.subopcion input[type="checkbox"]{
+    accent-color: #007bff;
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.contenidos-menu:hover .menu-contenido{
+    display: block;
+}
+
