@@ -1,24 +1,66 @@
+h3{
+text-align: center;
+}
+.curso-section {
+    display: flex;
+    flex-direction: row;
+    gap: 3%;
+    margin-bottom: 10px;
+}
+
+.curso-section h3 {
+    margin-bottom: 10px;
+}
+
+.curso-section img {
+    margin-left: 35px;
+    width: 300px;
+    height: 200px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+.curso-detalle__descripcion {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 35px;
+}
+
+.curso-detalle-item {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.curso-detalle-item span {
+    font-size: 16px;
+    font-weight: bold;
+}
+ .curso-detalle-item p{
+    text-align: justify;
+ }
+
 .caja-curso {
     width: 100%;
     max-width: 600px;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     background-color: #fff;
-    margin: 20px auto;
 }
 
 .menu-container {
     margin-bottom: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    overflow: hidden;
 }
 
 .menu-button {
-    background-color: violet;
-    color: white;
+    background-color: lightgrey;
+    color: black;
     border: none;
     padding: 10px;
     font-size: 16px;
@@ -69,9 +111,65 @@
 }
 
 .subopcion input[type="checkbox"] {
-    accent-color: violet;
+    accent-color: lightgreen;
     margin-left: 10px;
     width: 20px;
     height: 20px;
+    border-radius: 50%;
 }
 
+.docente-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 35px;
+    padding: 30px;
+    background-color: darkgray;
+    margin-top: 5px;
+}
+
+.docente-section img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    margin-right: 30px;
+}
+
+.docente-section h3{
+    text-align: center;
+    margin: 10px;
+}
+
+.docente-perfil {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+}
+
+.docente-perfil h4 {
+    margin-bottom: 5px;
+}
+
+.rating {
+    display: inline-block;
+    color: gold;
+    border: 1px black;
+    margin-bottom: 5px;
+}
+
+.rating .far{
+    color: lightgray;
+}
+
+.docente-perfil p{
+    font-size: 14px;
+    font-style: italic;
+}
+
+.cursos-relacionados-section{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    background-color: #f9f9f9;
+    margin: 35px;
+}
