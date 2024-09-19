@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+.contenedor {
+    
+    margin: 5% 10%;
+    width: 80%;
+    height: 350px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.contenedor-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 60%;
+    
+}
+
+.contenedor-form .form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.contenedor-form .form .passwordLinks {
+   color: #2c55b1;
+   font-size: 8px;
+}
+.contenedor-form .form p {
+    font-size: 10px;
+ }
+ 
+ .contenedor-form label {
+  font-size: 16pxx;
+   
+ }
+
+ .contenedor-form .form__input {
+    outline:none;
+    border-radius: 5px;
+    border: 0.5px solid black;
+    transition: border-color 0.3s;
+    
+   
+ }
+
+ .contenedor-form .form__input:focus{
+ 
+    border-color: #2c55b1;
+    box-shadow: 0px 1px 1px #2c54b153;
+ }
+
+
+.contenedor-imgLogin {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    
+}
+.img__login {
+    width: 50px;
+    margin-bottom: 15px;
+    
+}
+
+.contenedor .contenedor-imgSVG {
+    display: flex;
+    align-items: center;
+    width: 40%;
+  }
+
+ .imgSVG {
+    max-width: 100%;
+    height: 100%;
+    
+
+}
+
+.form a{
+    color: white;
+     
+ }
+ 
+.button-login {
+    cursor: pointer;
+    height: 20px;
+    background-color:#2c55b1;
+    border: none;
+    padding: 0 16px;
+    border-radius: 5px;
+    color: white;
+    font-size: 10px;
+    
+}
+
