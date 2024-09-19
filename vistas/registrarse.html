@@ -4,27 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../styles/registrarse.css">
 </head>
 <body>
     
-    <div class="contenedor">
-        <h2>Registrarse</h2>
-        <form class="contenedor-form">
+    <section class="contenedor">
+        <div class="aside-form">
+            <img src="../img/paginaRegistrarse.jpg" alt="registroSVG">
+           
+        </div>
+     <div class="contenedor-form">
+        <h2>Regístrate y Comienza a aprender</h2>
+        
+        <form class="form" method="post">
             <div class="form__contendedor-input">
-            <label for="Nombre">Nombre</label>
-            <input type= "text" class="nombre">
+            <input type= "text" class="nombre" placeholder="Nombre completo" required/>
             </div>
+           
             <div class="form__contendedor-input">
-            <label for="Nombre">Apellido</label>
-            <input type= "text" class="apellido">
+           
+            <input type= "email" class="apellido"placeholder="Correo electrónico" required>
             </div>
+           
+            <div class="form__contendedor-input">
+         
+        
+            <input type= "password"  required nombre="password" placeholder="Contraseña" />
+            </div>
+             <div class="contenedor-button__sumbit">
+                <button type="button">Registrarme</button>
+             </div>
             
+                <p class="registrado-p">Ya estas registrado? <a href="../vistas/inicioSesion.html">Inicia Sesión</a></p>
+           
             
-            
-            
-            
-
-        </form>
-    </div>
+            </form>
+        </div>
+       
+        </section>
 </body>
 </html>

@@ -9,12 +9,11 @@ body {
 }
 
 .contenedor {
-    
-    margin: 5% 10%;
-    width: 80%;
-    height: 350px;
     display: flex;
+    height: 100vh;
     flex-direction: row-reverse;
+    padding: 0 60px;
+   
 }
 
 .contenedor-form {
@@ -22,6 +21,7 @@ body {
     justify-content: center;
     flex-direction: column;
     width: 60%;
+   
     
 }
 
@@ -43,7 +43,7 @@ body {
  }
  
  .contenedor-form label {
-  font-size: 16pxx;
+  font-size: 16px;
    
  }
 
@@ -64,7 +64,7 @@ body {
 
 
 .contenedor-imgLogin {
-    width: 100%;
+    width: 50%;
     height: 60px;
     display: flex;
     justify-content: center;
@@ -80,7 +80,8 @@ body {
 .contenedor .contenedor-imgSVG {
     display: flex;
     align-items: center;
-    width: 40%;
+    width:40%;
+    
   }
 
  .imgSVG {
@@ -107,3 +108,45 @@ body {
     
 }
 
+/*media queries*/
+
+@media (width <=480px) {
+
+    .contenedor{
+        display: flex;
+        flex-direction: column;
+        padding: 0px 0px;
+        border: 1px solid rgb(226, 29, 29);
+        width: 100%;
+    }
+
+    .contenedor .contenedor-form{
+       
+        width: 100%;
+        height: 100%;
+    }
+    .contenedor .contenedor-form .form p{
+        font-size: 7px;
+    }
+    .contenedor .contenedor-form .form a{
+        font-size: 6px;
+    }
+    .contenedor-form label {
+        font-size: 10.5px;
+         
+       }
+    .contenedor-form .button-login {
+        font-size: 6px;
+        height: 16px;
+         
+       }
+
+    .contenedor-imgLogin {
+        display: none;
+    }
+    .imgSVG{
+       display: none;
+    }
+
+
+}
