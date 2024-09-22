@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/compra-curso.css">
+    <title>Udemy - Comprar</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="../index.html"><img src="../img/logoUdemy.png" class="header_logo" alt="Logo"></a>
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-bar" placeholder="Buscar...">
+            </div>
+
+            <div class="carrito-container">
+                <img src="../img/carrito (1).png" class="header_carrito" alt="Carrito">
+                <div class="numero">4</div>
+            </div>
+        </div>
+        <nav class="nav-bar">
+            <ul class="nav-bar__menu">
+                <li class="nav-bar__menu-item"><a class="button" href="../index.html">Inicio</a></li>
+                <li class="nav-bar__menu-item"><a class="button" href="../vistas/calendario.html">Proximos Cursos</a>
+                </li>
+                <li class="nav-bar__menu-item"><a class="button" href="../vistas/gift-card.html">Gift Card</a></li>
+                <li class="nav-bar__menu-item"><a class="button" href="../vistas/inscripcion-empresa.html">Inscripción
+                        para empresas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container">
+            <h1>Compra del Curso</h1>
+        
+            <form>
+                <label for="medio-pago">Selecciona tu medio de pago:</label>
+                <div class="payment-methods">
+                    <img src="../img/Visa.png" alt="Visa">
+                    <img src="../img/MasterCard.png" alt="MasterCard">
+                    <img src="../img/amercianexpress.png" alt="American Express">
+                </div>
+        
+                <label for="nombre-tarjeta">Nombre en la Tarjeta:</label>
+                <input class="campo-compra" type="text" id="nombre-tarjeta" name="nombre-tarjeta" placeholder="Nombre Completo">
+        
+                <label for="numero-tarjeta">Número de la Tarjeta:</label>
+                <input class="campo-compra" type="tel" id="numero-tarjeta" name="numero-tarjeta" placeholder="XXXX XXXX XXXX XXXX" maxlength="19">
+        
+                <div class="card-input-group">
+                    <div>
+                        <label for="fecha-expiracion">Fecha de Expiración:</label>
+                        <input class="campo-compra" type="text" id="fecha-expiracion" name="fecha-expiracion"  placeholder="MM/AA" maxlength="5">
+                    </div>
+                    <div>
+                        <label for="cvc">CVC:</label>
+                        <input class="campo-compra" type="number" id="cvc" name="cvc" placeholder="CVC" maxlength="3">
+                    </div>
+                </div>
+        
+                <label for="email">Correo Electrónico:</label>
+                <input class="campo-compra" type="email" id="email" name="email" placeholder="tuemail@ejemplo.com">
+        
+                <label for="telefono">Teléfono:</label>
+                <input class="campo-compra" type="tel" id="telefono" name="telefono" placeholder="+549 11 123 456 78">
+        
+                <button type="submit">Confirmar Compra</button>
+                
+                <a href="../index.html#cursos-destacados" class="btn-volver">Volver a Cursos Destacados</a>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-row__box">
+                    <h4>Grupo 7</h4>
+                    <div class="footer-row__box__integrante">
+                        <p>Integrante 1</p>
+                        <p>12345</p>
+                    </div>
+                    <div class="footer-row__box__integrante">
+                        <p>Integrante 2</p>
+                        <p>12345</p>
+                    </div>
+                    <div class="footer-row__box__integrante">
+                        <p>Integrante 3</p>
+                        <p>12345</p>
+                    </div>
+                    <div class="footer-row__box__integrante">
+                        <p>Integrante 4</p>
+                        <p>12345</p>
+                    </div>
+                </div>
+
+                <div class="footer-row__box">
+                    <h4>Menu Inferior</h4>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="../vistas/calendario.html">Proximos Cursos</a></li>
+                        <li><a href="../vistas/gift-card.html">Gift Card</a></li>
+                        <li><a href="../vistas/inscripcion-empresa.html">Inscripcion para empresas</a></li>
+                        <li><a href="../vistas/contacto.html">Contactate con nosotros</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-row__box">
+                    <div class="footer-row--social">
+                        <h4>Seguinos en nuestras redes</h4>
+                        <a href="#"><i class="fab fa-facebook"></i>Facebook</a>
+                        <a href="#"><i class="fab fa-youtube"></i>Youtube</a>
+                        <a href="#"><i class="fab fa-instagram"></i>Instagram</a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i>Twitter / X</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
