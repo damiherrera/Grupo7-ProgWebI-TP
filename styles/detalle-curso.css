@@ -1,6 +1,7 @@
-h3{
-text-align: center;
+h3 {
+    text-align: center;
 }
+
 .curso-section {
     display: flex;
     flex-direction: row;
@@ -38,9 +39,10 @@ text-align: center;
     font-size: 16px;
     font-weight: bold;
 }
- .curso-detalle-item p{
+
+.curso-detalle-item p {
     text-align: justify;
- }
+}
 
 .caja-curso {
     width: 100%;
@@ -135,7 +137,7 @@ text-align: center;
     margin-right: 30px;
 }
 
-.docente-section h3{
+.docente-section h3 {
     text-align: center;
     margin: 10px;
 }
@@ -157,19 +159,53 @@ text-align: center;
     margin-bottom: 5px;
 }
 
-.rating .far{
+.rating .far {
     color: lightgray;
 }
 
-.docente-perfil p{
+.docente-perfil p {
     font-size: 14px;
     font-style: italic;
 }
 
-.cursos-relacionados-section{
+.cursos-relacionados-section {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     background-color: #f9f9f9;
     margin: 35px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .curso-section {
+        display: flex;
+        flex-direction: column;
+        margin-left: 2em;
+    }
+    
+    .curso-section img{
+        margin: 0;
+    }
+    .cursos-relacionados-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .caja-curso{
+        width: 95%;
+        max-width: none;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .docente-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cursos-relacionados-section {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
 }

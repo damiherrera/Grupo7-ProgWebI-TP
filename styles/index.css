@@ -5,11 +5,11 @@
     list-style: none;
 }
 
-body{
+body {
     background-color: #f9f9f9;
 }
 
-h2{
+h2 {
     text-align: center;
     font-size: 20px;
     padding-bottom: 30px;
@@ -48,18 +48,22 @@ h2{
     text-transform: uppercase;
 }
 
-.button{
+.button {
     text-decoration: none;
     color: black;
     font: 18px;
 }
 
-.button:hover{
+.button:hover {
     color: purple;
 }
 
 .header .nav-bar .nav-bar__menu .nav-bar__menu-item {
     margin: 0 15px;
+}
+
+.header-logo-container {
+    width: 30%;
 }
 
 .header_logo {
@@ -114,7 +118,7 @@ h2{
 
 }
 
-.slider-container{
+.slider-container {
     position: relative;
     width: 80%;
     margin: auto;
@@ -122,15 +126,15 @@ h2{
     border: 2px solid #ddd;
 }
 
-.slider-img{
+.slider-img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-.arrow{
+.arrow {
     position: absolute;
-    top:50%;
+    top: 50%;
     transform: translateY(-50%);
     background: none;
     cursor: pointer;
@@ -140,36 +144,38 @@ h2{
     border-style: none;
 }
 
-.arrow-left{
+.arrow-left {
     left: 10px;
 }
 
-.arrow-right{
+.arrow-right {
     right: 10px;
 }
 
-.arrow-icon{
+.arrow-icon {
     width: 100%;
     height: 100%
 }
+
 /* PASOS PARA INSCRIBIRSE*/
-.pasos-section{
+.pasos-section {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
     background-color: #f9f9f9;
 
 }
 
-.paso img{
+.paso img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 10px;
 }
-.paso{
+
+.paso {
     position: relative;
     background-color: #fff;
     border: 1px sold #ddd;
@@ -183,7 +189,7 @@ h2{
     margin: 10px;
 }
 
-.paso-numero{
+.paso-numero {
     position: absolute;
     top: -10px;
     left: -10px;
@@ -201,13 +207,13 @@ h2{
 
 }
 
-.paso h3{
+.paso h3 {
     font-size: 18px;
     margin: 0;
     color: #333;
 }
 
-.paso p{
+.paso p {
     font: 14px;
     color: #666;
     margin: 0;
@@ -216,7 +222,7 @@ h2{
 
 /* CURSOS DESTACADOS */
 
-.cursos-destacados-section{
+.cursos-destacados-section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -224,7 +230,7 @@ h2{
     background-color: #f9f9f9;
 }
 
-.cursos-destacados__container{
+.cursos-destacados__container {
     background-color: #fff;
     border: 1px sold #ddd;
     border-radius: 8px;
@@ -235,13 +241,13 @@ h2{
     flex-direction: column;
 }
 
-.cursos-destacados__container img{
+.cursos-destacados__container img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
-.precio{
+.precio {
     position: absolute;
     background-color: black;
     color: white;
@@ -254,27 +260,27 @@ h2{
 
 }
 
-.cursos-destacados__info{
+.cursos-destacados__info {
     padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.cursos-destacados__info-nombre{
+.cursos-destacados__info-nombre {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
 
-.cursos-destacados__info-nombre h3{
+.cursos-destacados__info-nombre h3 {
     margin: 0 0 10px;
     font: 18px;
     color: #333;
 }
 
 
-.cursos-destacados__info .horas{
+.cursos-destacados__info .horas {
     display: flex;
     align-self: flex-start;
     font-size: 16px;
@@ -283,14 +289,14 @@ h2{
     margin-right: 20px;
 }
 
-.cursos-destacados__info-nombre a{
+.cursos-destacados__info-nombre a {
     font-size: 14px;
     color: #007bff;
     text-decoration: none;
     margin-bottom: 10px;
 }
 
-.boton-comprar{
+.boton-comprar {
     padding: 10px 20px;
     background-color: #28a745;
     color: white;
@@ -310,17 +316,17 @@ h2{
 
 /*MEDIOS DE PAGO*/
 
-.medios-pago{
+.medios-pago {
     text-align: center;
     margin-bottom: 20px;
 }
 
-.medios-pago h2{
+.medios-pago h2 {
     font-size: 24px;
     color: #333;
 }
 
-.imagenes-pago{
+.imagenes-pago {
     display: flex;
     flex-direction: row;
     align-content: center;
@@ -329,7 +335,7 @@ h2{
     background-color: #f9f9f9;
 }
 
-.imagenes-pago img{
+.imagenes-pago img {
     width: 120px;
     height: auto;
     border-radius: 8px;
@@ -340,59 +346,105 @@ h2{
 
 /* FOOTER */
 
-.footer{
+.footer {
     background-color: #edededae;
     padding: 2em 5em;
 }
 
-.footer-row{
+.footer-row {
     display: flex;
     justify-content: space-between;
     align-content: center;
     flex-wrap: wrap;
 }
 
-.footer-row__box{
+.footer-row__box {
     width: 25%;
 }
 
-.footer-row--social{
+.footer-row--social {
     display: flex;
     flex-direction: column;
 }
 
-.footer-row ul li a:hover, .footer-row--social a:hover{
+.footer-row ul li a:hover,
+.footer-row--social a:hover {
     color: rgb(175, 55, 244);
     transition: all .2s ease;
     padding-left: .07em;
 }
 
-.footer-row ul li a:hover, .footer-row--social a:active{
+.footer-row ul li a:hover,
+.footer-row--social a:active {
     color: rgb(125, 0, 198);
 }
 
-.footer-row__box h4{
+.footer-row__box h4 {
     font-weight: 700;
     font-size: 1.2rem;
     padding-bottom: .4em;
 }
 
-.footer-row ul li a, .footer-row ul li, .footer-row--social a, .footer-row__box__integrante{
+.footer-row ul li a,
+.footer-row ul li,
+.footer-row--social a,
+.footer-row__box__integrante {
     text-decoration: none;
     font-size: .95rem;
     padding: .4em 0;
     color: rgb(74, 74, 74);
 }
 
-.footer-row i{
+.footer-row i {
     padding-right: .2em;
 }
 
-.footer-row__box__integrante{
+.footer-row__box__integrante {
     font-size: .90rem;
-    border-top: .1em solid rgba(105, 105, 105, 0.5) ;
+    border-top: .1em solid rgba(105, 105, 105, 0.5);
 }
 
-.footer-row__box__integrante:nth-child(2){
-    border-style:none;
+.footer-row__box__integrante:nth-child(2) {
+    border-style: none;
+}
+
+
+
+@media screen and (max-widht: 768px) {
+    .cursos-destacados-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .header-container a{
+        width: 35%;
+        height: max-content;
+    }
+
+    .header_logo{
+        width:80%;
+        height: auto;
+    }
+    .pasos-section {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+    }
+
+    .cursos-destacados-section {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    .imagenes-pago img{
+        width: 20%;
+        height: auto;
+    }
 }
