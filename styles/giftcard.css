@@ -4,7 +4,6 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 .main{
-    padding: 5% 10%;
     box-sizing: border-box;
     display: flex;
     justify-content: center; 
@@ -12,7 +11,7 @@
     flex-direction: column;
 }
 .creation{
-    height: 100%;
+    margin: 5% 10%;
     display: flex;
     justify-content: space-between;
     gap: 4em;
@@ -54,6 +53,8 @@
     align-self: center;
     color: #000000;
     font-size: 2.5rem;
+    background-color: transparent;
+    padding: 0%;
 }
 .creation .view .view__text{
     align-self: center;
@@ -130,6 +131,9 @@
 .text-bar:hover{
     border-color:#A435F0 ;
 }
+.text-bar:focus{
+    outline-color:#A435F0 ;
+}
 
 .square{
     width: 3.5em;
@@ -175,6 +179,9 @@
 }
 
 .button-form{
+    text-align: center;
+    font-size: 0.8em;
+    text-decoration: none; 
     border: 0.1em solid rgba(0, 0, 0, 0.79);
     padding: 0.5em 1em;
     border-radius: 0.5em;

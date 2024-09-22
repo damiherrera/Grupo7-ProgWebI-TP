@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-envio{
+    padding: 5% 15%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.envio{
+    padding: 2%;
+    display: flex;
+    height: 100%;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 2em;
+    box-shadow: 0.1em 0.1em 5px rgba(0, 0, 0, 0.5);
+}
+.envio .envio__monto{
+    padding: 2%;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #a535f0b2;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 0.5em;
+}
+
+.envio .envio__form{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.box1{
+    display: flex;
+    gap: 0.8em;
+    flex-direction: row;
+    align-items: center;
+}
+.box2{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.box3{
+    padding: 2%;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0.1em 0.1em 3px rgba(0, 0, 0, 0.5);
+}
+.box4{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+.box5{
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+}
+.text-bar2{
+    flex-grow: 1;
+    padding: 0.2em;
+    border: 0.1em rgba(0, 0, 0, 0.5);
+    border-style: solid;
+    font-size: 1rem;
+}
+.cvv{
+    width: 5em;
+    padding: 0.2em;
+    border: 0.1em rgba(0, 0, 0, 0.5);
+    border-style: solid;
+    font-size: 1rem;
+}
+.text-bar2:hover, .cvv:hover{
+    border-color:#A435F0 ;
+}
+.text-bar2:focus, .cvv:focus{
+    outline-color:#A435F0 ;
+}
+
+.tarjeta-img{
+    width: 2em;
+    height: 2em;
+}
+.envio .envio__form .envio__form-email{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+.envio .envio__form .envio__form-email .envio__form-email-item{
+    display: flex;
+}
+.envio .envio__form .envio__form-final{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+.img{
+    width: 1.5em;
+    height: 1.5em;
+}
