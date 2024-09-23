@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Iniciar Sesion</title>
     <link rel="stylesheet" href="../styles/iniciarSesion.css">
+    <script src="https://kit.fontawesome.com/be966d90c6.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <section class="contenedor">
@@ -12,30 +13,39 @@
      <div class="contenedor-form">
         <form class="form">
             <!-- <div class="contenedor-imgLogin"> -->
-                <img src="../img/login.png" alt="login" class="img__login">
+                <!-- <img src="../img/login.png" alt="login" class="img__login"> -->
             <!-- </div> -->
-            
-            <div>
-            <label for="usuario">Nombre de Usuario</label>
-            <br>
+           <h2>Bienvenido/a</h2>
+            <div class="label-input">
+           <label for="usuario"> <i class="fa-solid fa-user"></i>
+          
+           </label>
+       
             <input
-             class="form__input"
+             class="input"
              type="text"
-             name="usuario" />
+             name="usuario" 
+             placeholder="Nombre de usuario"
+             required />
             </div>
         
-        <div>
-            <label for="password">Contraseña</label>
-            <br>
+         <!-- </div> -->
+            
+         <div class="label-input">
+           <label for="password" ><i class="fa-solid fa-lock"></i></label>
             <input
-             class="form__input"
-             type="text"
-             name="password" />
-            </div>
-            <br>
-            <p>Haz olvidado la Contraseña?<a href="#" class="passwordLinks">Cambiar Contraseña</a></p>
-            <p>No estas registrado?<a class="passwordLinks" href="../vistas/registrarse.html">Registrarse</a></p>
-            <br>
+              class="input"
+              type="text"
+              name="usuario"
+              placeholder="Contraseña"
+              required />
+             
+             </div>
+            
+             <p>Haz olvidado la Contraseña?<a href="#" class="passwordLinks">Cambiar Contraseña</a></p>
+             <p>No estas registrado?<a class="passwordLinks" href="../vistas/registrarse.html">Registrarse</a></p>
+             <br>
+          
            
             
             <a href="#"><button class="button-login">Entrar</button></a>
@@ -44,9 +54,9 @@
     </div>
   
    
-    <div class="contenedor-imgSVG">
+    <!-- <div class="contenedor-imgSVG">
         <img src="../img/svg/inicioSesion.svg" class="imgSVG" alt="imgSVG">
-    </div>
+    </div> -->
    
 </section>
 
