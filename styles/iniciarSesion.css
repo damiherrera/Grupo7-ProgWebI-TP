@@ -109,10 +109,9 @@ body {
     border-radius: 2px;
     color: white;
     font-size: 10px;
-    transition: 0.3s ease-in;
-   
-    
+    transition: 0.3s ease-in;  
 }
+
 .button-login:hover {
     border:1px solid #000;
     background-color: #A435F0;
