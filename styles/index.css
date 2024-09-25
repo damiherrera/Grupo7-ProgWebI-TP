@@ -258,7 +258,7 @@ h2 {
     display: flex;
     flex-direction: column;
     margin: 10px;
-    height: 180px;
+    height:400px;
     
 }
 
@@ -281,7 +281,7 @@ h2 {
 }
 
 .paso h3 {
-    font-size: 14px;
+    font-size: 25px;
     padding: 0px;
     height: 35px;
     color: #333;
@@ -291,7 +291,7 @@ h2 {
 }
 
 .paso p {
-    font-size: 10px;
+    font-size: 20px;
     text-align: center;
     padding: 0px 3px;
     display: block;
@@ -308,7 +308,6 @@ h2 {
 
 
 /* CURSOS DESTACADOS */
-
 .cursos-destacados-section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -359,9 +358,8 @@ h2 {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
    
-
 }
 
 .cursos-destacados__info-nombre h3 {
@@ -371,15 +369,14 @@ h2 {
     justify-content: center;
     align-items: center;
     margin: 0 0 10px;
-    font-size: 16px;
+    font-size: 25px;
     color: #333;
+    justify-content: space-between;
     
 }
 
-
-
 .cursos-destacados__info h3 .horas {
-    font-size: 11px;
+    font-size: 16px;
     margin: 0px 5px;
     font-weight: bold;
     color: #333;
@@ -410,12 +407,12 @@ h2 {
     background-color: #218838;
 }
 
-
 /*MEDIOS DE PAGO*/
 
 .medios-pago {
     text-align: center;
     margin-bottom: 20px;
+    
 }
 
 .medios-pago h2 {
@@ -428,7 +425,7 @@ h2 {
     flex-direction: row;
     align-content: center;
     justify-content: center;
-    gap: 20px;
+    gap: 100px;
     background-color: #f9f9f9;
 }
 
@@ -818,12 +815,12 @@ h2 {
         height: auto;
     }
     .pasos-section {
-        display: flex;
-        flex-direction: column;
        
+        flex-direction: column;
+        
     }
     .pasos-section .paso {
-        width: 100%;
+       width: 100%;
     }
     .pasos-section .paso h3{
         font-size: 13px;
