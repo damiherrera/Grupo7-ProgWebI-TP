@@ -697,6 +697,7 @@ h2 {
 
     .footer-row{
         display: grid;
+        align-content: space-around;
         grid-template-columns: 40% 40% ;
         grid-template-rows: 20% 20%;
         gap: 1em;
