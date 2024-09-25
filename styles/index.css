@@ -850,22 +850,5 @@ h2 {
     }
    
 }
-.header .nav-bar .nav-bar__menu {
-    height: 100vh;
-    top: -100vh; /*se agrega*/
-}
-.action-buttons--mobile .nav-bar__menu-item a{
-    font-weight: 300;
-   
-}
- .action-buttons--mobile {
-    font-size: 10px; /*se agrega*/
-}
-.slider-container {
-    width: 100%;
-   
-}
-
-
 
 
