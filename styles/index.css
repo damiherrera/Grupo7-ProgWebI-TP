@@ -638,7 +638,7 @@ h2 {
         background-color: #3100598b;
         backdrop-filter: blur(10px); /* Blur funciona en este*/
         width: 100%;
-        top: -70vh;
+        top: -250vh;
         padding: 1.5em 0;
         transition: .2s ease;
     }

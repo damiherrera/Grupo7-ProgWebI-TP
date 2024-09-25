@@ -3,18 +3,15 @@
     flex-wrap: wrap;
     justify-content: center;
     padding: 3em 0;
+    width: 100vw;
 }
 
 .calendario__row{
     display: flex;
     justify-content: center;
-    min-width: 0;
-    max-width: 82%;
+    /*min-width: era 60% o 0;*/
+    max-width: 90%;
     user-select: none;
-}
-
-.calendario__row__field{
-    background-color: rgba(254, 255, 241, 0.368);
 }
 
 .calendario__row:nth-child(1){
@@ -24,7 +21,7 @@
     background-color: rgb(167, 74, 221);
     color: white;
     font-size: 1.5em;
-    max-width: 82%;
+    /*max-width: 82%;*/
     width: 100%;
 }
 
@@ -44,12 +41,16 @@
     color: white;
 }
 
+.calendario__row__field{
+    background-color: rgba(254, 255, 241, 0.368);
+}
+
 .calendario__row__field, .calendario__row__field--unfocused{
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    height: 5em;
-    width: 10em;
+    height: 5.4em;
+    width: 20em;
     border: solid .1em rgba(97, 97, 97, 0.443);
     padding: .5em 0;
 }
@@ -64,27 +65,53 @@
     color: rgba(0, 0, 0, 0.249);
 }
 
-.calendario__row__field__event{
+.calendario__row__field__event, .calendario__row__field__event--tiny{
     margin: .3em 0;
     padding: .2em 0;
     width: 100%;
     background-color: rgb(200, 123, 244);
     border-radius: 10%;
-    font-size: .65rem;
+    font-size: clamp(.5rem, 1vw, .65rem);
     text-align: center;
 }
 
-.calendario__row__field__event a{
+.calendario__row__field__event a , .calendario__row__field__event--tiny a{
     color: white;
     font-weight: 600;
     text-decoration: none;
     padding: 0 1.4em;
 }
 
-.calendario__row__field__event:hover{
+.calendario__row__field__event:hover , .calendario__row__field__event--tiny:hover{
     background-color: rgb(152, 88, 189);
 }
 
-.calendario__row__field__event:active{
+.calendario__row__field__event:active , .calendario__row__field__event--tiny:active{
     background-color: rgb(178, 101, 223);
+}
+
+.calendario__row__field__event--tiny{
+    display: none;
+}
+
+@media screen and (max-width:1089px) {
+    .calendario__row{
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width:980px){
+    .calendario__row__field, .calendario__row__field--unfocused{
+        height: 7em;
+    }
+}
+
+@media screen and (max-width:640px){
+    .calendario__row__field__event{
+        display: none;
+    }
+
+    .calendario__row__field__event--tiny{
+        display: block;
+    }
 }
