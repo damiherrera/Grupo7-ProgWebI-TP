@@ -11,15 +11,12 @@ body {
 .contenedor {
     width: 100%;
     display: flex;
-    position: absolute;
     justify-content: center;
     align-items: center;
-    height: 100vh;
    
-   
-   
+    height: 85.76vh;
 }
-.contenedor-arrowBack {
+/* .contenedor-arrowBack {
     position: absolute;
     top: 20px;
     left: 40px;
@@ -32,7 +29,7 @@ body {
 .contenedor-arrowBack  a {
     color: #A435F0;
     font-size: 15px;
-}
+} */
 
 .contenedor-form {
     background: rgb(227,146,222);
@@ -41,8 +38,8 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width:350px;
-    height: 250px;
+    width: 60%;
+    height: 500px;
     box-shadow:  0px 0px 1px 1px #fedbfea6;
     
    
@@ -56,23 +53,26 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+   
     
 }
 .contenedor-form .form .passwordLinks {
    color: #A435F0;
-   font-size: 8px;
+   font-size: 20px;
 }
 .contenedor-form .form p {
-    font-size: 10px;
-    padding-top: 2px;
+    font-size: 18px;
+    padding : 5px 5px;
  }
  
  .contenedor-form .form p .passwordLinks {
     color: #fff;
-   
+    font-size: 17px;
+    
  }
  .contenedor-form .form p .passwordLinks:hover {
     color: #000000;
+    
    
  }
  
@@ -80,52 +80,63 @@ body {
 
  .contenedor-form .form .label-input{
     margin-bottom: 2px;
-    width: 80%;
+    width: 70%;
+    height: 60px;
     display: flex;
     flex-direction: column;
    
+    
   
  
  }
  
 .label-input i{
-  font-size: 10px;
-  width: 15px;
+  font-size: 20px;
+  
  }
 
  .label-input  input {
     outline: none;
     background-color: transparent;
     border: 1px solid #000;
-    height: 22px;
+    height: 90%;
     border-radius: 1.5px;
     transition: 0.3s ease;
+    
  }
  
 
 .label-input input:hover{
- 
-    border-color: #A435F0;
+    border-color: #ffffff;
     box-shadow: 0px 0px 1px #ffffff;
+   
  }
  .label-input input::placeholder{
-    color: #ffffff;
-    font-size: 10px;
+    color: #000000;
+    font-size: 16px;
     padding: 0px 2px;
+ }
+
+ .contenedor-form .form h2{
+    font-size: 55px;
+    padding: 15px 20px;
+    background-color: transparent;
  }
 
 
  
 .button-login {
+    width: 150px;
     cursor: pointer;
-    height: 20px;
+    height: 35px;
     background-color:#000000;
     border: none;
     padding: 0 16px;
     border-radius: 2px;
     color: white;
-    font-size: 10px;
+    font-size: 15px;
     transition: 0.3s ease-in;  
+    margin-top: 5px;
 }
 
 .button-login:hover {
