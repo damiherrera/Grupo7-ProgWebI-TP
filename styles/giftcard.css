@@ -32,6 +32,8 @@
     background-image: url(../img/fondos/fondo5.png);
     background-repeat: no-repeat;
     background-size: cover;
+    border: 2px outset #4074C9 ;
+    border-radius: 5px;
     gap: 5em;
 }
 .creation .view .view__giftcard .view__giftcard-price{
@@ -242,19 +244,15 @@
     .creation .view{
         margin-right: 1%;
         width:49%;
-        border: 1px solid blue;
-       
-    
         
     }
 
-   
     .creation .view .view__giftcard{
         width: 100%;
         height: 70%;
         background-size: 100% 100%;
         background-position:center;
-        border: 1px solid black;
+        
        
     }
    
@@ -298,7 +296,6 @@
    
 .creation{
     flex-direction: column;
-  
     gap:1em;
     padding: 0px 0px;
     margin-bottom: 5px;
@@ -307,15 +304,29 @@
 .creation .form {
     max-width: 100%;
     border-left:none;
+    font-size: 10px;
 }
 .creation .view {
+ 
     width: 100%;
 }
 .creation .view .view__giftcard {
     width:100% ;
-    background-size: cover;
-    background-position: center;
+    background-size: 100% 100%;
+   
   
+}
+
+.view__text {
+    font-size: 12px;
+}
+
+.creation .view .view__giftcard .view__giftcard-text-dedicacion{
+    font-size: 12px;
+}
+
+.creation .view .view__giftcard .view__giftcard-text-destinatario{
+    font-size:15px ;
 }
 
 
@@ -323,15 +334,19 @@
     gap: 0.5em;
 }
 .form__election-ubicacion.caja1  {
-    margin-left: 2%;
-    width: 98%;
+   width: 98%;
+  
+   
 }
 .form__election-ubicacion.caja1 .form__election-ubicacion-item-tag {
     width: 20%;
+    height: 70px;
+    
     
 }
 .form__election-ubicacion-item-tag .square  {
     width: 100%;
+    height: 70%;
    
 }
 
@@ -340,7 +355,7 @@
 }
 
 .caja2 .form__election-fondo-item-square .square  {
-   width: 100%;
+   width: 80%;
    height: auto;   
 }
 .caja2 .form__election-fondo-item-square {
@@ -359,15 +374,16 @@
 }
 .button-form {
     text-align: center;
-    width: 60px;
-    height: 15px;
-    font-size: 8px;
+    padding: 2px 2px;
+    width: 65px;
+    height: 25px;
+    font-size: 10px;
     margin-left: 2px;
 }
 .form__election-entrega .a {
-    width: 60px;
-    padding: 3px 9px;
-    font-size: 8px;
+    width: 65px;
+    padding: 2px 2px;
+    font-size: 10px;
 }
 
 
@@ -378,6 +394,11 @@
 .text-bar{
       width: 80%;
       
+}
+
+.text-bar::placeholder{
+    font-size: 10px;
+    
 }
 
 }
