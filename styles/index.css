@@ -35,14 +35,18 @@ h2 {
     display: flex;
     justify-content: space-around;
     align-items: center;
-   
+    background-color: white;
+}
+
+.header .fa-bars, #check-burger, #check-search{
+    display: none;
 }
 
 .header .nav-bar {
     display: flex;
     height: 30%;  /*agregado*/
     
-   
+    
 }
 
 .header .nav-bar .nav-bar__menu {
@@ -68,8 +72,6 @@ h2 {
 
 .header .nav-bar .nav-bar__menu .nav-bar__menu-item {
     margin: 0 15px;
-   
-    
 }
 
 .header-logo-container {
@@ -106,8 +108,7 @@ h2 {
     border-radius: 20px;
     font-size: 16px;
     box-sizing: border-box;
-    background-color: rgba(255, 255, 255, 0.688);
-
+    background-color: rgba(255, 255, 255, 0.349);
 }
 
 .search-icon {
@@ -153,7 +154,6 @@ h2 {
     justify-content: flex-end;
     align-items: center;
     height: 100%;
-
 }
 .action-buttons .button {
     height: 15px;
@@ -175,11 +175,14 @@ h2 {
     background-color: #A435F0;
 }
 
+.action-buttons--mobile{
+    display: none;
+}
+
 
 
 .slider-container {
     position: relative;
-    width: 80%;
     margin: 5px auto; /*se agrega*/
     overflow: hidden;
     border: 2px solid #ddd;
@@ -199,7 +202,7 @@ h2 {
     cursor: pointer;
     height: 40px;
     width: 40px;
-    z-index: 10;
+    z-index: 1;
     border-style: none;
 }
 
@@ -469,6 +472,265 @@ h2 {
 
 
 
+@media screen and (max-width:996px){
+
+    /*******************************
+    ********************************
+        INTENTO DE NAV MOBILE
+    ********************************
+    ********************************/
+    .header{
+        height: auto;
+    }
+    
+    .header .header-container{
+        margin: 0;
+        padding-top:3em;
+        padding-bottom: 2em;
+        width: 100vw;
+        position: relative;
+        z-index: 20;
+    }
+
+    .header .header-logo-container{
+        justify-self: center;
+        display: block;
+        position: absolute;
+    }
+
+    .header .header_logo{
+        width: auto;
+        max-width: 35vw;
+        max-height: 8vh;
+    }
+
+    .header-container .search-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        right: 15%;
+    }
+
+    .header-container .search-container .search-bar{
+        right: 0vw;
+        width: 72vw;
+    }
+
+    .header-container .search-container .search-icon{
+        transform: none;
+        color: black;
+        font-size: clamp(1.8em, 4vw, 5em);
+        position: unset;
+        cursor: pointer;
+    }
+
+    .search-bar{
+        position: absolute;
+        display: block;
+        top: -200%;
+        backdrop-filter: blur(10px); /* Blur no funciona por algun motivo*/
+        background-color: rgba(255, 255, 255, 0.863);
+        border-style: solid;
+        border-color: #b300ff;
+        border-width: 1px;
+    }
+
+    #check-search:checked ~ .search-bar{
+        top: 150%;
+    }
+
+    #check-search:checked ~ * .search-icon{
+        color: #b300ff;
+    }
+
+    .header .header-container .carrito-container{
+        position: absolute;
+        height: auto;
+        align-items: center;
+        right: 4%;
+    }
+    
+    .header_carrito{
+        max-width: 10vw;
+        min-height: 5vh;
+    }
+
+    .header .header-container .carrito-container .header_carrito{
+        width: auto;
+        height: auto;        
+    }
+
+    .header .header-container .carrito-container .numero{
+        top: -9px;
+        font-size: clamp(.7em, 2vw, 1em);
+    }
+
+    .header .nav-bar{
+        position: relative;
+        padding: .25em 0;
+        
+    }
+
+    .checkbtn{
+        display: flex;
+        align-items: center;
+    }
+
+    .header .nav-bar .checkbtn .fa-bars{
+        display: block;
+        position: absolute;
+        left: 4%;
+        bottom: 300%;
+        font-size: clamp(2em, 4vw, 5em);
+        cursor: pointer;
+        z-index: 21;
+        transition: .2s ease-in-out;
+    }
+
+    .header .nav-bar{
+        background-color: white;
+    }
+
+    .header .nav-bar .nav-bar__menu{
+        display: block;
+        position: absolute;
+        height: auto;
+        z-index: 2;
+        text-align: center;
+        background-color: #3100598b;
+        backdrop-filter: blur(10px); /* Blur funciona en este*/
+        width: 100vw;
+        top: -76vh;
+        padding: 1.5em 0;
+        transition: .2s ease;
+    }
+
+    .header .nav-bar .nav-bar__menu .nav-bar__menu-item{
+        margin: 1em;
+        font-weight: 700;
+    }
+
+    .header .nav-bar .nav-bar__menu .nav-bar__menu-item a {
+        color: white;
+        font-size: clamp(1em, 3vw, 1.5em);
+        position: relative;
+        text-decoration: none;
+        padding: .5em .5em;
+    }
+
+    .header .nav-bar .nav-bar__menu .nav-bar__menu-item a:hover {
+        color: #e3bdff;
+    }
+
+    .header .nav-bar .nav-bar__menu .nav-bar__menu-item a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background: #ffffff; 
+        transition: 0.2s ease;
+    }
+
+    .header .nav-bar .nav-bar__menu .nav-bar__menu-item a:hover::after {
+        width: 100%;
+    }
+
+    #check-burger:checked ~ .nav-bar__menu{
+        top: 100%; 
+    }
+
+    #check-burger:checked ~ * .fa-bars{
+        transform: rotate(90deg);
+        color: #b300ff;
+    }
+
+    .action-buttons{
+        display: none;
+    }
+
+    .action-buttons--mobile{
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+    }
+
+    .action-buttons--mobile .nav-bar__menu-item a:hover{
+        background-color: #1f003379;
+    }
+
+    .action-buttons--mobile .nav-bar__menu-item a{
+        font-weight: 500;
+        border-style: solid;
+        border-color: white;
+        border-radius: 5px;
+        border-width: 1px;
+        background-color: #00000079;
+        
+    }
+
+
+    /*******************************
+    ********************************
+        FOOTER RESPONSIVE
+    ********************************
+    ********************************/
+
+    .footer{
+        padding: 2em 1em;
+    }
+
+    .footer-row{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: 1fr 1fr;
+        gap: 2em;
+    }
+
+    .footer-row__box{
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+        .a{
+            grid-column: span 2;
+            grid-row: 2;
+            width: 100%;
+            text-align: center;
+            align-content: center;
+        }
+
+        .b{
+            grid-column: 1;
+            grid-row: 1;
+            align-items: center;
+            
+        }
+        
+        .c{
+            grid-column: 2;
+            grid-row: 1;
+            align-items: center;
+            
+        }
+
+        .footer-row__box a , .footer-row__box ul li a, .footer-row__box__integrante p{
+            font-size: clamp(1em, 3vw, 2em);
+        }
+
+        .footer-row__box h4{
+            font-size: clamp(1.2em, 3vw, 2em);
+            text-align: center;
+        }
+
+
+        
 @media screen and (max-widht: 768px) {
     .cursos-destacados-section {
         display: grid;
@@ -476,6 +738,7 @@ h2 {
 
     }
 }
+
 
 
 @media screen and (max-width: 480px) {
