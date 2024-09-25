@@ -710,7 +710,16 @@ h2 {
         
     }
 
-
+@media screen and (max-width: 1024px){
+    .paso h3 {
+        font-size: 22px;
+        padding: 0px;
+        height: 35px;
+        color: #333;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+} 
         
 @media screen and (max-width: 768px) {
     .cursos-destacados-section {
