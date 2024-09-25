@@ -5,11 +5,11 @@
 
 .titulos{
     align-self: flex-start;
-    margin: 1em 0;
+    margin-bottom: 1em;
 }
 
 .titulos h2{
-    margin: .5em 0;
+    margin: .2em 0;
 }
 
 .form{
