@@ -4,17 +4,17 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 .main{
-    box-sizing: border-box;
     display: flex;
-    justify-content: center; 
-    align-items: center; 
-    flex-direction: column;
+   
+    
 }
 .creation{
-    margin: 5% 10%;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    padding: 20px 20px;
     gap: 4em;
+   
 }
 
 /*---Vista GIFT CARD---*/
@@ -22,6 +22,7 @@
     display: flex;
     flex-direction: column;
     gap: 1em;
+   
 }
 .creation .view .view__giftcard{
     width: 25em;
@@ -69,6 +70,7 @@
     display: flex;
     flex-direction: column;
     gap: 1em;
+   
   }
   .creation .form .form__election {
     font-weight: normal;
@@ -206,4 +208,176 @@
 .size:hover{
     color: #A435F0 ;
     transform: scale(1.1);
+}
+
+/*RESPONVE, QUERIES */
+       
+@media  (max-width: 830px) and (min-width: 481px) {
+    
+ .creation .view{
+     width: 48%;
+     margin-right: 2%;
+      
+      
+  }
+  .creation .view .view__giftcard{
+      width: 100%;
+      background-size: contain;
+    
+  }
+  
+  .creation .form {
+     width: 48%;
+     margin-left: 2%;
+     font-size: 10px;
+     
+  }
+  
+}
+       
+@media  (max-width: 680px) and (min-width: 481px) {
+    .creation {
+        gap:0;
+    }
+    .creation .view{
+        margin-right: 1%;
+        width:49%;
+        border: 1px solid blue;
+       
+    
+        
+    }
+
+   
+    .creation .view .view__giftcard{
+        width: 100%;
+        height: 70%;
+        background-size: 100% 100%;
+        background-position:center;
+        border: 1px solid black;
+       
+    }
+   
+    .view__text {
+        font-size: 15px;
+    }
+    .creation .view .view__giftcard .view__giftcard-text-destinatario {
+        font-size: 25px;
+    }
+
+    .creation .form {
+       width: 48%;
+       margin-left: 2%;
+       font-size: 9px;
+    }
+    .caja2 {
+        gap: 0.3em;
+    }
+    
+    .caja2 .form__election-fondo-item-square .square  {
+       width: 35px;
+       height: auto;
+       
+    }
+    .form__election-price .price-tag {
+        font-size: 9px;
+    }
+    .text-bar {
+        width: 10px;
+    }
+    .text-bar::placeholder {
+        font-size: 11px;
+    }
+    
+    
+}
+
+
+
+@media (width <= 480px)  {
+   
+.creation{
+    flex-direction: column;
+  
+    gap:1em;
+    padding: 0px 0px;
+    margin-bottom: 5px;
+    
+}
+.creation .form {
+    max-width: 100%;
+    border-left:none;
+}
+.creation .view {
+    width: 100%;
+}
+.creation .view .view__giftcard {
+    width:100% ;
+    background-size: cover;
+    background-position: center;
+  
+}
+
+
+.caja2 {
+    gap: 0.5em;
+}
+.form__election-ubicacion.caja1  {
+    margin-left: 2%;
+    width: 98%;
+}
+.form__election-ubicacion.caja1 .form__election-ubicacion-item-tag {
+    width: 20%;
+    
+}
+.form__election-ubicacion-item-tag .square  {
+    width: 100%;
+   
+}
+
+.form__election-fondo-item {
+    gap: 0.2rem;
+}
+
+.caja2 .form__election-fondo-item-square .square  {
+   width: 100%;
+   height: auto;   
+}
+.caja2 .form__election-fondo-item-square {
+    gap: 0;
+   
+}
+.caja2 .form__election-fondo-item-square input {
+    align-self: center;
+    width: 10px
+}
+.form__election-entrega {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.2em;
+  
+}
+.button-form {
+    text-align: center;
+    width: 60px;
+    height: 15px;
+    font-size: 8px;
+    margin-left: 2px;
+}
+.form__election-entrega .a {
+    width: 60px;
+    padding: 3px 9px;
+    font-size: 8px;
+}
+
+
+.form__election-price label{
+    font-size: 12px;
+    width: 25%;
+}
+.text-bar{
+      width: 80%;
+      
+}
+
 }

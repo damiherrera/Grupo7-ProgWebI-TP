@@ -1,6 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     list-style: none;
 }
@@ -21,6 +22,8 @@ h2 {
 
 .header {
     display: flex;
+    width: 100%;
+   
     flex-direction: column;
     height: 100px;  /*se agrega*/
     box-shadow: 0px 0px 3px  #414141;
@@ -28,6 +31,7 @@ h2 {
 }
 
 .header .header-container {
+    max-width: 100%; /*se agrega*/
     min-height: 56px;
     height: 70%;
     box-sizing: border-box;
@@ -78,14 +82,14 @@ h2 {
     width: 20%;                 /*width: 30%;*/
     height: 100%;
     display: flex;
-    align-items: last baseline;
+    /* align-items: last baseline; */
     mix-blend-mode: multiply; /*se agrega*/
     
 }
 
 .header_logo {
     width: 130px;
-    height: 50spx;
+    height: 50px;
 
 
 }
@@ -224,17 +228,24 @@ h2 {
 .pasos-section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
+    gap: 30px;
+    padding: 35px;
     background-color: #f9f9f9;
-
 }
 
-.paso img {
+.contenedor-img {
     width: 100%;
+    height: 50%;
+    border-top-left-radius: 8px;
+    border-top-right-radius:8px ;
+}
+
+.contenedor-img img {
     height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius:8px ;
+    object-fit:contain;
     margin-bottom: 10px;
 }
 
@@ -244,12 +255,11 @@ h2 {
     border: 1px sold #ddd;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     margin: 10px;
+    height: 180px;
+    
 }
 
 .paso-numero {
@@ -271,15 +281,29 @@ h2 {
 }
 
 .paso h3 {
-    font-size: 18px;
-    margin: 0;
+    font-size: 14px;
+    padding: 0px;
+    height: 35px;
     color: #333;
+    text-align: center
+
+   
 }
 
 .paso p {
-    font: 14px;
+    font-size: 10px;
+    text-align: center;
+    padding: 0px 3px;
+    display: block;
     color: #666;
     margin: 0;
+    height: 45px;
+    width: 100%;
+   
+   
+}
+.paso p a {
+    color: #A435F0;
 }
 
 
@@ -302,12 +326,13 @@ h2 {
     position: relative;
     display: flex;
     flex-direction: column;
+    height: 350px;
 }
 
 .cursos-destacados__container img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: 60%;
+    object-fit: 100% 100%;
 }
 
 .precio {
@@ -324,32 +349,41 @@ h2 {
 }
 
 .cursos-destacados__info {
-    padding: 15px;
+    padding: 0px 16px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    height: 40%;
+ 
 }
 
 .cursos-destacados__info-nombre {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
+   
+
 }
 
 .cursos-destacados__info-nombre h3 {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0 0 10px;
-    font: 18px;
+    font-size: 16px;
     color: #333;
+    
 }
 
 
-.cursos-destacados__info .horas {
-    display: flex;
-    align-self: flex-start;
-    font-size: 16px;
+
+.cursos-destacados__info h3 .horas {
+    font-size: 11px;
+    margin: 0px 5px;
     font-weight: bold;
     color: #333;
-    margin-right: 20px;
+    
 }
 
 .cursos-destacados__info-nombre a {
@@ -472,7 +506,6 @@ h2 {
 }
 
 
-
 @media screen and (max-width:996px){
 
     /*******************************
@@ -593,6 +626,7 @@ h2 {
 
     .header .nav-bar{
         background-color: white;
+      
     }
 
     .header .nav-bar .nav-bar__menu{
@@ -603,8 +637,8 @@ h2 {
         text-align: center;
         background-color: #3100598b;
         backdrop-filter: blur(10px); /* Blur funciona en este*/
-        width: 100vw;
-        top: -76vh;
+        width: 100%;
+        top: -70vh;
         padding: 1.5em 0;
         transition: .2s ease;
     }
@@ -653,9 +687,11 @@ h2 {
     .action-buttons{
         display: none;
     }
+  
 
     .action-buttons--mobile{
         display: flex;
+       
         justify-content: center;
         text-decoration: none;
     }
@@ -680,8 +716,21 @@ h2 {
     .cursos-destacados-section {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-
+        
     }
+
+
+    .medios-pago img {
+        width: 80px;
+        margin: 0px 10px;
+        
+    }
+  
+
+    
+}
+
+
 }
 
 @media screen and (max-width: 640px) {
@@ -740,9 +789,25 @@ h2 {
             font-size: clamp(1.2em, 3vw, 2em);
             text-align: center;
         }
+       
+        .pasos-section .paso {
+            width: 100%;
+        }
+        .pasos-section .paso h3{
+            font-size: 10px;
+        }
+        .pasos-section .paso p{
+            font-size: 9px;
+            padding: 0px 1px;
+        }
+
+        
+
+
+    
 }
 
-@media screen and (max-width: 480px) {
+@media (width <=480px) {
     .header-container a{
         width: 35%;
         height: max-content;
@@ -753,11 +818,19 @@ h2 {
         height: auto;
     }
     .pasos-section {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 20px;
-        padding: 20px;
-        background-color: #f9f9f9;
+        display: flex;
+        flex-direction: column;
+       
+    }
+    .pasos-section .paso {
+        width: 100%;
+    }
+    .pasos-section .paso h3{
+        font-size: 13px;
+    }
+    .pasos-section .paso p{
+        font-size: 12px;
+        padding: 0px 1px;
     }
 
     .cursos-destacados-section {
@@ -765,9 +838,37 @@ h2 {
         grid-template-columns: repeat(1, 1fr);
 
     }
+    
+    .medios-pago {
+        border: 1px solid green;
+    }
+    .imagenes-pago {
+        width: 100%;
+        gap:0;
+        border: 1px solid black;
+    }
 
     .imagenes-pago img{
-        width: 20%;
-        height: auto;
+       width: 40px;
     }
+   
 }
+.header .nav-bar .nav-bar__menu {
+    height: 100vh;
+    top: -100vh; /*se agrega*/
+}
+.action-buttons--mobile .nav-bar__menu-item a{
+    font-weight: 300;
+   
+}
+ .action-buttons--mobile {
+    font-size: 10px; /*se agrega*/
+}
+.slider-container {
+    width: 100%;
+   
+}
+
+
+
+
