@@ -5,8 +5,7 @@
 }
 .main{
     display: flex;
-   
-    
+    padding-bottom: 3em;
 }
 .creation{
     width: 80% ;
