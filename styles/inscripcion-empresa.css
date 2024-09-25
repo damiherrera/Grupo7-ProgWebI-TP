@@ -32,7 +32,7 @@
     width: 25%;
     height: 5vh;
     padding: .1em;
-    font-size: 1rem;
+    font-size: clamp(.8rem, 1.5vw, 1rem);
     border: .1em solid rgba(195, 193, 193, 0.933);
     border-radius: .2em;
     outline: none;
