@@ -212,7 +212,7 @@ body {
 
 /*MEDIA QUERIES SECCION FORMULARIO*/
 
-@media (width <= 480px) {
+@media screen and (max-width: 480px){
     .contact-section{
      flex-direction: column;
      width: 100%;
