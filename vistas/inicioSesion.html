@@ -1,109 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesion</title>
-    <link rel="stylesheet" href="../styles/iniciarSesion.css">
-    <link rel="stylesheet" href="../styles/index.css">
-    <script src="https://kit.fontawesome.com/be966d90c6.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <header class="header">
-        <div class="header-container">
-            <a class="header-logo-container" href="../index.html"><img src="../img/logoUdemy.png" class="header_logo" alt="Logo"></a>
-            <div class="search-container">
-                <input type="checkbox" id="check-search">
-                <label for="check-search" class="checkbtn">
-                    <i class="fas fa-search search-icon"></i>
-                </label>
-                <input type="text" class="search-bar" placeholder="Buscar...">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Iniciar Sesion</title>
+        <link rel="stylesheet" href="../styles/iniciarSesion.css">
+        <link rel="stylesheet" href="../styles/index.css">
+        <script src="https://kit.fontawesome.com/be966d90c6.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header-container">
+                <a class="header-logo-container" href="../index.html"><img src="../img/logoUdemy.png" class="header_logo" alt="Logo"></a>
+                <div class="search-container">
+                    <input type="checkbox" id="check-search">
+                    <label for="check-search" class="checkbtn">
+                        <i class="fas fa-search search-icon"></i>
+                    </label>
+                    <input type="text" class="search-bar" placeholder="Buscar...">
+                </div>
+
+                <div class="carrito-container">
+                    <a href="#"><img src="../img/carrito (1).png" class="header_carrito" alt="Carrito"></a>
+                    <div class="numero">4</div>
+                </div>
             </div>
 
-            <div class="carrito-container">
-                <a href="#"><img src="../img/carrito (1).png" class="header_carrito" alt="Carrito"></a>
-                <div class="numero">4</div>
-            </div>
+            <nav class="nav-bar">
+                <input type="checkbox" id="check-burger">
+                <label for="check-burger" class="checkbtn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <ul class="nav-bar__menu">
+                    <li class="nav-bar__menu-item"><a  href="../index.html">Inicio</a></li>
+                    <li class="nav-bar__menu-item"><a  href="../vistas/calendario.html">Proximos Cursos</a>
+                    </li>
+                    <li class="nav-bar__menu-item"><a  href="../vistas/gift-card.html">Gift Card</a></li>
+                    <li class="nav-bar__menu-item"><a  href="../vistas/inscripcion-empresa.html">Inscripción
+                            para empresas</a></li>
+                    <div class="action-buttons--mobile">
+                        <li class="nav-bar__menu-item"><a href="../vistas/registrarse.html"> Registrarse</a></li>
+                        <li class="nav-bar__menu-item"><a href="../vistas/inicioSesion.html"> Iniciar Sesión</a></li>
+                    </div>
+                </ul>
+                <div class="action-buttons">
+                    <a href="../vistas/registrarse.html" class="button">Registrarse</a>
+                    <a href="../vistas/inicioSesion.html" class="button">Iniciar Sesión</a>
+                </div>
+            </nav>
+        </header>
+        
+        
+        <section class="contenedor">
+            <!-- <h2>Iniciar Sesión</h2> -->
+        <div class="contenedor-form">
+            <!-- <div class="contenedor-arrowBack">
+                <a href="../index.html" class="flecha"><i class="fa-solid fa-arrow-left"></i>Inicio</a>
+            </div> -->
+            <form class="form">
+
+            <h2>Bienvenido/a</h2>
+                <div class="label-input">
+            <label for="usuario"> <i class="fa-solid fa-user"></i>
+
+            </label>
+
+                <input
+                class="input"
+                type="text"
+                name="usuario"
+                placeholder="Nombre de usuario"
+                required>
+                </div>
+
+            <!-- </div> -->
+
+            <div class="label-input">
+            <label for="password" ><i class="fa-solid fa-lock"></i></label>
+                <input
+                class="input"
+                type="password"
+                name="usuario"
+                placeholder="Contraseña"
+                required>
+
+                </div>
+
+                <!-- <p>Haz olvidado la Contraseña?<a href="#" class="passwordLinks">Cambiar Contraseña</a></p> *****(se saca por el momento)  -->
+                <p>No estas registrado?<a class="passwordLinks" href="../vistas/registrarse.html"> Registrarse</a></p>
+                
+
+
+
+
+                <a href="#"><button type="submit" class="button-login">Entrar</button></a>
+            </form>
+
         </div>
 
-        <nav class="nav-bar">
-            <input type="checkbox" id="check-burger">
-            <label for="check-burger" class="checkbtn">
-                <i class="fas fa-bars"></i>
-            </label>
-            <ul class="nav-bar__menu">
-                <li class="nav-bar__menu-item"><a  href="../index.html">Inicio</a></li>
-                <li class="nav-bar__menu-item"><a  href="../vistas/calendario.html">Proximos Cursos</a>
-                </li>
-                <li class="nav-bar__menu-item"><a  href="../vistas/gift-card.html">Gift Card</a></li>
-                <li class="nav-bar__menu-item"><a  href="../vistas/inscripcion-empresa.html">Inscripción
-                        para empresas</a></li>
-                <div class="action-buttons--mobile">
-                    <li class="nav-bar__menu-item"><a href="../vistas/registrarse.html"> Registrarse</a></li>
-                    <li class="nav-bar__menu-item"><a href="../vistas/inicioSesion.html"> Iniciar Sesión</a></li>
-                </div>
-            </ul>
-            <div class="action-buttons">
-                 <a href="../vistas/registrarse.html" class="button">Registrarse</a>
-                 <a href="../vistas/inicioSesion.html" class="button">Iniciar Sesión</a>
-            </div>
-        </nav>
-    </header>
-    
-    
-    <section class="contenedor">
-        <!-- <h2>Iniciar Sesión</h2> -->
-     <div class="contenedor-form">
-        <!-- <div class="contenedor-arrowBack">
-            <a href="../index.html" class="flecha"><i class="fa-solid fa-arrow-left"></i>Inicio</a>
+
+        <!-- <div class="contenedor-imgSVG">
+            <img src="../img/svg/inicioSesion.svg" class="imgSVG" alt="imgSVG">
         </div> -->
-        <form class="form">
 
-           <h2>Bienvenido/a</h2>
-            <div class="label-input">
-           <label for="usuario"> <i class="fa-solid fa-user"></i>
+    </section>
 
-           </label>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-row__box a">
+                    <h4>Grupo 7</h4>
+                    <div class="footer-row__box__integrante">
+                        <p>Dubini, Ivan Nicolas</p>
+                        <p>43.718.732</p>
+                    </div>
+                    <div class="footer-row__box__integrante">
+                        <p>Herrera, Damián Alberto</p>
+                        <p>36.993.121</p>
+                    </div>
+                    <div class="footer-row__box__integrante">
+                        <p>Ramirez Natalia</p>
+                        <p>38.991.925</p>
+                    </div>
+                    <div class="footer-row__box__integrante">
+                        <p>Suarez, Valentina Abigail</p>
+                        <p>46.431.769</p>
+                    </div>
+                </div>
 
-            <input
-             class="input"
-             type="text"
-             name="usuario"
-             placeholder="Nombre de usuario"
-             required>
+                <div class="footer-row__box b">
+                    <h4>Menu Inferior</h4>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="./calendario.html">Proximos Cursos</a></li>
+                        <li><a href="./gift-card.html">Gift Card</a></li>
+                        <li><a href="#">Inscripcion para empresas</a></li>
+                        <li><a href="./contacto.html">Contactate con nosotros</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-row__box c">
+                    <div class="footer-row--social">
+                        <h4>Seguinos en nuestras redes</h4>
+                        <a href="https://www.facebook.com/udemy/?locale=es_LA" target="_blank"><i class="fab fa-facebook"></i>Facebook</a>
+                        <a href="https://www.youtube.com/channel/UCzw4hbQIePVtyJQzE_F8QDg" target="_blank"><i class="fab fa-youtube"></i>Youtube</a>
+                        <a href="https://www.instagram.com/udemy/?hl=es" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+                        <a href="https://x.com/udemy?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><i class="fa-brands fa-twitter"></i>Twitter / X</a>
+                    </div>
+                </div>
             </div>
+        </div>
+    </footer>
 
-         <!-- </div> -->
-
-         <div class="label-input">
-           <label for="password" ><i class="fa-solid fa-lock"></i></label>
-            <input
-              class="input"
-              type="password"
-              name="usuario"
-              placeholder="Contraseña"
-              required>
-
-             </div>
-
-             <!-- <p>Haz olvidado la Contraseña?<a href="#" class="passwordLinks">Cambiar Contraseña</a></p> *****(se saca por el momento)  -->
-             <p>No estas registrado?<a class="passwordLinks" href="../vistas/registrarse.html"> Registrarse</a></p>
-            
-
-
-
-
-            <a href="#"><button type="submit" class="button-login">Entrar</button></a>
-        </form>
-
-    </div>
-
-
-    <!-- <div class="contenedor-imgSVG">
-        <img src="../img/svg/inicioSesion.svg" class="imgSVG" alt="imgSVG">
-    </div> -->
-
-</section>
-
-</body>
+    </body>
 </html>
