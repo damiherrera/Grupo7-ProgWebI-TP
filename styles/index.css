@@ -715,13 +715,32 @@ h2 {
         grid-template-columns: repeat(2, 1fr);
         
     }
+     
+    .pasos-section  {
+        gap: 5px;
+    }
 
+    .pasos-section .paso h3{
+        font-size: 15px;
+    }
 
+    .pasos-section .paso p{
+        padding: 13px 2px;
+        font-size: 15px;
+    }
+
+    .contenedor-img {
+        height: 55%;
+    }
+      
     .medios-pago img {
-        width: 80px;
+        width: 100%;
         margin: 0px 10px;
         
     }
+     .paso-numero{
+        left: 1px;
+     }
   
 
     
@@ -815,7 +834,7 @@ h2 {
         height: auto;
     }
     .pasos-section {
-       
+        display: flex;
         flex-direction: column;
         
     }
@@ -823,10 +842,10 @@ h2 {
        width: 100%;
     }
     .pasos-section .paso h3{
-        font-size: 13px;
+        font-size: 18px;
     }
     .pasos-section .paso p{
-        font-size: 12px;
+        font-size: 15px;
         padding: 0px 1px;
     }
 
@@ -835,18 +854,19 @@ h2 {
         grid-template-columns: repeat(1, 1fr);
 
     }
-    
-    .medios-pago {
-        border: 1px solid green;
+    .cursos-destacados__info h3{
+        font-size: 20px;
     }
+    
+    
+   
     .imagenes-pago {
         width: 100%;
         gap:0;
-        border: 1px solid black;
     }
 
     .imagenes-pago img{
-       width: 40px;
+       width: 60px;
     }
    
 }
