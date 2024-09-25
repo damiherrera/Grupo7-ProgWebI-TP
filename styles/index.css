@@ -183,6 +183,7 @@ h2 {
 
 .slider-container {
     position: relative;
+    width: 80%;
     margin: 5px auto; /*se agrega*/
     overflow: hidden;
     border: 2px solid #ddd;
@@ -190,7 +191,7 @@ h2 {
 
 .slider-img {
     width: 100%;
-    height: auto;
+    height: 5px auto;
     display: block;
 }
 
@@ -674,6 +675,16 @@ h2 {
     }
 
 
+        
+@media screen and (max-width: 768px) {
+    .cursos-destacados-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+}
+
+@media screen and (max-width: 640px) {
     /*******************************
     ********************************
         FOOTER RESPONSIVE
@@ -686,9 +697,9 @@ h2 {
 
     .footer-row{
         display: grid;
-        grid-template-columns: 1fr 1fr ;
-        grid-template-rows: 1fr 1fr;
-        gap: 2em;
+        grid-template-columns: 40% 40% ;
+        grid-template-rows: 20% 20%;
+        gap: 1em;
     }
 
     .footer-row__box{
@@ -728,18 +739,7 @@ h2 {
             font-size: clamp(1.2em, 3vw, 2em);
             text-align: center;
         }
-
-
-        
-@media screen and (max-widht: 768px) {
-    .cursos-destacados-section {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-
-    }
 }
-
-
 
 @media screen and (max-width: 480px) {
     .header-container a{
