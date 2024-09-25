@@ -701,13 +701,13 @@ h2 {
         grid-template-columns: 40% 40% ;
         grid-template-rows: 20% 20%;
         gap: 1em;
+        align-items: center;
     }
 
     .footer-row__box{
         width: auto;
         display: flex;
         flex-direction: column;
-        
     }
 
         .a{
