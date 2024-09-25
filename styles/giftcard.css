@@ -36,14 +36,18 @@
     background-size: 100% 100%;
     border: 2px outset #4074C9 ;
     border-radius: 5px;
-    gap: 5em;
+    position: relative;
+    align-items: center;
+    justify-content: center;
 }
 .creation .view .view__giftcard .view__giftcard-price{
     padding: 2%;
     font-size: 1rem;
     align-self: flex-end;
     background-color: #000000;
-    color: #ffffff
+    color: #ffffff;
+    position: absolute;
+    top: 0%;
 }
 .creation .view .view__giftcard .view__giftcard-text{
     display: flex;
