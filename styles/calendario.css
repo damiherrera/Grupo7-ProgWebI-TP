@@ -47,7 +47,7 @@
 
 .calendario__row__field, .calendario__row__field--unfocused{
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column;
     align-items: center;
     height: 5.4em;
     width: 20em;
@@ -79,7 +79,7 @@
     color: white;
     font-weight: 600;
     text-decoration: none;
-    padding: 0 1.4em;
+    padding: 0.5em;
 }
 
 .calendario__row__field__event:hover , .calendario__row__field__event--tiny:hover{
