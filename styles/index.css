@@ -372,7 +372,7 @@ h2 {
     justify-content: center;
     align-items: center;
     margin: 0 0 10px;
-    font-size: 25px;
+    font-size: 20px;
     color: #333;
     justify-content: space-between;
     
@@ -736,13 +736,16 @@ h2 {
         height: 55%;
     }
       
-    .medios-pago img {
-        width: 100%;
-        margin: 0px 10px;
-        
-    }
      .paso-numero{
         left: 1px;
+     }
+
+     .imagenes-pago{    
+        gap: 3em;
+     }
+
+     .imagenes-pago img{
+        width: 4em;
      }
   
 
@@ -865,7 +868,7 @@ h2 {
    
     .imagenes-pago {
         width: 100%;
-        gap:0;
+        gap:1em;
     }
 
     .imagenes-pago img{
