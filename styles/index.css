@@ -30,7 +30,7 @@ h2 {
 }
 
 .header .header-container {
-   
+    max-width: 100%;
     min-height: 56px;
     height: 65%;
     box-sizing: border-box;
