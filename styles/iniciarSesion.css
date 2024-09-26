@@ -13,13 +13,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-   
+    
     height: 85.76vh;
 }
-/* .contenedor-arrowBack {
+.contenedor-arrowBack {
     position: absolute;
     top: 20px;
-    left: 40px;
+    left: 20px;
 }
 
 .contenedor-arrowBack  i{
@@ -28,8 +28,8 @@ body {
 
 .contenedor-arrowBack  a {
     color: #A435F0;
-    font-size: 15px;
-} */
+    font-size: 20px;
+}
 
 .contenedor-form {
     background: rgb(227,146,222);
