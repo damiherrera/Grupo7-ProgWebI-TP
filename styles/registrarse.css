@@ -118,6 +118,7 @@
 .contenedor .aside-form img {
    width: 600px;
    object-fit: contain;
+   mix-blend-mode: multiply;
   
 }
 
