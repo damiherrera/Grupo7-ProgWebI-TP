@@ -65,18 +65,34 @@
         <form class="form" method="post" action="../vistas/inicioSesion.html">
             <h2>Regístrate y Comienza a aprender</h2>
             <div class="form__contendedor-input">
-            <input type= "text" class="nombre" placeholder="Nombre completo" required/>
+            <input 
+             type= "text"
+             id="nombre"
+             class="nombre" 
+             placeholder="Nombre completo" 
+             required/>
             </div>
            
             <div class="form__contendedor-input">
            
-            <input type= "email" class="apellido"placeholder="Correo electrónico" required>
+            <input type= "email" 
+            id="email"
+            class="apellido"
+            placeholder="Correo electrónico" 
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+            required>
             </div>
            
             <div class="form__contendedor-input">
          
         
-            <input type= "password"  required nombre="password" placeholder="Contraseña" />
+            <input type= "password"  
+            id="password"
+            required 
+            nombre="password" 
+            placeholder="Contraseña" 
+            pattern="(?=.*\d).{6,}" 
+            title="La contraseña debe tener al menos 6 caracteres e incluir al menos un número." />
             </div>
              <div class="contenedor-button__sumbit">
                 <button type="submit">Registrarse</button>
