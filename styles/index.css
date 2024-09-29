@@ -341,7 +341,7 @@ h2 {
 
 .precio {
     position: absolute;
-    background-color: black;
+    background-color: #28a745;
     color: white;
     padding: 5px 10px;
     border-radius: 4px;
@@ -350,6 +350,18 @@ h2 {
     bottom: 50%;
     right: 1px;
 
+}
+
+.modalidad{
+    position: absolute;
+    background-color: #A435F0;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    top: 5%;
+    left: 1px;
 }
 
 .cursos-destacados__info {

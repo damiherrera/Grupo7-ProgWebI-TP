@@ -63,27 +63,77 @@ h3 {
     background-color: #fff;
 }
 
+summary {
+    font-size: 18px;
+    padding: 15px;
+    background-color: #d87eff;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    position: relative;
+    user-select: none;
+}
+
+summary:focus {
+    outline: none;
+}
+
+details[open] summary::after {
+    content: "▲";
+    position: absolute;
+    right: 20px;
+    font-size: 12px;
+}
+
+summary::after {
+    content: "▼";
+    position: absolute;
+    right: 20px;
+    font-size: 12px;
+}
+
+details .menu-content {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    padding: 0 0 0 15px;
+}
+
+details[open] .menu-content {
+    max-height: 500px; 
+    padding: 10px 0 10px 15px;
+}
+
+.subopcion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.subopcion .texto {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.duracion {
+    font-size: 14px;
+    color: #666;
+}
+
+input[type="checkbox"] {
+    accent-color: lightgreen;
+    width: 20px;
+    height: 20px;
+}
+
 .menu-container {
     margin-bottom: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
 }
 
-.menu-button {
-    background-color:  #d87eff;
-    color: black;
-    border: none;
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 4px;
-    width: 100%;
-    text-align: left;
-    outline: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
 
 .menu-content .subopcion {
@@ -127,6 +177,30 @@ h3 {
     width: 20px;
     height: 20px;
     border-radius: 50%;
+}
+
+.botones-detalle-curso{
+    display: flex;
+    width: 60%;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.boton-inscripcion-empresa {
+    padding: 10px 20px;
+    background-color: #a613e6;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.boton-inscripcion-empresa:hover{
+    background-color: #d87eff;
 }
 
 .docente-container {
@@ -205,6 +279,13 @@ h3 {
         width: 95%;
         max-width: none;
     }
+
+    .botones-detalle-curso{
+       width: 50%;
+       justify-content: flex-start;
+       gap: 25%;
+    }
+    
 }
 
 @media screen and (max-width: 480px){
@@ -217,4 +298,16 @@ h3 {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
     }
+
+    .botones-detalle-curso{
+        width: 50%;
+        justify-content: flex-start;
+        flex-direction: column;
+     }
+
+     .boton-inscripcion-empresa {
+        margin-top: 10px;
+    }
+
+     
 }
