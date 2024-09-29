@@ -60,6 +60,9 @@
                 <div class="curso-detalle-item">
                     <p><span>Valor:</span> $100.-</p>
                 </div>
+                <div class=""curso-detalle-item>
+                    <p><span>Modalidad:</span> Virtual.</p>
+                </div>
                 <div class="curso-detalle-item">
                     <p><span>Tiempo de dedicación necesario:</span> 40 horas</p>
                 </div>
@@ -82,22 +85,19 @@
                             <ul>Habilidad para comprender lógica matemática básica.</ul>
                         </li>
                     </p>
-                    <a href="./comprar-curso.html"><input class="boton-comprar" type="button" value="Comprar" id="boton-comprar"></a>
                 </div>
                 <h3>CONTENIDOS POR CLASE</h3>
                 <div class="caja-curso">
-                    <div class="menu-container">
-                        <button class="menu-button">
-                            Introducción
-                        </button>
+                    <details open>
+                        <summary>Introducción</summary>
                         <div class="menu-content">
                             <div class="subopcion">
                                 <i class="fas fa-play icon"></i>
                                 <div class="texto">
-                                    <span>Fundamentos de Python</span>
+                                    <span>¿Qué es Python?</span>
                                     <div class="duracion">
                                         <i class="fas fa-clock"></i>
-                                        <span>1h 30m</span>
+                                        <span>1h 15m</span>
                                     </div>
                                 </div>
                                 <input type="checkbox">
@@ -105,7 +105,7 @@
                             <div class="subopcion">
                                 <i class="fas fa-play icon"></i>
                                 <div class="texto">
-                                    <span>Estructuras de Control</span>
+                                    <span>Instalación y Configuración del IDE</span>
                                     <div class="duracion">
                                         <i class="fas fa-clock"></i>
                                         <span>2h</span>
@@ -116,7 +116,7 @@
                             <div class="subopcion">
                                 <i class="fas fa-play icon"></i>
                                 <div class="texto">
-                                    <span>Funciones en Phyton</span>
+                                    <span>Sintaxis Básica: Tipos de Datos, Variables y Operadores</span>
                                     <div class="duracion">
                                         <i class="fas fa-clock"></i>
                                         <span>2h</span>
@@ -135,19 +135,114 @@
                                 </div>
                                 <input type="checkbox">
                             </div>
-
                         </div>
-                    </div>
-                    <div class="menu-container disabled">
-                        <button class="menu-button">
-                            Unidad 2
-                        </button>
-                    </div>
-                    <div class="menu-container disabled">
-                        <button class="menu-button">
-                            Unidad 3
-                        </button>
-                    </div>
+                    </details>
+
+                    <!-- Unidad 2 -->
+                    <details>
+                        <summary>Unidad 2</summary>
+                        <div class="menu-content">
+                            <div class="subopcion">
+                                <i class="fas fa-play icon"></i>
+                                <div class="texto">
+                                    <span>Listas, Tuplas y Diccionarios</span>
+                                    <div class="duracion">
+                                        <i class="fas fa-clock"></i>
+                                        <span>1h 30m</span>
+                                    </div>
+                                </div>
+                                <input type="checkbox">
+                            </div>
+                            <div class="subopcion">
+                                <i class="fas fa-play icon"></i>
+                                <div class="texto">
+                                    <span>Condicionales: if, elif, else</span>
+                                    <div class="duracion">
+                                        <i class="fas fa-clock"></i>
+                                        <span>2h</span>
+                                    </div>
+                                </div>
+                                <input type="checkbox">
+                            </div>
+                            <div class="subopcion">
+                                <i class="fas fa-play icon"></i>
+                                <div class="texto">
+                                    <span>Bucles: for y while</span>
+                                    <div class="duracion">
+                                        <i class="fas fa-clock"></i>
+                                        <span>2h</span>
+                                    </div>
+                                </div>
+                                <input type="checkbox">
+                            </div>
+                            <div class="subopcion">
+                                <i class="fa fa-list"></i>
+                                <div class="texto">
+                                    <span>EXAMEN</span>
+                                    <div class="duracion">
+                                        <i class="fas fa-clock"></i>
+                                        <span>1h</span>
+                                    </div>
+                                </div>
+                                <input type="checkbox">
+                            </div>
+                        </div>
+                    </details>
+
+                    <!-- Unidad 3 -->
+                    <details>
+                        <summary>Unidad 3</summary>
+                        <div class="menu-content">
+                            <div class="subopcion">
+                                <i class="fas fa-play icon"></i>
+                                <div class="texto">
+                                    <span>Definición y Uso de Funciones</span>
+                                    <div class="duracion">
+                                        <i class="fas fa-clock"></i>
+                                        <span>1h</span>
+                                    </div>
+                                </div>
+                                <input type="checkbox">
+                            </div>
+                            <div class="subopcion">
+                                <i class="fas fa-play icon"></i>
+                                <div class="texto">
+                                    <span>Argumentos y Parámetros en Funciones</span>
+                                    <div class="duracion">
+                                        <i class="fas fa-clock"></i>
+                                        <span>1h 30m</span>
+                                    </div>
+                                </div>
+                                <input type="checkbox">
+                            </div>
+                            <div class="subopcion">
+                                <i class="fas fa-play icon"></i>
+                                <div class="texto">
+                                    <span>Módulos y Paquetes: importación y Creación</span>
+                                    <div class="duracion">
+                                        <i class="fas fa-clock"></i>
+                                        <span>2h</span>
+                                    </div>
+                                </div>
+                                <input type="checkbox">
+                            </div>
+                            <div class="subopcion">
+                                <i class="fa fa-list"></i>
+                                <div class="texto">
+                                    <span>EXAMEN</span>
+                                    <div class="duracion">
+                                        <i class="fas fa-clock"></i>
+                                        <span>1h</span>
+                                    </div>
+                                </div>
+                                <input type="checkbox">
+                            </div>
+                        </div>
+                    </details>
+                </div>
+                <div class="botones-detalle-curso">
+                    <a href="./comprar-curso.html"><input class="boton-comprar" type="button" value="Comprar para mí" id="boton-comprar"></a>
+                    <a href="../vistas/inscripcion-empresa.html"><input class="boton-inscripcion-empresa" type="button" value="Inscripcion para empresas" id="inscripcion-empresa"></a>
                 </div>
             </div>
         </section>
@@ -185,6 +280,7 @@
             <div class="cursos-destacados__container">
                 <img src="../img/disenio-web.jpg" alt="Curso 1">
                 <span class="precio">$50</span>
+                <span class="modalidad">Virtual</span>
                 <div class="cursos-destacados__info">
                     <div class="cursos-destacados__info-nombre">
                         <h3><span class="horas">20hs.</span>Curso de Diseño Web</h3>
@@ -195,36 +291,42 @@
             </div>
 
             <div class="cursos-destacados__container">
-                <img src="../img/JavaScript.jpg" alt="Curso 1">
-                <span class="precio">$80</span>
+                <img src="../img/React.jpg" alt="Curso 1">
+                <span class="precio">$60</span>
+                <span class="modalidad">Presencial</span>
                 <div class="cursos-destacados__info">
                     <div class="cursos-destacados__info-nombre">
-                        <h3><span class="horas">30hs.</span>Curso de JavasScript</h3>
-                        <a href="../vistas/detalle-javascript.html">Ver detalles</a>
-                        <a href="../vistas/comprar-curso.html"><input class="boton-comprar" type="button" value="Comprar" id="boton-comprar"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="cursos-destacados__container">
-                <img src="../img/BasesDeDatosjpeg.jpeg" alt="Curso 1">
-                <span class="precio">$90</span>
-                <div class="cursos-destacados__info">
-                    <div class="cursos-destacados__info-nombre">
-                        <h3><span class="horas">30hs.</span>Curso de Bases de Datos</h3>
-                        <a href="../vistas/detalle-bases-de-datos.html">Ver detalles</a>
+                        <h3> <span class="horas">40hs.</span>Curso de React</h3>
+                        <a href="../vistas/detalle-react.html">Ver detalles</a>
                         <a href="../vistas/comprar-curso.html"><input class="boton-comprar" type="button" value="Comprar" id="boton-comprar"></a>
                     </div>
                 </div>
             </div>
 
             <div class="cursos-destacados__container">
-                <img src="../img/React.jpg" alt="Curso 1">
-                <span class="precio">$60</span>
+                <img src="../img/java.jpg" alt="Curso 1">
+                <span class="precio">$80</span>
+                <span class="modalidad">Presencial</span>
                 <div class="cursos-destacados__info">
+                    
                     <div class="cursos-destacados__info-nombre">
-                        <h3><span class="horas">40hs.</span>Curso de React</h3>
-                        <a href="../vistas/detalle-react.html">Ver detalles</a>
-                        <a href="../vistas/carrito.html"><input class="boton-comprar" type="button" value="Comprar" id="boton-comprar"></a>
+                        <h3><span class="horas">60hs.</span> Curso de Java</h3>
+                        <a href="../vistas/detalle-java.html">Ver detalles</a>
+                        <a href="../vistas/comprar-curso.html"><input class="boton-comprar" type="button" value="Comprar" id="boton-comprar"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cursos-destacados__container">
+                <img src="../img/BasesDeDatosjpeg.jpeg" alt="Curso 1">
+                <span class="precio">$90</span>
+                <span class="modalidad">Virtual</span>
+                <div class="cursos-destacados__info">
+                    
+                    <div class="cursos-destacados__info-nombre">
+                        <h3><span class="horas">30hs.</span>Curso Bases de Datos</h3>
+                        <a href="../vistas/detalle-bases-de-datos.html">Ver detalles</a>
+                        <a href="../vistas/comprar-curso.html"><input class="boton-comprar" type="button" value="Comprar" id="boton-comprar"></a>
                     </div>
                 </div>
             </div>
