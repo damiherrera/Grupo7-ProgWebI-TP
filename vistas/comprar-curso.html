@@ -54,7 +54,7 @@
         <section class="container">
             <h1>Compra del Curso</h1>
         
-            <form>
+            <form action="../index.html">
                 <label for="medio-pago">Selecciona tu medio de pago:</label>
                 <div class="payment-methods">
                     <img src="../img/Visa.png" alt="Visa">
@@ -71,7 +71,7 @@
                 <div class="card-input-group">
                     <div>
                         <label for="fecha-expiracion">Fecha de Expiración:</label>
-                        <input class="campo-compra" type="text" id="fecha-expiracion" name="fecha-expiracion"  placeholder="MM/AA" maxlength="5" required>
+                        <input class="campo-compra" type="month" name="fecha" id="fecha" placeholder="MM/AA" min="2024-01" max="2050-12" required class="text-bar2">
                     </div>
                     <div>
                         <label for="cvc">CVC:</label>

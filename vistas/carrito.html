@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UDEMY - Carrito</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/carrito.css">
+    <script src="https://kit.fontawesome.com/be966d90c6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a class="header-logo-container" href="../index.html"><img src="../img/logoUdemy.png" class="header_logo"
+                    alt="Logo"></a>
+            <div class="search-container">
+                <input type="checkbox" id="check-search">
+                <label for="check-search" class="checkbtn">
+                    <i class="fas fa-search search-icon"></i>
+                </label>
+                <input type="text" class="search-bar" placeholder="Buscar...">
+            </div>
+
+            <div class="carrito-container">
+                <a href="#"><img src="../img/carrito (1).png" class="header_carrito" alt="Carrito"></a>
+                <div class="numero">0</div>
+            </div>
+        </div>
+
+        <nav class="nav-bar">
+            <input type="checkbox" id="check-burger">
+            <label for="check-burger" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul class="nav-bar__menu">
+                <li class="nav-bar__menu-item"><a href="./index.html">Inicio</a></li>
+                <li class="nav-bar__menu-item"><a href="./vistas/calendario.html">Proximos Cursos</a>
+                </li>
+                <li class="nav-bar__menu-item"><a href="./vistas/gift-card.html">Gift Card</a></li>
+                <li class="nav-bar__menu-item"><a href="./vistas/inscripcion-empresa.html">Inscripción
+                        para empresas</a></li>
+                <div class="action-buttons--mobile">
+                    <li class="nav-bar__menu-item"><a href="./vistas/registrarse.html"> Registrarse</a></li>
+                    <li class="nav-bar__menu-item"><a href="./vistas/inicioSesion.html"> Iniciar Sesión</a></li>
+                </div>
+            </ul>
+            <div class="action-buttons">
+                <a href="./vistas/registrarse.html" class="button">Registrarse</a>
+                <a href="./vistas/inicioSesion.html" class="button">Iniciar Sesión</a>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <section class="carrito-section">
+            <h2>Carrito de Compras</h2>
+            <div class="carrito-box">
+                <div class="curso-carrito">
+                    <img src="../img/React.jpg" alt="Imagen del curso">
+                    <div class="curso-detalle">
+                        <h3>Curso de React</h3>
+                        <p>Cantidad de horas: 40</p>
+                        <p>Precio: $60</p>
+                        <a href="../vistas/carritovacio.html" class="eliminar-curso">Eliminar</a>
+                    </div>
+                </div>
+                <div class="total-carrito">
+                    <h3>Total: $60</h3>
+                    <a href="../vistas/comprar-curso.html"><button class="btn-comprar">Proceder al Pago</button></a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-row__box a">
+                    <h4>Grupo 7</h4>
+                    <div class="footer-row__box__integrante">
+                        <p>Dubini, Ivan Nicolas</p>
+                        <p>43.718.732</p>
+                    </div>
+                    <div class="footer-row__box__integrante">
+                        <p>Herrera, Damián Alberto</p>
+                        <p>36.993.121</p>
+                    </div>
+                    <div class="footer-row__box__integrante">
+                        <p>Ramirez Natalia</p>
+                        <p>38.991.925</p>
+                    </div>
+                    <div class="footer-row__box__integrante">
+                        <p>Suarez, Valentina Abigail</p>
+                        <p>46.431.769</p>
+                    </div>
+                </div>
+
+                <div class="footer-row__box b">
+                    <h4>Menu Inferior</h4>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="./vistas/calendario.html">Proximos Cursos</a></li>
+                        <li><a href="./vistas/gift-card.html">Gift Card</a></li>
+                        <li><a href="./vistas/inscripcion-empresa.html">Inscripcion para empresas</a></li>
+                        <li><a href="./vistas/contacto.html">Contactate con nosotros</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-row__box c">
+                    <div class="footer-row--social">
+                        <h4>Seguinos en nuestras redes</h4>
+                        <a href="https://www.facebook.com/udemy/?locale=es_LA" target="_blank"><i class="fab fa-facebook"></i>Facebook</a>
+                        <a href="https://www.youtube.com/channel/UCzw4hbQIePVtyJQzE_F8QDg" target="_blank"><i class="fab fa-youtube"></i>Youtube</a>
+                        <a href="https://www.instagram.com/udemy/?hl=es" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+                        <a href="https://x.com/udemy?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><i class="fa-brands fa-twitter"></i>Twitter / X</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
