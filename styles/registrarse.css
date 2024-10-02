@@ -5,10 +5,9 @@
 }
 
 
-
 .contenedor {
     width: 100%;
-    height: 40%;
+    height: 95vh;
     display: flex;
     position: relative;
    
@@ -24,6 +23,7 @@
     width: 50%;
     max-height: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: center;
    
    
@@ -116,35 +116,37 @@
 
 .contenedor .aside-form img {
    width: 100%;
-   
    object-fit: contain;
    mix-blend-mode: multiply;
   
 }
 
- .contenedor-arrowBack {
-    display: none;
-    position: absolute;
-    top: 20px;
-    left: 40px;
+.spanArrow {
+    height: 5vh;
+    display: inline-flex;
+    width: 100px;
+    padding:10px 0px;
+ 
 }
 
-.contenedor-arrowBack  i{
+.spanArrow i{
     color: #000000;
     font-size: 26px;
 }
 
-.contenedor-arrowBack  a {
+.spanArrow a {
     color: #A435F0;
     font-size: 29px;
+    cursor: pointer;
+  
 } 
 
 
 
-@media  (max-width: 930px) and (min-width: 482px)
+@media  (max-width: 780px) and (min-width: 482px)
 {
 
- 
+    
     .contenedor .aside-form img{
         width: 100%;
       
@@ -160,6 +162,17 @@
     .contenedor .form h2 {
         font-size: 25px;
     }
+    
+ .registrado-p{
+    text-align: center;
+    justify-content: center;
+    height: 25px;
+    font-size: 15px ;
+    margin: 5px 0;
+    width: 100%;
+    background-color: #ecebeb;
+ }
+ 
 }
 
 
@@ -171,6 +184,8 @@
  
         display: flex;
         flex-direction: column;
+        justify-content: center;
+
     }
 
     .contenedor .aside-form {
@@ -182,8 +197,7 @@
 
     .contenedor .contenedor-form {
       width: 100%;
-   
-      justify-content: center;
+      
       
       
     }
@@ -201,14 +215,20 @@
         font-size: 13px;
       }
 
-      .contenedor-arrowBack  i{
-      
+      .contenedor-arrowBack  {
+        top: 2px;
+        left: 5px;
         font-size: 18px;
     }
+    .spanArrow i{
+      
+        font-size: 15px;
+    } 
     
-    .contenedor-arrowBack  a {
-       
-        font-size: 25px;
+    .spanArrow  a {
+        font-weight: bold;
+        left: 0px;
+        font-size: 15px;
     } 
 }
 

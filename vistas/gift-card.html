@@ -42,8 +42,9 @@
                 </div>
             </ul>
             <div class="action-buttons">
-                 <a href="./registrarse.html" class="button">Registrarse</a>
-                 <a href="./inicioSesion.html" class="button">Iniciar Sesión</a>
+                 <a href="./registrarse.html" class="button" id="botonRegistro">Registrarse</a>
+                 <a href="./inicioSesion.html" class="button" id="botonInicioSesion">Iniciar Sesión</a>
+                 <button class=" button buttonCerrarSesion" id="botonCerrarSesion">Cerrar Sesion</button>
             </div>
         </nav>
     </header>
@@ -74,23 +75,23 @@
                         <div class="form__election-color-item caja2">
                             <div class="form__election-color-item-circle caja3">
                                 <label for="color1" class="circle circle1"></label>
-                                <input type="radio" name="color" id="color1" value="color1">
+                                <input type="radio" name="color" id="color1" value="color1" required>
                             </div>                       
                             <div class="form__election-color-item-circle caja3">
                                 <label for="color2" class="circle circle2"></label>
-                                <input type="radio" name="color" id="color2" value="color2">
+                                <input type="radio" name="color" id="color2" value="color2" required>
                             </div>                       
                             <div class="form__election-color-item-circle caja3">
                                 <label for="color3" class="circle circle3"></label>
-                                <input type="radio" name="color" id="color3" value="color3">
+                                <input type="radio" name="color" id="color3" value="color3" required>
                             </div>
                             <div class="form__election-color-item-circle caja3">
                                 <label for="color4" class="circle circle4"></label>
-                                <input type="radio" name="color" id="color4" value="color4">
+                                <input type="radio" name="color" id="color4" value="color4" required>
                             </div>
                             <div class="form__election-color-item-circle caja3">
                                 <label for="color5" class="circle circle5"></label>
-                                <input type="radio" name="color" id="color5" value="color5">
+                                <input type="radio" name="color" id="color5" value="color5" required>
                             </div>
                         </div>
                         
@@ -101,23 +102,23 @@
 
                             <div class="form__election-fontsize-item-number caja3">
                                 <label for="size1" class="size">20px</label>
-                                <input type="radio" name="size" id="size1" value="20">
+                                <input type="radio" name="size" id="size1" value="20" required>
                             </div>                           
                             <div class="form__election-fontsize-item-number caja3">
                                 <label for="size2" class="size">28px</label>
-                                <input type="radio" name="size" id="size2" value="28">
+                                <input type="radio" name="size" id="size2" value="28" required>
                             </div>                
                             <div class="form__election-fontsize-item-number caja3" >
                                 <label for="size3" class="size">32px</label>
-                                <input type="radio" name="size" id="size3" value="32">
+                                <input type="radio" name="size" id="size3" value="32" required>
                             </div>                          
                             <div class="form__election-fontsize-item-number caja3">
                                 <label for="size4" class="size">48px</label>
-                                <input type="radio" name="size" id="size4" value="48">
+                                <input type="radio" name="size" id="size4" value="48" required>
                             </div>                          
                             <div class="form__election-fontsize-item-number caja3">
                                 <label for="size5" class="size">55px</label>
-                                <input type="radio" name="size" id="size5" value="60">
+                                <input type="radio" name="size" id="size5" value="60" required>
                             </div>
                             
                         </div>  
@@ -132,19 +133,19 @@
 
                             <div class="form__election-ubicacion-item-tag caja3">
                                 <label for="ubicacion1" class="square top-left"><div class="price-tag"></div></label>
-                                <input type="radio" name="ubicacion" id="ubicacion1" value="top-left">
+                                <input type="radio" name="ubicacion" id="ubicacion1" value="top-left"  required>
                             </div>                           
                             <div class="form__election-ubicacion-item-tag caja3">
                                 <label for="ubicacion2" class="square top-right"><div class="price-tag"></div></label>
-                                <input type="radio" name="ubicacion" id="ubicacion2" value="top-right">
+                                <input type="radio" name="ubicacion" id="ubicacion2" value="top-right"  required>
                             </div>                           
                             <div class="form__election-ubicacion-item-tag caja3">
                                 <label for="ubicacion3" class="square bottom-left"><div class="price-tag"></div></label>
-                                <input type="radio" name="ubicacion" id="ubicacion3" value="bottom-left">
+                                <input type="radio" name="ubicacion" id="ubicacion3" value="bottom-left"  required>
                             </div>                          
                             <div class="form__election-ubicacion-item-tag caja3">
                                 <label for="ubicacion4" class="square bottom-right"><div class="price-tag"></div></label>
-                                <input type="radio" name="ubicacion" id="ubicacion4" value="bottom-right">
+                                <input type="radio" name="ubicacion" id="ubicacion4" value="bottom-right"  required>
                             </div>           
 
                         </div>                       
@@ -155,29 +156,29 @@
 
                             <div class="form__election-fondo-item-square caja3">
                                 <label for="fondo1"><img src="../img/fondos/fondo1.png" alt="fondo1" class="square"></label>
-                                <input type="radio" name="fondo" id="fondo1" value="fondo1">
+                                <input type="radio" name="fondo" id="fondo1" value="fondo1" required>
                             </div>                            
                             <div class="form__election-fondo-item-square caja3">
-                                <label for="fondo2"><img src="../img/fondos/fondo2.png" alt="fondo2" class="square"></label>
-                                <input type="radio" name="fondo" id="fondo2" value="fondo2">
+                                <label for="fondo2"><img src="../img/fondos/fondo2.png" alt="fondo2" class="square" ></label>
+                                <input type="radio" name="fondo" id="fondo2" value="fondo2" required>
                             </div>                          
                             <div class="form__election-fondo-item-square caja3">
                                 <label for="fondo3"><img src="../img/fondos/fondo3.png" alt="fondo3" class="square"></label>
-                                <input type="radio" name="fondo" id="fondo3" value="fondo3">
+                                <input type="radio" name="fondo" id="fondo3" value="fondo3" required>
                             </div>                          
                             <div class="form__election-fondo-item-square caja3">
                                 <label for="fondo4"><img src="../img/fondos/fondo4.png" alt="fondo4" class="square"></label>
-                                <input type="radio" name="fondo" id="fondo4" value="fondo4">
+                                <input type="radio" name="fondo" id="fondo4" value="fondo4" required>
                             </div>                          
                             <div class="form__election-fondo-item-square caja3">
                                 <label for="fondo5"><img src="../img/fondos/fondo5.png" alt="fondo5" class="square"></label>
-                                <input type="radio" name="fondo" id="fondo5" value="fondo5">
+                                <input type="radio" name="fondo" id="fondo5" value="fondo5" required>
                             </div>                          
 
                         </div>                      
                     </div>
                     <div class="form__election-entrega">
-                        <button type="submit" class="button-form" formaction="../vistas/gift-card-pago.html">Continuar</button>
+                        <button type="submit" class="button-form" id="botonComprar-giftCard">Continuar</button>
                         <a href="../index.html" class="button-form a">Cancelar</a>
                     </div>
                 </form>
@@ -230,5 +231,7 @@
             </div>
         </div>
     </footer>
+    <script src="../js/index.js"></script>
+    <script src="../js/giftCard.js"></script>
 </body>
 </html>

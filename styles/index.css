@@ -190,6 +190,13 @@ h2 {
     display: none;
 }
 
+.action-buttons .buttonCerrarSesion {
+    display: none;
+    width: 120px;
+    cursor: pointer;
+    border: none;
+}
+
 
 
 .slider-container {
@@ -723,7 +730,7 @@ h2 {
     }
 
         
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 7700px) {
     .cursos-destacados-section {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -759,7 +766,9 @@ h2 {
         width: 4em;
      }
   
-
+     .cursos-destacados__info-nombre h3{
+        font-size: 15px ;
+    }
     
 }
 
@@ -835,7 +844,9 @@ h2 {
         }
 
         
-
+        .cursos-destacados__info-nombre h3{
+            font-size: 16px ;
+        }
 
     
 }
