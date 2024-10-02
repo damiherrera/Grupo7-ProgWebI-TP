@@ -3,7 +3,7 @@ const botonRegistro = document.getElementById("botonRegistro");
 const botonCerrarSesion = document.getElementById("botonCerrarSesion");
 const liBotenesResponsive = document.querySelectorAll(".li-botonMobile");
 const liBotonCerrarSesion = document.getElementById("liCerrarSesion");
-const linkVerDetalle = document.querySelectorAll(".ver-detalle");
+const liBotonCerrarSesionResponsive = document.getElementById("liCerrarSesion"); // Se repite, asegurarse de que sea el correcto
 
 // Función que actualiza el estado del usuario
 function actualizarEstadoUsuario() {
@@ -11,44 +11,53 @@ function actualizarEstadoUsuario() {
     
     // Seleccionar todos los botones "Agregar al carrito"
     const botonesAgregarACarrito = document.querySelectorAll('.boton-comprar');
+    const linkVerDetalle = document.querySelectorAll(".ver-detalle");
    
+    linkVerDetalle.forEach(boton => {
+        boton.addEventListener("click", function(event) {
+            event.preventDefault();
+            if (!usuarioLogueado) {
+                window.location.href = "./vistas/registrarse.html"; // Redirigir a registro
+            } else {
+                window.location.href = boton.getAttribute("href");
+            }
+        });
+    });
+    
     botonesAgregarACarrito.forEach(boton => {
         boton.addEventListener("click", function(event) {
             event.preventDefault(); // Prevenir el comportamiento predeterminado
 
             if (usuarioLogueado) {
-                // Si está logueado, redirigir al carrito
-               // Obtener el href del <a> que contiene el botón
-                window.location.href = "./vistas/carrito.html"; // Redirigir a la URL del <a>
+                window.location.href = "./vistas/carrito.html"; // Redirigir al carrito
             } else {
-                // Si no está logueado, redirigir a la página de registro
                 window.location.href = "./vistas/registrarse.html"; // Redirigir a registro
             }
         });
     });
 
     if (usuarioLogueado) {
-        // Si está logueado
-        botonInicioSesion.style.display = "none";
-        botonRegistro.style.display = "none";
-        botonCerrarSesion.style.display = 'flex';
-        liBotenesResponsive.forEach(boton=>{
-            boton.style.display = 'none';
+        // Si está logueado, ocultar botones de inicio y registro, mostrar cerrar sesión (escritorio)
+        if (botonInicioSesion) botonInicioSesion.style.display = "none";
+        if (botonRegistro) botonRegistro.style.display = "none";
+        if (botonCerrarSesion) botonCerrarSesion.style.display = 'flex';
+
+        // Mostrar/ocultar botones para la versión responsive
+        liBotenesResponsive.forEach(boton => {
+            boton.style.display = 'none'; // Ocultar botones de inicio y registro responsive
         });
-        
+        if (liBotonCerrarSesionResponsive) liBotonCerrarSesionResponsive.style.display = 'flex'; // Mostrar cerrar sesión responsive
     } else {
-        // Si no está logueado, mantener visibles los botones de inicio de sesión y registro
-        botonInicioSesion.style.display = "flex";
-        botonRegistro.style.display = "flex";
-        liBotonCerrarSesion.style.display = 'none';
-        linkVerDetalle.forEach(link=>{
-            link.addEventListener("click", function(){
-                window.location.href = '../vistas/registrarse.html'
-            })
-        })
-        
+        // Si no está logueado, mostrar botones de inicio y registro, ocultar cerrar sesión
+        if (botonInicioSesion) botonInicioSesion.style.display = "flex";
+        if (botonRegistro) botonRegistro.style.display = "flex";
+        if (botonCerrarSesion) botonCerrarSesion.style.display = 'none';
 
-
+        // Mostrar/ocultar botones para la versión responsive
+        liBotenesResponsive.forEach(boton => {
+            boton.style.display = 'flex'; // Mostrar botones de inicio y registro responsive
+        });
+        if (liBotonCerrarSesionResponsive) liBotonCerrarSesionResponsive.style.display = 'none'; // Ocultar cerrar sesión responsive
     }
 }
 
