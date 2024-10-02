@@ -258,6 +258,18 @@ input[type="checkbox"] {
     background-color: #f9f9f9;
     margin: 35px;
 }
+.boton-comprarParaMi {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
 
 
 @media screen and (max-width: 768px) {
