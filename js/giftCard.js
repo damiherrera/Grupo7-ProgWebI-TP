@@ -23,3 +23,33 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+
+const viewGift = document.querySelector(".creation .view .view__giftcard");
+
+const inputFondo = document.getElementsByClassName("input-fondo");
+//const fondos = document.getElementsByClassName("square");
+
+const fondoImagen = Array.from(document.querySelectorAll('.fondo-label img')).map(img => img.src);
+const inputFondoArray = Array.from(inputFondo);
+
+
+//console.log("Fondo imágenes:", fondoImagen);
+
+// Agregar el evento de clic a cada input
+inputFondoArray.forEach(input => {
+    input.addEventListener("click", function() {
+        const clickedId = input.id; // Obtener el id del input clickeado
+        
+        // Obtener el índice del input clickeado
+        const index = inputFondoArray.findIndex(i => i.id === clickedId);
+        
+        if (index !== -1) {
+            const selectedImage = fondoImagen[index]; // Obtener la URL de la imagen correspondiente
+            
+            viewGift.style.backgroundImage = `url(${selectedImage})`;
+        } else {
+            console.error("Index not found for clicked ID:", clickedId);
+        }
+    });
+});
