@@ -16,11 +16,8 @@ function actualizarEstadoUsuario() {
     linkVerDetalle.forEach(boton => {
         boton.addEventListener("click", function(event) {
             event.preventDefault();
-            if (!usuarioLogueado) {
-                window.location.href = "./vistas/registrarse.html"; // Redirigir a registro
-            } else {
-                window.location.href = boton.getAttribute("href");
-            }
+            window.location.href = boton.getAttribute("href");
+          
         });
     });
     
