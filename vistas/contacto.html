@@ -62,25 +62,36 @@
 <section class="contact-section">
    
     <div class="contact-section__form">
-    <form class="form">
+    <form class="form" action="" method="GET" id="contact-us">
         <h2>CONTACTANOS</h2>
         <div class="form_input">
             
             
-            <input type="text" name="name" placeholder="Nombre" required>
+            <input type="text" name="name" placeholder="Nombre" id="name">
+            <p id="error-name"></p>
         </div>
         <div class="form_input">
            
-            <input type="text" name="lastname" placeholder="Apellido" required>
+            <input type="text" name="lastname" placeholder="Apellido" id="lastname" >
+            <p id="error-lastname"></p>
         </div>
         <div class="form_input">
             
           
-            <input type="email" name="email" placeholder="E-mail" required/>
+            <input type="tel" name="phone" placeholder="Teléfono"  pattern="\d{4}-?\d{4}" title="Formato: 1234-5678 o 12345678" id="tel"/>
+            <p id="error-tel"></p>
+        </div>
+        <div class="form_input">
+            
+          
+            <input type="email" name="email" placeholder="E-mail" id="email"/>
+            <p id="error-email"></p>
         </div>
         <div class="form_input">
            
-           <textarea placeholder="Escriba su consulta" name="consulta" rows="6" ></textarea>
+           <textarea placeholder="Escriba su consulta" name="consulta" rows="6" maxlength= "1000" id="consulta" ></textarea>
+           <div id="contador">0/1000</div>
+           <p id="error-consulta"></p>
         </div>
           <div class="contenedor-button">
            <button type="submit" class="button_submit">Enviar</button>
@@ -172,6 +183,7 @@
             </div>
         </footer>
         <script src="../js/index.js"></script>
+        <script src="../js/contacto.js" ></script>
 
 </body>
 </html>
