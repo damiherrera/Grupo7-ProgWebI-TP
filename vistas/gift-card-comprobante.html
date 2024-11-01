@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giftcard-pago</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../styles/index.css">
     <link rel="stylesheet" href="../styles/giftcard.css">
-    <link rel="stylesheet" href="../styles/giftcard-pago.css">
+    <link rel="stylesheet" href="../styles/gift-card-comprobante.css">
+    <title>Comprobante</title>
 </head>
 <body>
     <header class="header">
@@ -52,76 +52,35 @@
             </div>
         </nav>
     </header>
-
-    <main class="main-envio">
-        <section class="envio">
-            <div class="envio__monto">
-                <p>Monto:</p>
-                <p>$ <span id="montoAbonar">00000</span></p>
-            </div>
-            <form class="envio__form" method="get" action="../vistas/gift-card-comprobante.html">
-                <div class="envio__form-pago box1">
-                    <img src="../img/tarjeta-logo.png" alt="tarjeta logo" class="img">
-                    <p>Método de pago</p>
-                </div>
-                <div class="envio__form-pago box2">
-                    <div class="envio__form-pago-eleccion box3">
-                        <p>Tarjeta crédito/débito</p>
-                    </div>
-                    <div class="envio__form-pago-tarjeta box2">
-                        <div class="envio__form-pago-tarjeta-item box4">
-                            <div class="envio__form-pago-tarjeta-item-options">
-                                <label for="options"></label>
-                                <select required name="options" id="options" class="text-bar2">
-                                    <option value="" disabled selected hidden>Seleccione una opción</option>
-                                    <option value="option1">Visa</option>
-                                    <option value="option2">Mastercard</option>
-                                    <option value="option3">American Express</option>
-                                </select>
-                            </div>
-                            <div class="envio__form-pago-tarjeta-item-images">
-                                <img src="../img/Visa.png" alt="tarjeta visa" class="tarjeta-img">
-                                <img src="../img/MasterCard.png" alt="tarjeta mastercard" class="tarjeta-img">
-                                <img src="../img/amercianexpress.png" alt="tarjeta amercian express" class="tarjeta-img">
-                            </div>
-                        </div>
-                        <div class="envio__form-pago-tarjeta-item box2">
-                            <div class="envio__form-pago-tarjeta-item-numero box5">
-                                <label for="card">Número de tarjeta</label>
-                                <input type="text"  id="card" required inputmode="numeric" minlength="13" maxlength="19" placeholder="1111 2222 3333 4444" class="text-bar2">
-                            </div>
-                            <div class="envio__form-pago-tarjeta-item-fecha box5">
-                                <label for="fecha">Fecha de expiración</label>
-                                <input type="month" name="fecha" id="fecha" min="2024-01" max="2050-12" required class="text-bar2">
-                            </div>
-                            <div class="envio__form-pago-tarjeta-item-titular box5">
-                                <label for="nombre-titular">Nombre del titular</label>
-                                <input type="text" name="nombre-titular" id="nombre-titular" placeholder="Nombre" required class="text-bar2">
-                            </div>
-                            <div class="envio__form-pago-tarjeta-item-cvv box5">
-                                <label for="cvv">CVV</label>
-                                <input type="password" id="cvv" name="cvv" placeholder="****" minlength="3" maxlength="4" required class="cvv">
-                            </div>
-                        </div>
-                    </div>                   
-                </div>
-
-                <div class="envio__form-email">
-                    <p>Email del destinatario</p>
-                    <div class="envio__form-email-item">
-                        <label for="email"></label>
-                        <input type="email" name="email" id="email" class="text-bar" required>
+    <main class="main">
+        <h1>¡¡Compra completada exitosamente!!</h1>
+        <section class="section">
+            <article class="gift">
+                <div class="muestra muestra-Gift" id="giftcard">
+                    <p class="monto" id="ubicacionMonto">$<span id="monto">0000</span>.-</p>
+                    <div class="texto">
+                        <p class="dedicacion" id="dedicacion">GIFT CARD para</p>
+                        <h2 id="destinatario">Destinatario</h2>
                     </div>
                 </div>
-
-                <div class="envio__form-final">    
-                    <button type="submit" class="button-form">Confirmar</button>
-                    <a href="../vistas/gift-card.html" class="button-form">Cancelar</a>
-                </div>
-            </form>
+            </article>
+            <article class="codigo">
+                <h4>Aquí tienes tu código de gift card</h4> 
+                <h1 id="codigoAleatorio"></h1>
+            </article>
+            <article class="comprobante">
+                <h4>Detalles de la Gift card:</h4>
+                <p>Monto: $<span id="montoTexto">0000</span></p>
+                <p>De parte de: <span id="titular"></span></p>
+                <p>Para: <span id="destinatario-texto"></span></p>
+                <p>Fecha de compra: <span id="fecha"></span></p>
+            </article>
+            <article class="volver">
+                <a href="../index.html" class="volver-inicio button-form">Volver al inicio</a>
+                <a href="../vistas/gift-card.html" class="volver-giftcard button-form">Crear otra Giftcard</a>
+            </article>
         </section>
     </main>
-    
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-row">
@@ -169,6 +128,6 @@
         </div>
     </footer>
     <script src="../js/index.js"></script>
-    <script src="../js/giftCard-pago.js"></script>
+    <script src="../js/giftCard-comprobante.js"></script>
 </body>
 </html>

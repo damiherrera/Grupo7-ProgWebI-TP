@@ -26,7 +26,7 @@
   
    
 }
-.creation .view .view__giftcard{
+.creation .view .view__giftcard, .muestra{
     width: 100%;
     height: 90%;
     display: flex;
@@ -40,7 +40,7 @@
     align-items: center;
     justify-content: center;
 }
-.creation .view .view__giftcard .view__giftcard-price{
+.creation .view .view__giftcard .view__giftcard-price, .monto{
     padding: 2%;
     font-size: 1rem;
     align-self: flex-end;
@@ -49,16 +49,16 @@
     position: absolute;
     top: 0%;
 }
-.creation .view .view__giftcard .view__giftcard-text{
+.creation .view .view__giftcard .view__giftcard-text, .texto{
     display: flex;
     flex-direction: column;
 }
-.creation .view .view__giftcard .view__giftcard-text-dedicacion{
+.creation .view .view__giftcard .view__giftcard-text-dedicacion, .dedicacion{
     align-self: center;
     font-size: 1rem;
     color: #000000;
 }
-.creation .view .view__giftcard .view__giftcard-text-destinatario{
+.creation .view .view__giftcard .view__giftcard-text-destinatario, .destinatario{
     align-self: center;
     color: #000000;
     font-size: 2.5rem;
