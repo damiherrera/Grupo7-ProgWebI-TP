@@ -56,34 +56,32 @@
             <section class="inscripcion">
                 <form action="../index.html" method="get" class="form">
                     <div class="titulos">                    <!--nombre placeholder, cambiar en otro momento-->
-                        <h2>CURSO DE EJEMPLO</h2>
-                        <h3>INSCRIPCION</h3>
-                        <p>Complete los campos con los datos requeridos</p>
+                        
                     </div>
 
                     <div class="form-row">
                         <input type="text" class="form-row__input" name="nombre" id="nombre" placeholder="Nombre" required>
                         <input type="text" class="form-row__input" name="apellido" id="Apellido" placeholder="Apellido" required>
                         <input type="text" class="form-row__input" name="dni" id="dni" placeholder="Documento" required>
-                        <button type="button" class="btn-round" alt="Eliminar fila"> - </button>
+                        <button type="button" class="js-delete-row btn-round" alt="Eliminar fila"> - </button>
                     </div>
 
                     <div class="form-row">
                         <input type="text" class="form-row__input" name="nombre" id="nombre" placeholder="Nombre">
                         <input type="text" class="form-row__input" name="apellido" id="Apellido" placeholder="Apellido">
                         <input type="text" class="form-row__input" name="dni" id="dni" placeholder="Documento">
-                        <button type="button" class="btn-round" alt="Eliminar fila"> - </button>
+                        <button type="button" class="js-delete-row btn-round" alt="Eliminar fila"> - </button>
                     </div>
                     
                     <div class="form-row">
                         <input type="text" class="form-row__input" name="nombre" id="nombre" placeholder="Nombre">
                         <input type="text" class="form-row__input" name="apellido" id="Apellido" placeholder="Apellido">
                         <input type="text" class="form-row__input" name="dni" id="dni" placeholder="Documento">
-                        <button type="button" class="btn-round" alt="Boton de Eliminar fila"> - </button>
+                        <button type="button" class="js-delete-row btn-round" alt="Boton de Eliminar fila"> - </button>
                     </div>
                     
                     <div class="form-row__add">
-                        <button type="button" class="btn-round" alt="Boton de Anadir persona"> + </button>
+                        <button type="button" class="js-add-row btn-round" alt="Boton de Anadir persona" onclick="addInfoRow()"> + </button>
                         <p>Agregar Persona</p> 
                     </div>p
 
@@ -142,5 +140,6 @@
             </div>
         </footer>
         <script src="../js/index.js"></script>
+        <script src="../js/inscripcion-empresa.js"></script>
     </body>
 </html>

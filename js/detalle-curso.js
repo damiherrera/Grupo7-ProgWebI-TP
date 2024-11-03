@@ -369,6 +369,17 @@ function displayCurso() {
             </div> `;
     }
 
+    if (curso) {
+        const botonesDetalleCurso = document.querySelector(".botones-detalle-curso");
+        
+        botonesDetalleCurso.innerHTML = `
+        <a href="../vistas/carrito.html"><input class="boton-comprarParaMi" type="button" value="Comprar"
+                    id="boton-comprar"></a>
+            <a href="../vistas/inscripcion-empresa.html?idCurso=${curso.idCurso}"><input class="boton-inscripcion-empresa" type="button"
+                    value="Inscribirse" id="inscripcion-empresa"></a>
+        `
+    }
+
 }
 //Se genera el array  para las 4 tarjetas de cursos relacionados
 function generarCursosRelacionados() {
@@ -397,8 +408,10 @@ function displayCursosRelacionados() {
     cursosRelacionados.forEach((curso) => {
         const cursoCard = document.createElement("div");
         cursoCard.classList.add("cursos-destacados__container");
-        cursoCard.innerHTML = `
-        <img src="${curso.imagen}" alt="Curso 1">
+
+        if (curso.modalidad === 'Virtual') {
+            cursoCard.innerHTML = `
+            <img src="${curso.imagen}" alt="Curso 1">
                 <span class="precio">USD ${curso.precio}</span>
                 <span class="modalidad">${curso.modalidad}</span>
                 <div class="cursos-destacados__info">
@@ -409,6 +422,22 @@ function displayCursosRelacionados() {
                     </div>
                 </div>`;
         cursosRelacionadosSection.appendChild(cursoCard);
+        } else {
+            cursoCard.innerHTML = `
+            <img src="${curso.imagen}" alt="Curso 1">
+                <span class="precio">USD ${curso.precio}</span>
+                <span class="modalidad">${curso.modalidad}</span>
+                <div class="cursos-destacados__info">
+                    <div class="cursos-destacados__info-nombre">
+                        <h3><span class="horas">${curso.duracion}</span>${curso.nombreCurso}</h3>
+                        <a href="../vistas/detalle-curso.html?idCurso=${curso.idCurso}">Ver detalles</a>
+                        <a href="../vistas/inscripcion-empresa.html?idCurso=${curso.idCurso}"><input class="boton-comprar" type="button" value="Inscribirse" id="boton-comprar"></a>
+                    </div>
+                </div>`;
+        cursosRelacionadosSection.appendChild(cursoCard);
+        }
+
+        
     });
 }
 

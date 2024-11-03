@@ -8,8 +8,8 @@
     margin-bottom: 1em;
 }
 
-.titulos h2{
-    margin: .2em 0;
+.titulos h1{
+    margin: .3em 0;
 }
 
 .form{
@@ -101,5 +101,7 @@
 .form__end a{
     margin-left: 2em ;
 }
+
+
 
 
