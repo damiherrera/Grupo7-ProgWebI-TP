@@ -362,6 +362,17 @@ function displayCurso() {
             </div> `;
     }
 
+    if (curso) {
+        const botonesDetalleCurso = document.querySelector(".botones-detalle-curso");
+        
+        botonesDetalleCurso.innerHTML = `
+        <a href="../vistas/carrito.html"><input class="boton-comprarParaMi" type="button" value="Comprar"
+                    id="boton-comprar"></a>
+            <a href="../vistas/inscripcion-empresa.html?idCurso=${curso.idCurso}"><input class="boton-inscripcion-empresa" type="button"
+                    value="Inscribirse" id="inscripcion-empresa"></a>
+        `
+    }
+
 }
 //Se genera el array  para las 4 tarjetas de cursos relacionados
 function generarCursosRelacionados() {
