@@ -6,11 +6,15 @@ function getCursosOfrecidos() {
     return JSON.parse(cursosOfrecidos);
 }
 
+function obtenerCursoPorId(idCurso) {
+    const cursosOfrecidos = getCursosOfrecidos();
+    return cursosOfrecidos.cursos.find(curso => curso.idCurso === idCurso);
+}
+
 function displayCursoInscripcion(){
     const url = new URL(location.href);
     const idCurso = parseInt(url.searchParams.get("idCurso"));
-    const cursosOfrecidos = getCursosOfrecidos();
-    const curso = cursosOfrecidos.cursos.find(curso => curso.idCurso === idCurso);
+    const curso = obtenerCursoPorId(idCurso);
 
     if (curso) {
         const titulo = document.querySelector(".titulos")
