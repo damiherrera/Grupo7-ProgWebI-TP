@@ -146,6 +146,7 @@ const cursosOfrecidos = {
 localStorage.setItem("cursosOfrecidos", JSON.stringify(cursosOfrecidos));
 displayCurso();
 displayCursosRelacionados();
+mostrarBoton();
 
 function getCursosOfrecidos() {
     const cursosOfrecidos = localStorage.getItem("cursosOfrecidos");
@@ -337,10 +338,6 @@ function displayCurso() {
                         </div>
                     </details>
                 </div>
-                <div class="botones-detalle-curso">
-                    <a href="../vistas/carrito.html"><input class="boton-comprarParaMi" type="button" value="Comprar para mí" id="boton-comprar"></a>
-                    <a href="../vistas/inscripcion-empresa.html"><input class="boton-inscripcion-empresa" type="button" value="Inscripcion para empresas" id="inscripcion-empresa"></a>
-                </div>
             </div> `;
     }
 
@@ -382,7 +379,6 @@ function generarCursosRelacionados() {
             cursosRelacionados.push(cursoSeleccionado);
         }
     }
-    console.log(cursosRelacionados);
     return cursosRelacionados;
 }
 
@@ -396,7 +392,7 @@ function displayCursosRelacionados() {
         cursoCard.classList.add("cursos-destacados__container");
         cursoCard.innerHTML = `
         <img src="${curso.imagen}" alt="Curso 1">
-                <span class="precio">${curso.precio}</span>
+                <span class="precio">USD ${curso.precio}</span>
                 <span class="modalidad">${curso.modalidad}</span>
                 <div class="cursos-destacados__info">
                     <div class="cursos-destacados__info-nombre">
@@ -408,3 +404,26 @@ function displayCursosRelacionados() {
         cursosRelacionadosSection.appendChild(cursoCard);
     });
 }
+
+function obtenerCursoPorId(idCurso) {
+    const cursosOfrecidos = getCursosOfrecidos();
+    return cursosOfrecidos.cursos.find(curso => curso.idCurso === idCurso);
+}
+
+//se determina si se muestra boton comprar o boton inscribirse
+function mostrarBoton(){
+    const url = new URL (location.href);
+    const idCurso = parseInt(url.searchParams.get("idCurso"));
+    const curso = obtenerCursoPorId(idCurso);
+
+    const botonComprar = document.getElementById("boton-comprar");
+    const botonInscribirse = document.getElementById("inscripcion-empresa");
+
+    if(curso.modalidad === "Virtual"){
+        botonComprar.style.display="flex";
+    } else if(curso.modalidad === "Presencial"){
+        botonInscribirse.style.display="flex";
+    }
+}
+
+

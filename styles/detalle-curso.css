@@ -181,12 +181,25 @@ input[type="checkbox"] {
 
 .botones-detalle-curso{
     display: flex;
-    width: 60%;
+    width: 100vw;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
 }
-
+.boton-comprarParaMi {
+    display: none;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
 .boton-inscripcion-empresa {
+    display: none;
     padding: 10px 20px;
     background-color: #a613e6;
     color: white;
@@ -258,18 +271,7 @@ input[type="checkbox"] {
     background-color: #f9f9f9;
     margin: 35px;
 }
-.boton-comprarParaMi {
-    padding: 10px 20px;
-    background-color: #28a745;
-    color: white;
-    text-align: center;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-}
+
 
 
 @media screen and (max-width: 768px) {
