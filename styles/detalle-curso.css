@@ -186,7 +186,7 @@ input[type="checkbox"] {
     justify-content: center;
 }
 .boton-comprarParaMi {
-    display: none;
+    display: flex;
     padding: 10px 20px;
     background-color: #28a745;
     color: white;
@@ -199,7 +199,7 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 .boton-inscripcion-empresa {
-    display: none;
+    display: flex;
     padding: 10px 20px;
     background-color: #a613e6;
     color: white;

@@ -148,8 +148,8 @@ localStorage.setItem("cursosOfrecidos", JSON.stringify(cursosOfrecidos));
 
 const modal = document.getElementById("modal");
 const span = document.getElementsByClassName("cerrar")[0];
-const botonComprar = document.getElementById("boton-comprar");
-const botonInscribirse = document.getElementById("inscripcion-empresa");
+const botonComprar = document.getElementsByClassName("boton-comprarParaMi");
+const botonInscribirse = document.getElementsByClassName("boton-inscripcion-empresa");
 
 displayCurso();
 displayCursosRelacionados();
@@ -369,16 +369,6 @@ function displayCurso() {
             </div> `;
     }
 
-    if (curso) {
-        const botonesDetalleCurso = document.querySelector(".botones-detalle-curso");
-        
-        botonesDetalleCurso.innerHTML = `
-        <a href="../vistas/carrito.html"><input class="boton-comprarParaMi" type="button" value="Comprar"
-                    id="boton-comprar"></a>
-            <a href="../vistas/inscripcion-empresa.html?idCurso=${curso.idCurso}"><input class="boton-inscripcion-empresa" type="button"
-                    value="Inscribirse" id="inscripcion-empresa"></a>
-        `
-    }
 
 }
 //Se genera el array  para las 4 tarjetas de cursos relacionados
@@ -452,12 +442,20 @@ function mostrarBoton() {
     const idCurso = parseInt(url.searchParams.get("idCurso"));
     const curso = obtenerCursoPorId(idCurso);
 
+    const botonContainer = document.querySelector(".botones-section");
+    botonContainer.innerHTML = "";
 
     if (curso.modalidad === "Virtual") {
-        botonComprar.style.display = "flex";
+        botonContainer.innerHTML = `
+        <a href="../vistas/carrito.html"><input class="boton-comprarParaMi" type="button" value="Comprar"
+                    id="boton-comprar"></a>`;
+
     } else if (curso.modalidad === "Presencial") {
-        botonInscribirse.style.display = "flex";
+        botonContainer.innerHTML = `
+        <a href="../vistas/inscripcion-empresa.html"><input class="boton-inscripcion-empresa" type="button"
+                    value="Inscribirse" id="inscripcion-empresa"></a>`;
     }
+
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -465,6 +463,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const span = document.getElementsByClassName("cerrar")[0];
     const botonComprar = document.getElementById("boton-comprar");
     const botonInscribirse = document.getElementById("inscripcion-empresa");
+    
 
     // Definir la URL de redirección
     let redireccionURL = "";
