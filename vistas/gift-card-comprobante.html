@@ -10,50 +10,9 @@
     <title>Comprobante</title>
 </head>
 <body>
-    <header class="header">
-        <div class="header-container">
-            <a class="header-logo-container" href="../index.html"><img src="../img/logoUdemy.png" class="header_logo" alt="Logo"></a>
-            <div class="search-container">
-                <input type="checkbox" id="check-search">
-                <label for="check-search" class="checkbtn">
-                    <i class="fas fa-search search-icon"></i>
-                </label>
-                <input type="text" class="search-bar" placeholder="Buscar...">
-            </div>
-
-            <div class="carrito-container">
-                <a href="./carritovacio.html"><img src="../img/carrito (1).png" class="header_carrito" alt="Carrito"></a>
-                <div class="numero">0</div>
-            </div>
-        </div>
-
-        <nav class="nav-bar">
-            <input type="checkbox" id="check-burger">
-            <label for="check-burger" class="checkbtn">
-                <i class="fas fa-bars"></i>
-            </label>
-            <ul class="nav-bar__menu">
-                <li class="nav-bar__menu-item"><a  href="../index.html">Inicio</a></li>
-                <li class="nav-bar__menu-item"><a  href="../vistas/calendario.html">Proximos Cursos</a>
-                </li>
-                <li class="nav-bar__menu-item"><a  href="../vistas/gift-card.html">Gift Card</a></li>
-                <li class="nav-bar__menu-item"><a  href="../index.html#cursos-destacados">Cursos Destacados</a></li>
-                <div class="action-buttons--mobile">
-                    <li class="nav-bar__menu-item li-botonMobile" ><a href="../vistas/registrarse.html"> Registrarse</a></li>
-                    <li class="nav-bar__menu-item li-botonMobile"><a href="../vistas/inicioSesion.html"> Iniciar Sesión</a></li>
-                    <li class="nav-bar__menu-item" id= "liCerrarSesion" ><a href="../vistas/registrarse.html"> Cerrar Sesion</a></li>
-                    
-                </div>
-            </ul>
-            <div class="action-buttons">
-                 <a href="./vistas/registrarse.html" class="button" id="botonRegistro">Registrarse</a>
-                 <a href="./vistas/inicioSesion.html" class="button" id = "botonInicioSesion">Iniciar Sesión</a>
-                 <button class="button buttonCerrarSesion" id="botonCerrarSesion" >Cerrar Sesion</button>
-            </div>
-        </nav>
-    </header>
+    
     <main class="main">
-        <h1>¡¡Compra completada exitosamente!!</h1>
+        <h1 class="titulo">¡¡Pago completado exitosamente!!</h1>
         <section class="section">
             <article class="gift">
                 <div class="muestra muestra-Gift" id="giftcard">
@@ -65,15 +24,22 @@
                 </div>
             </article>
             <article class="codigo">
-                <h4>Aquí tienes tu código de gift card</h4> 
+                <h4>Aquí tienes el código de Gift Card</h4> 
                 <h1 id="codigoAleatorio"></h1>
             </article>
             <article class="comprobante">
-                <h4>Detalles de la Gift card:</h4>
-                <p>Monto: $<span id="montoTexto">0000</span></p>
-                <p>De parte de: <span id="titular"></span></p>
-                <p>Para: <span id="destinatario-texto"></span></p>
-                <p>Fecha de compra: <span id="fecha"></span></p>
+                <h4>Detalles de la Gift Card:</h4>
+                <div class="linea"></div>
+                <div class="detalle">
+                    <div class="dato-1">
+                        <p><strong>Monto: </strong><span id="montoTexto">0000</span></p>
+                        <p><strong>Fecha de compra:</strong> <span id="fecha"></span></p>
+                    </div>
+                    <div class="dato-2">
+                        <p><strong>Para: </strong><span id="destinatario-texto"></span></p>    
+                        <p><strong>De parte de:</strong> <span id="titular"></span></p>   
+                    </div>                               
+                </div>  
             </article>
             <article class="volver">
                 <a href="../index.html" class="volver-inicio button-form">Volver al inicio</a>
@@ -81,52 +47,7 @@
             </article>
         </section>
     </main>
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-row">
-                <div class="footer-row__box a">
-                    <h4>Grupo 7</h4>
-                    <div class="footer-row__box__integrante">
-                        <p>Dubini, Ivan Nicolas</p>
-                        <p>43.718.732</p>
-                    </div>
-                    <div class="footer-row__box__integrante">
-                        <p>Herrera, Damián Alberto</p>
-                        <p>36.993.121</p>
-                    </div>
-                    <div class="footer-row__box__integrante">
-                        <p>Ramirez Natalia</p>
-                        <p>38.991.925</p>
-                    </div>
-                    <div class="footer-row__box__integrante">
-                        <p>Suarez, Valentina Abigail</p>
-                        <p>46.431.769</p>
-                    </div>
-                </div>
-
-                <div class="footer-row__box b">
-                    <h4>Menu Inferior</h4>
-                    <ul>
-                        <li><a href="../index.html">Inicio</a></li>
-                        <li><a href="../vistas/calendario.html">Proximos Cursos</a></li>
-                        <li><a href="../vistas/gift-card.html">Gift Card</a></li>
-                        <li><a href="../index.html#cursos-destacados">Cursos Destacados</a></li>
-                        <li><a href="../vistas/contacto.html">Contactate con nosotros</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-row__box c">
-                    <div class="footer-row--social">
-                        <h4>Seguinos en nuestras redes</h4>
-                        <a href="https://www.facebook.com/udemy/?locale=es_LA" target="_blank"><i class="fab fa-facebook"></i>Facebook</a>
-                        <a href="https://www.youtube.com/channel/UCzw4hbQIePVtyJQzE_F8QDg" target="_blank"><i class="fab fa-youtube"></i>Youtube</a>
-                        <a href="https://www.instagram.com/udemy/?hl=es" target="_blank"><i class="fab fa-instagram" target="_blank"></i>Instagram</a>
-                        <a href="https://x.com/udemy?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><i class="fa-brands fa-twitter"></i>Twitter / X</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    
     <script src="../js/index.js"></script>
     <script src="../js/giftCard-comprobante.js"></script>
 </body>

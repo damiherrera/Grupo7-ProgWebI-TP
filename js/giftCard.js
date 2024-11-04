@@ -11,7 +11,27 @@ document.addEventListener("DOMContentLoaded", function() {
         if (form.checkValidity()) {
             // Si el formulario es válido, redirigir según el estado de login
             if (usuarioLogueado) {
-                // Si el usuario está logueado, redirigir a la página de pago de gift cards
+                // Si el usuario está logueado, redirigir a la página de pago de gift cards y guardar los datos
+                    let montoTotal = montoEstablecido.value;
+                    let color = destinatarioVisualizacion.style.color;
+                    let fondo = viewGift.style.backgroundImage;
+                    let tamanio = destinatarioVisualizacion.style.fontSize;
+                    let dedicatoriaColor = dedicatoria.style.color;
+                    let right = ubicacionVisualizacion.style.right;
+                    let left = ubicacionVisualizacion.style.left;
+                    let bottom = ubicacionVisualizacion.style.bottom;
+                    let top = ubicacionVisualizacion.style.top;
+
+                    sessionStorage.setItem("montoTotal", montoTotal);
+                    sessionStorage.setItem("destinatario", destinatarioNombre.value);
+                    sessionStorage.setItem("colorFuente", color);
+                    sessionStorage.setItem("fondo", fondo);
+                    sessionStorage.setItem("tamanioFuente", tamanio);
+                    sessionStorage.setItem("colorDedicatoria", dedicatoriaColor);
+                    sessionStorage.setItem("top", top);
+                    sessionStorage.setItem("right", right);
+                    sessionStorage.setItem("bottom", bottom);
+                    sessionStorage.setItem("left", left);
                 window.location.href = "../vistas/gift-card-pago.html";
             } else {
                 // Si el usuario no está logueado, redirigir a la página de registro
@@ -180,32 +200,3 @@ function cambiarColorDedicatoria(){
         dedicatoria.style.color = "#000000";
     }
 }
-
-
-//Datos guardados en sessionStorge
-const formulario = document.getElementById("formGiftcard");
-
-formulario.addEventListener("submit", function(event){
-    event.preventDefault()
-    let color = destinatarioVisualizacion.style.color;
-    let fondo = viewGift.style.backgroundImage;
-    let tamanio = destinatarioVisualizacion.style.fontSize;
-    let dedicatoriaColor = dedicatoria.style.color;
-    let right = ubicacionVisualizacion.style.right;
-    let left = ubicacionVisualizacion.style.left;
-    let bottom = ubicacionVisualizacion.style.bottom;
-    let top = ubicacionVisualizacion.style.top;
-
-    sessionStorage.setItem("montoTotal", montoEstablecido.value);
-    sessionStorage.setItem("destinatario", destinatarioNombre.value);
-    sessionStorage.setItem("colorFuente", color);
-    sessionStorage.setItem("fondo", fondo);
-    sessionStorage.setItem("tamanioFuente", tamanio);
-    sessionStorage.setItem("colorDedicatoria", dedicatoriaColor);
-    sessionStorage.setItem("top", top);
-    sessionStorage.setItem("right", right);
-    sessionStorage.setItem("bottom", bottom);
-    sessionStorage.setItem("left", left);
-
-    window.location.href = "../vistas/gift-card-pago.html";
-})
