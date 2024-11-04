@@ -65,3 +65,41 @@ botonCerrarSesion.addEventListener("click", function(event){
 
 // Llamar a la función para establecer el estado al cargar la página
 actualizarEstadoUsuario();
+
+//Carrusel
+const arrowLeft = document.querySelector(".arrow-left");
+const arrowRight = document.querySelector(".arrow-right");
+const slider = document.getElementById("slider");
+const imagenes = document.querySelectorAll(".carrusel-item");
+
+setInterval (moverHaciaLaDerecha, 3000);
+
+arrowRight.addEventListener("click", moverHaciaLaDerecha);
+let operacion = 0;
+let contador = 0;
+let tamanioImagen = 100/imagenes.length;
+function moverHaciaLaDerecha() {
+    if(contador >= imagenes.length - 1){
+        contador = 0; //Se reinicia el contador y me muestra la primera posicion
+        operacion = 0;
+        slider.style.transform = `translate(-${operacion}%)`;
+        return;
+    }
+    contador++;
+    operacion += tamanioImagen
+    slider.style.transform = `translate(-${operacion}%)`
+    slider.style.transition = "all ease.5s"
+};
+arrowLeft.addEventListener("click", moverHaciaLaIzquierda);
+function moverHaciaLaIzquierda() {
+    contador--;
+    if(contador < 0){
+        contador = imagenes.length - 1; //Me devuelve la ultima posicion
+        operacion = tamanioImagen * (imagenes.length - 1); //Me devuelve la ultima posicion segun el tamaño del contenedor
+        slider.style.transform = `translate(-${operacion}%)`;
+        return;
+    }
+    operacion -= tamanioImagen;
+    slider.style.transform = `translate(-${operacion}%)`
+    slider.style.transition = "all ease.5s"
+};
