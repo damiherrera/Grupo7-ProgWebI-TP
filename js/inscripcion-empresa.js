@@ -26,6 +26,8 @@ function displayCursoInscripcion(){
             <p>Complete los campos con los datos requeridos</p>
         `
     }
+    
+    calcularMontoTotal();
 }
 
 //tldr; Asigna el evento a todos los botones de borrado que haya, esta como onclick() en el html
@@ -34,7 +36,10 @@ function assignDeleteButtonEvent(){
 
     //por cada instancia del boton delete que recorra le agrega como evento la funcion para borrar la fila
     deletionButtons.forEach(button => {
-        button.addEventListener("click", deleteInfoRow)});
+        button.addEventListener("click", deleteInfoRow)
+    });
+
+    calcularMontoTotal();
 }
 
 // "event: objeto del evento que el navegador pasa automáticamente a la función cuando se ejecuta."
@@ -56,6 +61,8 @@ function deleteInfoRow(event) {
     } else {
         clearInput(row, inputField);
     }
+
+    calcularMontoTotal();
 }
 
 // Limpia el campo input del contenedor al que pertenezca
@@ -82,6 +89,19 @@ function addInfoRow() {
     //Inserta a newInfoRow antes/detras del div .form-row__add
     form.insertBefore(newInfoRow, form.querySelector(".form-row__add"));
     assignDeleteButtonEvent();
+}
+
+// Funcion temporal, tal vez cambiar cuando vea que hacer con las personas a registrar                          <<<<<===========!!!!!!!!!!
+function calcularMontoTotal(){
+    const url = new URL(location.href);
+    const idCurso = parseInt(url.searchParams.get("idCurso"));
+    const curso = obtenerCursoPorId(idCurso);
+    const calcularMontoTotal = document.querySelector('.js-monto-total');
+    const cantidadAnotados = document.querySelectorAll('.form-row').length;
+
+    calcularMontoTotal.innerHTML = `
+    <b>Monto total = ${curso.moneda} $${curso.precio*cantidadAnotados}</b>
+    `
 }
 
 function closeModalResumen() {

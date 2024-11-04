@@ -100,20 +100,44 @@
     margin: 1em;
 }
 
-.form-row__add p, .form__end p{
+.form-row__add p{
     padding: 0 1em;
+}
+
+.form__end {
+    gap: 1em;
+    margin-bottom: 2em;
 }
 
 .form__end a{
     margin-left: 2em ;
 }
 
-.form__end {
-    gap: 1em;
+.monto {
+    display: inherit;
+}
+
+.js-monto-total{
+    background-color: rgb(34, 167, 22);
+    color: white;
+    user-select: none;
+    text-wrap: nowrap;
+    border-radius: 3px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border: 1px solid rgb(39, 189, 49);
+    border-right-style: none;
+    padding: .3em;
 }
 
 .js-alert-text {
     color: red;
+    text-wrap: nowrap;
+}
+
+.js-end-form.modal {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
 }
 
 .js-modal{
@@ -141,7 +165,7 @@
     padding: 1.5em;
 }
 
-.modal-content .added-info{
+.modal-content.added-info{
 
 }
 
