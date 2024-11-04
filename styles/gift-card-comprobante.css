@@ -1,41 +1,86 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2em 10%;
+    background-color: #faf0ffc7;
+}
 .main{
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    align-items: center;
-    padding: 3% 20%;
+    width: fit-content;
+    padding: 1em;
     gap: 1em;
+    box-shadow: 0.1em 0.1em 5px rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+}
+.titulo{
+    color: #A435F0;
+}
+#destinatario{
+    text-align: center;
+    background: none;
+    padding: 0;
 }
 .section{
     display: flex;
     flex-direction: column;
     gap: 1em;
+    align-items: center;
 }
-#destinatario{
-    padding: 0;
-    background: none;
-}
-.gift{
-    width: 20em;
+.gift{ 
+    display: flex;
+    justify-content: center;
 }
 .muestra-Gift{
-    height: 12.5em;
+    width: 21em; 
+    height: 15em;
 }
 .codigo{
     display: flex;
     align-items: center;
     flex-direction: column;
     margin-bottom: 1em;
-    gap: 0.3em;
+    gap: 0.4em;
 }
-.comprobante{
+#codigoAleatorio{
+    font-size: 2.5em;
+    color: #A435F0;
+    text-shadow: 0em 0em 0.1em rgba(0, 0, 0, 0.3);
+}
+.comprobante{ 
     display: flex;
-    align-items: flex-start;
     flex-direction: column;
-    margin-bottom: 1em;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em; 
+    margin-bottom: 0.5em;
+}
+.detalle{
+    display: flex;
+    justify-content: space-between;
+    gap: 0 3em;
 }
 .volver{
     display: flex;
     justify-content: center;
-    gap: 0.5em;
+    gap: 0.6em;
+}
+.linea{
+    width: 100%;
+    height: 0.1em;
+    background-color: rgba(31, 31, 31, 0.308);
+}
+
+@media(max-width:425px){
+    body{
+        background: none;
+    }
+    .main{
+        box-shadow: none;
+    }
+    .titulo{
+        text-align: center;
+    }
 }

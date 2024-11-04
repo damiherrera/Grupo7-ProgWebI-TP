@@ -4,27 +4,29 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 .main{
+    padding: 5% 15%; 
+    box-sizing: border-box;
     display: flex;
-    padding-bottom: 3em;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
 }
 .creation{
-    width: 80% ;
-    margin: 0% 10%;
+    width: 100%;
+    max-width: 100%;
     display: flex;
-    justify-content: center;
-    padding: 50px 50px;
-    gap: 4em;
+    justify-content: space-between; 
+    gap: 5%;
    
 }
 
 /*---Vista GIFT CARD---*/
 .creation .view{
-    width: 60%;
     display: flex;
     flex-direction: column;
     gap: 1em;
-  
-   
+    width: 100%;
+    max-width: 100%;
 }
 .creation .view .view__giftcard, .muestra{
     width: 100%;
@@ -35,7 +37,7 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     border: 2px outset #4074C9 ;
-    border-radius: 5px;
+    border-radius: 0.3em;
     position: relative;
     align-items: center;
     justify-content: center;
@@ -43,7 +45,6 @@
 .creation .view .view__giftcard .view__giftcard-price, .monto{
     padding: 2%;
     font-size: 1rem;
-    align-self: flex-end;
     background-color: #000000;
     color: #ffffff;
     position: absolute;
@@ -52,6 +53,7 @@
 .creation .view .view__giftcard .view__giftcard-text, .texto{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 .creation .view .view__giftcard .view__giftcard-text-dedicacion, .dedicacion{
     align-self: center;
@@ -66,7 +68,6 @@
     padding: 0%;
 }
 .creation .view .view__text{
-    align-self: center;
     text-align: center;
     text-transform: uppercase;
 }
@@ -75,6 +76,7 @@
 
 .creation .form{
     width: 40%;
+    max-width: 100%;
     font-weight: bold;
     display: flex;
     flex-direction: column;
@@ -86,6 +88,8 @@
     display: flex;
     flex-direction: column;
     gap: 1em;
+    width: 100%;
+    max-width: 100%;
   }
 .creation .form .form__election .form__election-destinatario{
     display: flex;
@@ -96,10 +100,15 @@
     display: flex;
     flex-direction: column;
     gap: 0.5em; 
+    width: 100%;
+    max-width: 100%;
 }
 .caja2{
     display: flex;
-    gap: 1em;
+    gap: 0.5em;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
 }
 .caja3{
     display: flex;
@@ -221,199 +230,58 @@
 
 /*RESPONVE, QUERIES */
        
-@media  (max-width: 830px) and (min-width: 481px) {
-    .creation {
-        margin: 0 0;
-        width: 100%;
-       
+@media (max-width: 1024px) {
+    .main{
+        padding: 5% 10%;
     }
-    
- .creation .view{
-     width: 48%;
-     margin-right: 2%;
-      
-      
-  }
-  .creation .view .view__giftcard{
-      width: 100%;
-      background-size: 100% 100%;
-    
-  }
-  
-  .creation .form {
-     width: 48%;
-     margin-left: 2%;
-     font-size: 12px;
-     
-  }
-  
-}
-       
-@media  (max-width: 680px) and (min-width: 481px) {
-    .creation {
-        gap:0;
-    }
-    .creation .view{
-        margin-right: 1%;
-        width:49%;
-        
-    }
-
     .creation .view .view__giftcard{
-        width: 100%;
         height: 70%;
-        background-size: 100% 100%;
-        background-position:center;
-        
-       
     }
-   
-    .view__text {
-        font-size: 15px;
-    }
-    .creation .view .view__giftcard .view__giftcard-text-destinatario {
-        font-size: 25px;
-    }
+}
 
+@media (max-width: 768px) {
+    .square{
+        width: 3em;
+        height: 2.3em;
+    }
+    .creation .view .view__giftcard{
+        height: 50%;
+    }
     .creation .form {
-       width: 48%;
-       margin-left: 2%;
-       font-size: 9px;
+    width: 80%;
+    max-width: 100%;
     }
-    .caja2 {
-        gap: 0.3em;
+}
+
+@media (max-width:550px) {
+    .creation{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr;
     }
-    
-    .caja2 .form__election-fondo-item-square .square  {
-       width: 35px;
-       height: auto;
-       
+    .creation .view .view__giftcard{
+        height: 15em;
     }
-    .form__election-price .price-tag {
-        font-size: 9px;
+    .form__election-fondo-item{
+        display: flex;
+        flex-wrap: wrap;
     }
-    .text-bar {
-        width: 10px;
+    .creation .form {
+        width: 100%;
+        max-width: 100%;
+        }
+}
+@media (max-width:375px){
+    .creation .view .view__giftcard{
+        height: 13em;
     }
-    .text-bar::placeholder {
-        font-size: 11px;
+    .creation .view .view__giftcard .view__giftcard-text-dedicacion, .dedicacion{
+        font-size: 0.8rem;
     }
-    
-    
-}
-
-
-
-@media screen and (max-width: 480px) {
-   
-.creation{
-   display: flex;
-   flex-direction: column;
-   margin: 0 0;
-   padding: 0 0;
-   width: 100%;
-
-    
-    
-}
-.creation .form {
-    width: 100%;
-    border-left:none;
-    font-size: 10px;
-}
-.creation .view {
-    width: 100%;
-}
-.creation .view .view__giftcard {
-    width:100% ;
-    height: 300px;
-    background-size: 100% 100%;
-   
-  
-}
-
-.view__text {
-    font-size: 12px;
-}
-
-.creation .view .view__giftcard .view__giftcard-text-dedicacion{
-    font-size: 12px;
-}
-
-.creation .view .view__giftcard .view__giftcard-text-destinatario{
-    font-size:15px ;
-}
-
-
-.caja2 {
-    gap: 0.5em;
-}
-.form__election-ubicacion.caja1  {
-   width: 98%;
-  
-   
-}
-.form__election-ubicacion.caja1 .form__election-ubicacion-item-tag {
-    width: 20%;
-    height: 70px;
-    
-    
-}
-.form__election-ubicacion-item-tag .square  {
-    width: 100%;
-    height: 70%;
-   
-}
-
-.form__election-fondo-item {
-    gap: 0.2rem;
-}
-
-.caja2 .form__election-fondo-item-square .square  {
-   width: 80%;
-   height: auto;   
-}
-.caja2 .form__election-fondo-item-square {
-    gap: 0;
-   
-}
-.caja2 .form__election-fondo-item-square input {
-    align-self: center;
-    width: 10px
-}
-.form__election-entrega {
-    display: flex;
-    justify-content: flex-start;
-    gap: 0.2em;
-  
-}
-.button-form {
-    text-align: center;
-    padding: 2px 2px;
-    width: 65px;
-    height: 25px;
-    font-size: 10px;
-    margin-left: 2px;
-}
-.form__election-entrega .a {
-    width: 65px;
-    padding: 2px 2px;
-    font-size: 10px;
-}
-
-
-.form__election-price label{
-    font-size: 12px;
-    width: 25%;
-}
-.text-bar{
-      width: 80%;
-      
-}
-
-.text-bar::placeholder{
-    font-size: 10px;
-    
-}
-
+    .creation .view .view__giftcard .view__giftcard-text-destinatario, .destinatario{
+        font-size: 1.75rem;
+    }
+    .px55{
+        display: none;
+    }
 }

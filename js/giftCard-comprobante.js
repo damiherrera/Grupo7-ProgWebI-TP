@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function(){
     
 
     if(montoGuardado){
-        montoTexto.textContent = montoGuardado;
+        montoTexto.textContent = '$' + montoGuardado;
         monto.textContent = montoGuardado;
     };
     if(titularGuardado){

@@ -28,9 +28,10 @@
              type= "text"
              id="nombre"
              class="nombre" 
-             placeholder="Nombre completo" 
-             required/>
+             placeholder="Nombre de Usuario" 
+             />
             </div>
+            <p class="mensaje_error_usuario"></p>
            
             <div class="form__contendedor-input">
            
@@ -38,10 +39,9 @@
             id="email"
            
             placeholder="Correo electrónico" 
-            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
-            required>
+           >
             </div>
-           
+            <p class="mensaje_error_email"></p>
             <div class="form__contendedor-input">
          
         
@@ -50,9 +50,9 @@
             required 
             nombre="password" 
             placeholder="Contraseña" 
-            pattern="(?=.*\d).{6,}" 
-            title="La contraseña debe tener al menos 6 caracteres e incluir al menos un número." />
+             />
             </div>
+            <p class="mensaje_error_password"></p>
              <div class="contenedor-button__sumbit">
                 <button type="submit">Registrarse</button>
              </div>

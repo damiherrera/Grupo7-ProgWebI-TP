@@ -18,6 +18,21 @@ function generarCodigo (longitud){
     return codigo;
 }
 
+//Verificar formulario solo numeros
+const numeroTarjeta = document.getElementById("card");
+const numeroCVV = document.getElementById("cvv");
+
+console.log(numeroCVV);
+console.log(numeroTarjeta);
+
+numeroTarjeta.addEventListener("keypress", function(event){
+    this.value = this.value.replace(/[^0-9 ]/g, ''); //Acepta Espacios, cambia letras por cadena vacía
+})
+  
+numeroCVV.addEventListener("keypress", function(event){
+    this.value = this.value.replace(/[^0-9]/g, ''); //No acepta espacios, cambia letras y espacios por cadena vacía
+})
+
 const formularioPago = document.querySelector(".envio__form");
 //El codigo solo se creará cuando toque confirmar
 
@@ -34,3 +49,4 @@ formularioPago.addEventListener("submit", function(event){
 
     window.location.href = "../vistas/gift-card-comprobante.html"
 })
+
