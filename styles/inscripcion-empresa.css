@@ -30,7 +30,7 @@
 
 .form-row__input{
     width: 25%;
-    height: 5vh;
+    min-height: 5vh;
     padding: .1em;
     font-size: clamp(.8rem, 1.5vw, 1rem);
     border: .1em solid rgba(195, 193, 193, 0.933);
@@ -83,25 +83,27 @@
     background-color: #8f00ef;
 }
 
+.btn-round, .btn{
+    cursor: pointer;
+}
+
 .form-row__add, .form__end{
     align-self: flex-start;
     display: flex;
     align-items: center;
     height: 6.4vh;
+    margin: 1em;
 }
 
 .form-row__add p, .form__end p{
     padding: 0 1em;
 }
 
-.form__end p{
-    background-color: rgb(136, 136, 136);
-}
-
 .form__end a{
     margin-left: 2em ;
 }
 
-
-
+.form__end {
+    gap: 1em;
+}
 

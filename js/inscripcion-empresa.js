@@ -65,3 +65,20 @@ function clearInput(parentContainer, inputField){
     });
 }
 
+// Agrega una fila para completar datos
+function addInfoRow() {
+    let form = document.querySelector(".form");
+    let newInfoRow = document.createElement("div");
+    
+    newInfoRow.classList.add("form-row");
+    newInfoRow.innerHTML = `
+        <input type="text" class="form-row__input" name="nombre" id="nombre" placeholder="Nombre">
+        <input type="text" class="form-row__input" name="apellido" id="Apellido" placeholder="Apellido">
+        <input type="text" class="form-row__input" name="dni" id="dni" placeholder="Documento">
+
+        <button type="button" class="js-delete-row btn-round" alt="Boton eliminar fila"> - </button>`;
+
+    //Inserta a newInfoRow antes/detras del div .form-row__add
+    form.insertBefore(newInfoRow, form.querySelector(".form-row__add"));
+    assignDeleteButtonEvent();
+}
