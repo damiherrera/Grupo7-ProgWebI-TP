@@ -1,5 +1,6 @@
 displayCursoInscripcion();
 assignDeleteButtonEvent();
+openModalResumen();
 
 //funciones copiadas de detalle-curso.js para hacer la vinculacion
 function getCursosOfrecidos() {
@@ -82,3 +83,95 @@ function addInfoRow() {
     form.insertBefore(newInfoRow, form.querySelector(".form-row__add"));
     assignDeleteButtonEvent();
 }
+
+function closeModalResumen() {
+    let modal = document.querySelector(".js-modal");
+    let button = document.querySelector(".close");
+
+    button.addEventListener("click", function(event) {
+        modal.style.display = "none";
+        document.body.style.overflow = 'auto';
+    }); 
+}
+
+function openModalResumen() {
+    const modal = document.querySelector(".js-modal"); 
+    const button = document.querySelector(".js-end-form");
+    const errorMessage = document.querySelector('.js-alert-text');
+
+    button.addEventListener("click", function(event) {
+        // Si todos los datos de campos son validos entonces procede al modal
+        if (validateForm(errorMessage)) {
+                modal.style.display = "flex";
+                document.body.style.overflow = 'hidden';
+                
+                 // Borrar mensaje de error si es válido
+                errorMessage.innerHTML = '';
+                closeModalResumen();
+        }
+    });
+}
+
+//recibe como parametro el div donde vaya a poner los mensajes de error
+function validateForm(errorMessage) {
+    const rows = document.querySelectorAll('.form-row');
+    let isValid = true;
+    let errorMessages = new Set();
+
+    //se verifica los campos nombre, apellido y dni de cada fila
+    rows.forEach(row => {
+        const nombre = row.querySelector('#nombre');
+        const apellido = row.querySelector('#Apellido');
+        const dni = row.querySelector('#dni');
+
+        // verifica si hay campos nulos en la fila que este parada
+        row.querySelectorAll('.form-row__input').forEach(input => {
+            if (input.value === '') {
+                input.classList.add('input-error');
+                isValid = false;
+                errorMessages.add('Hay campos sin completar!');
+            } else {
+                input.classList.remove('input-error');
+            }
+        });
+
+        // Verifica si el dni no tiene 8 caracteres || que no sea un numero
+        if (dni.value.length !== 8 || !/^\d+$/.test(dni.value)) {
+            dni.classList.add('input-error');
+            isValid = false;
+            errorMessages.add('El Documento debe tener exactamente 8 números!');
+        } else {
+            dni.classList.remove('input-error');
+        }
+
+
+        // Verifica si el nombre no tiene letras
+        if (!/^[a-zA-Z]+$/.test(nombre.value)) {
+            nombre.classList.add('input-error');
+            isValid = false;
+            errorMessages.add('El nombre solo debe contener letras!');
+        } else {
+            nombre.classList.remove('input-error');
+        }
+
+
+        // Verifica si el apellido no tiene letras
+        if (!/^[a-zA-Z]+$/.test(apellido.value)) {
+            apellido.classList.add('input-error');
+            isValid = false;
+            errorMessages.add('El apellido solo debe contener letras!');
+        } else {
+            apellido.classList.remove('input-error');
+        }
+    });
+
+    // 256. Limpia para evitar que se repitan cada vez que se llame a la funcion 
+    // 257-259. Muestra mensajes únicos
+    errorMessage.innerHTML = '';
+    errorMessages.forEach(msg => {
+        errorMessage.innerHTML += `<p>${msg}</p>`;
+    });
+
+    return isValid;
+}
+

@@ -65,29 +65,28 @@
                         <input type="text" class="form-row__input" name="dni" id="dni" placeholder="Documento" required>
                         <button type="button" class="js-delete-row btn-round" alt="Eliminar fila"> - </button>
                     </div>
-
-                    <div class="form-row">
-                        <input type="text" class="form-row__input" name="nombre" id="nombre" placeholder="Nombre">
-                        <input type="text" class="form-row__input" name="apellido" id="Apellido" placeholder="Apellido">
-                        <input type="text" class="form-row__input" name="dni" id="dni" placeholder="Documento">
-                        <button type="button" class="js-delete-row btn-round" alt="Eliminar fila"> - </button>
-                    </div>
-                    
-                    <div class="form-row">
-                        <input type="text" class="form-row__input" name="nombre" id="nombre" placeholder="Nombre">
-                        <input type="text" class="form-row__input" name="apellido" id="Apellido" placeholder="Apellido">
-                        <input type="text" class="form-row__input" name="dni" id="dni" placeholder="Documento">
-                        <button type="button" class="js-delete-row btn-round" alt="Boton de Eliminar fila"> - </button>
-                    </div>
                     
                     <div class="form-row__add">
                         <button type="button" class="js-add-row btn-round" alt="Boton de Anadir persona" onclick="addInfoRow()"> + </button>
                         <p>Agregar Persona</p> 
-                    </div>p
+                    </div>
 
                     <div class="form__end">
-                        <p>$00000.-</p>
-                        <button type="submit" class="btn">INSCRIBIRSE</button>
+                        <p class="monto-total">Monto total = USD $20.-</p>
+                        <button type="button" class="js-end-form btn">INSCRIBIRSE</button>
+                        <div class="js-alert-text"></div>
+
+                        <div class="js-modal">
+                            <div class="modal-content">
+                                <div class="added-info">
+                                    <p>Las siguientes personas seran registradas al curso</p>
+                                </div>
+                                <div class="modal-content__action">
+                                    <button type="button" class="btn close">Volver</button>
+                                    <button type="submit" class="js-end-form btn">Proceder al pago</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </form>
             </section>
