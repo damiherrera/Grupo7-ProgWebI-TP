@@ -72,9 +72,6 @@ const arrowRight = document.querySelector(".arrow-right");
 const slider = document.getElementById("slider");
 const imagenes = document.querySelectorAll(".carrusel-item");
 
-setInterval (moverHaciaLaDerecha, 3000);
-
-arrowRight.addEventListener("click", moverHaciaLaDerecha);
 let operacion = 0;
 let contador = 0;
 let tamanioImagen = 100/imagenes.length;
@@ -90,7 +87,7 @@ function moverHaciaLaDerecha() {
     slider.style.transform = `translate(-${operacion}%)`
     slider.style.transition = "all ease.5s"
 };
-arrowLeft.addEventListener("click", moverHaciaLaIzquierda);
+
 function moverHaciaLaIzquierda() {
     contador--;
     if(contador < 0){
@@ -103,3 +100,12 @@ function moverHaciaLaIzquierda() {
     slider.style.transform = `translate(-${operacion}%)`
     slider.style.transition = "all ease.5s"
 };
+
+document.addEventListener("DOMContentLoaded", function() {
+    const sliderContainer = document.querySelector(".slider-container");
+    if(sliderContainer){
+        setInterval (moverHaciaLaDerecha, 3000);
+        arrowLeft.addEventListener("click", moverHaciaLaIzquierda);
+        arrowRight.addEventListener("click", moverHaciaLaDerecha);
+    }
+})
