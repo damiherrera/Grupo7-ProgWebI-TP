@@ -58,7 +58,7 @@
         <section class="container">
             <h1>Compra del Curso</h1>
         
-            <form method="post" action="../vistas/confirma-compra.html">
+            <form method="get" action="../vistas/confirma-compra.html" id="form">
                 <label for="medio-pago">Selecciona tu medio de pago:</label>
                 <div class="payment-methods">
                     <img src="../img/Visa.png" alt="Visa">
@@ -88,6 +88,14 @@
         
                 <label for="telefono">Teléfono:</label>
                 <input class="campo-compra" type="tel" id="telefono" name="telefono" placeholder="+549 11 123 456 78" required>
+
+                <label for="descuento">Código de descuento:</label>
+                <div class="codigo-descuento">
+                    <input type="text" class="campo-compra descuento" id="descuento" name="descuento">
+                    <button type="button" id="aplicar-descuento">Aplicar descuento</button>
+                </div>
+
+                <p class="total"><strong>Total: <span id="total"></span></strong></p>
         
                 <button type="submit">Confirmar Compra</button>
                 
@@ -142,7 +150,8 @@
             </div>
         </div>
     </footer>
- <script src="../js/index.js"></script>
+    <script src="../js/comprar-curso.js"></script>
+    <script src="../js/index.js"></script>
 </body>
 
 </html>

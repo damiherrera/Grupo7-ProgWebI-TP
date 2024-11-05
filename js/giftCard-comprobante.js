@@ -13,7 +13,7 @@ const fechaActual = new Date().toLocaleDateString();
 fechaVisualizacion.textContent = fechaActual;
 
 document.addEventListener("DOMContentLoaded", function(){
-    let montoGuardado = sessionStorage.getItem("montoTotal");
+    let montoGuardado = sessionStorage.getItem("montoDescuento");
     let titularGuardado = sessionStorage.getItem("nombreTitular");
     let codigoGiftcardGuardado = sessionStorage.getItem("codigoMostrado");
     let destinatarioGuardado = sessionStorage.getItem("destinatario");

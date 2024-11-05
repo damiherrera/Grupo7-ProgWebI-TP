@@ -91,3 +91,22 @@ button:hover {
 .btn-volver:hover {
     background-color: #c0392b;
 }
+
+.codigo-descuento{
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.descuento{
+    width: 60%;
+    margin: 0;
+}
+#aplicar-descuento{
+    padding: 0.2em;
+    display: none;
+}
+.total{
+    margin: 1.2em 0em;
+    font-size: 1.5rem;
+}

@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     let bottom = ubicacionVisualizacion.style.bottom;
                     let top = ubicacionVisualizacion.style.top;
 
-                    sessionStorage.setItem("montoTotal", montoTotal);
+                    sessionStorage.setItem("montoDescuento", montoTotal);
                     sessionStorage.setItem("destinatario", destinatarioNombre.value);
                     sessionStorage.setItem("colorFuente", color);
                     sessionStorage.setItem("fondo", fondo);

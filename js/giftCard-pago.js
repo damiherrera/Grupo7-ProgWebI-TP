@@ -1,7 +1,7 @@
 //Traer el monto
 const montoVisualizacion = document.getElementById("montoAbonar");
 document.addEventListener("DOMContentLoaded", function(){
-    let montoGuardado = sessionStorage.getItem("montoTotal");
+    let montoGuardado = sessionStorage.getItem("montoDescuento");
     if(montoGuardado){
         montoVisualizacion.textContent = montoGuardado;
     };
@@ -39,11 +39,20 @@ const formularioPago = document.querySelector(".envio__form");
 formularioPago.addEventListener("submit", function(event){
     event.preventDefault()
         let codigoGiftcard = generarCodigo(7);
-        let codigosGenerados = JSON.parse(localStorage.getItem("codigo")) || []; //Si no encuentra ninguno crea array vacio
+        let montoDescuento = sessionStorage.getItem("montoDescuento");
+        let codigosGenerados = JSON.parse(localStorage.getItem("codigoYMonto")) || []; //Si no encuentra ninguno crea array vacio
 
-        codigosGenerados.push(codigoGiftcard);
-        sessionStorage.setItem("codigoMostrado", codigoGiftcard);
-        localStorage.setItem("codigo", JSON.stringify(codigosGenerados));
+        let giftcardDatos = {
+            codigo: codigoGiftcard,
+            monto: montoDescuento
+        };
+
+        codigosGenerados.push(giftcardDatos); //Agrego al array
+
+        sessionStorage.setItem("codigoMostrado", codigoGiftcard); //Se guarda momentaneamente para mostrarlo al usuario
+
+        localStorage.setItem("codigoYMonto", JSON.stringify(codigosGenerados)); //Se guarda el array en el localStorage
+
         let nombreTitular = document.querySelector("input[name='nombre-titular']").value;
         sessionStorage.setItem("nombreTitular", nombreTitular);
 
