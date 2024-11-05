@@ -56,7 +56,7 @@
 }
 
 .calendario__row__field:hover, .calendario__row__field--unfocused:hover{
-    background-color: rgba(137, 43, 226, 0.144);
+    background-color: rgba(161, 99, 219, 0.144);
     transition: all ease .15s;
 }
 
@@ -71,16 +71,19 @@
     width: 100%;
     background-color: rgb(200, 123, 244);
     border-radius: 10%;
-    font-size: clamp(.5rem, 1vw, .65rem);
+    font-size: clamp(.7rem, 2vw, .75rem);
     text-align: center;
+    cursor: pointer;
 }
 
+/*
 .calendario__row__field__event a , .calendario__row__field__event--tiny a{
     color: white;
     font-weight: 600;
     text-decoration: none;
     padding: 0.5em;
 }
+*/
 
 .calendario__row__field__event:hover , .calendario__row__field__event--tiny:hover{
     background-color: rgb(152, 88, 189);
@@ -92,6 +95,78 @@
 
 .calendario__row__field__event--tiny{
     display: none;
+}
+
+button.js-resumen{
+    all: unset;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.js-modal{
+    position: fixed;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.211);
+    backdrop-filter: blur(1px);
+}
+
+.js-modal__content{
+    background-color: white;
+    border-radius: 3px;
+    padding: 1em;
+    width: 80vw;
+}
+
+.js-modal__content h2{
+    background-color: white;
+    text-align: center;
+    padding: .5em 0;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.js-modal__content p{
+    padding: 0 3em;
+}
+
+.js-modal__content-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.js-modal__content-info button{
+    background-color: rgb(191, 108, 255);
+    border: solid 1px;
+    border-radius: 4px;
+    color: white;
+    font-weight: 550;
+    cursor: pointer;
+    padding: .4em;
+    font-size: clamp(.6rem, 3vw, 1.1rem);
+}
+
+.js-modal__content-info button:hover{
+    background-color: rgb(181, 86, 254);
+    
+}
+
+.js-modal__content-info a{
+    text-decoration: none;
+    
+}
+
+.js-modal__close{
+    float: right;
+    font-size: 2rem;
+    cursor: pointer;
 }
 
 @media screen and (max-width:1089px) {
