@@ -1,5 +1,5 @@
 let total = document.getElementById("total");
-let montoAPagar = 60;
+let montoAPagar = sessionStorage.getItem("totalCarrito");//
 total.textContent = "$" + montoAPagar;
 const btnAplicarDescuento = document.getElementById("aplicar-descuento");
 
@@ -58,5 +58,7 @@ montoDescuento = 0;
 const formulario = document.getElementById("form");
 
 formulario.addEventListener("submit", function(){
+    sessionStorage.removeItem("totalCarrito");
     window.location.href = "./vistas/confirma-compra.html";
 })
+

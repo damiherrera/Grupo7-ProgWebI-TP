@@ -95,6 +95,7 @@ function actualizarTotal(cursos) {
     // Aseguramos que el total se actualice
     if (totalElement) {
         totalElement.textContent = `Total: USD ${total}`;
+        sessionStorage.setItem("totalCarrito", total);
     }
 
 }
