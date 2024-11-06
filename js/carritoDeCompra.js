@@ -2,7 +2,7 @@ const usuarioLogueado = localStorage.getItem("userLoggedIn");
 const linkProcederAlPago = document.getElementById("proceder-pago");
 const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 const carritoContainer = document.querySelector(".carrito-content");
-const totalElement = document.querySelector(".carrito-resumen p");
+const totalElement = document.querySelector(".carrito-resumen");
 
 // Verificamos si el carrito está vacío
 if (carrito.length === 0) {
@@ -92,10 +92,10 @@ function actualizarTotal(cursos) {
         total += curso.precio;
     });
 
-    // Aseguramos que el total se actualice
-    if (totalElement) {
-        totalElement.textContent = `Total: USD ${total}`;
-    }
+    totalElement.innerHTML ="";
+    totalElement.innerHTML= 
+    `<p>Total: USD ${total}</p>
+     <a href="../vistas/comprar-curso.html" id="proceder-pago"><button class="btn-comprar" id="proceder-pago">Proceder al Pago</button></a>`;
 
 }
 
