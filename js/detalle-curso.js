@@ -150,6 +150,8 @@ const modal = document.getElementById("modal");
 const span = document.getElementsByClassName("cerrar")[0];
 const botonComprar = document.getElementsByClassName("boton-comprarParaMi");
 const botonInscribirse = document.getElementsByClassName("boton-inscripcion-empresa");
+const cerrarModalBtn = document.getElementById("cerrar-modal");
+
 
 displayCurso();
 displayCursosRelacionados();
@@ -448,24 +450,24 @@ function mostrarBoton() {
     if (curso.modalidad === "Virtual") {
         botonContainer.innerHTML = `
         <a href="../vistas/carrito.html"><input class="boton-comprarParaMi" type="button" value="Comprar"
-                    id="boton-comprar"></a>`;
+                    data-url="../vistas/carrito.html" id="boton-comprar"></a>`;
 
     } else if (curso.modalidad === "Presencial") {
         botonContainer.innerHTML = `
         <a href="../vistas/inscripcion-empresa.html"><input class="boton-inscripcion-empresa" type="button"
-                    value="Inscribirse" id="inscripcion-empresa"></a>`;
+                    value="Inscribirse" data-url="../vistas/inscripcion-empresa.html" id="inscripcion-empresa"></a>`;
     }
 
+
 }
+
 
 document.addEventListener('DOMContentLoaded', function () {
     const modal = document.getElementById("modal");
     const span = document.getElementsByClassName("cerrar")[0];
     const botonComprar = document.getElementById("boton-comprar");
     const botonInscribirse = document.getElementById("inscripcion-empresa");
-    
 
-    // Definir la URL de redirección
     let redireccionURL = "";
 
     function mostrarModal(mensaje) {
@@ -475,21 +477,26 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function manejarAccionCurso(event, urlRedireccion) {
-        event.preventDefault(); // Prevenir la redirección
+        event.preventDefault(); 
         const url = new URL(location.href);
         const idCurso = parseInt(url.searchParams.get("idCurso"));
         const curso = obtenerCursoPorId(idCurso);
 
-        const mensaje = `¡Estás a un paso de finalizar! <br> Vas a adquirir el ${curso.nombreCurso}, por el valor de USD ${curso.precio}.-`;
-        mostrarModal(mensaje);
+        if (curso) {
+            const mensaje = `¡Estás a un paso de finalizar! <br> Vas a adquirir el ${curso.nombreCurso}, por el valor de USD ${curso.precio}.-`;
+            mostrarModal(mensaje);
 
-        // Guardar la URL de redirección
-        redireccionURL = urlRedireccion;
+            redireccionURL = urlRedireccion;
+        } else {
+            console.error("Curso no encontrado");
+        }
     }
 
     function redirigir() {
         if (redireccionURL) {
             window.location.href = redireccionURL;
+        } else {
+            console.error("No se ha definido una URL de redirección");
         }
     }
 
@@ -505,27 +512,17 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-
     if (botonComprar) {
+        const urlRedireccion = botonComprar.getAttribute("data-url");
         botonComprar.addEventListener("click", function (event) {
-            manejarAccionCurso(event, botonComprar.href);
+            manejarAccionCurso(event, urlRedireccion);
         });
     }
 
     if (botonInscribirse) {
+        const urlRedireccion = botonInscribirse.getAttribute("data-url");
         botonInscribirse.addEventListener("click", function (event) {
-            manejarAccionCurso(event, botonInscribirse.href);
-        }
-        );
+            manejarAccionCurso(event, urlRedireccion);
+        });
     }
 });
-
-
-
-
-
-
-
-
-
-
