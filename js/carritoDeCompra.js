@@ -92,11 +92,10 @@ function actualizarTotal(cursos) {
         total += curso.precio;
     });
 
-    // Aseguramos que el total se actualice
-    if (totalElement) {
-        totalElement.textContent = `Total: USD ${total}`;
-        sessionStorage.setItem("totalCarrito", total);
-    }
+    totalElement.innerHTML ="";
+    totalElement.innerHTML= 
+    `<p>Total: USD ${total}</p>
+     <a href="../vistas/comprar-curso.html" id="proceder-pago"><button class="btn-comprar" id="proceder-pago">Proceder al Pago</button></a>`;
 
 }
 
