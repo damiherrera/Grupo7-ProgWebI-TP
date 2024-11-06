@@ -1,26 +1,29 @@
-const formInicioSesion = document.getElementById("form");   // seleciona por id y lo guarda en variable
-const emailInput= document.getElementById("email")       // seleciona por id  y lo guarda en variable
-const passwordInput = document.getElementById ("password");// seleciona por id y lo guarda en variable
+// Seleccionamos los elementos del formulario
+const formInicioSesion = document.getElementById("form");
+const nameUserInput = document.getElementById("name");
+const passwordInput = document.getElementById("password");
 
+formInicioSesion.addEventListener("submit", function(event) {
+    event.preventDefault();  // Prevenimos la recarga de la página
 
-
-formInicioSesion.addEventListener("submit", function(event) {  // evento a form inicio sesion. 
-    event.preventDefault ();   // evita que se recargue la pagina
-
-    const usuarioRegistrado = JSON.parse(localStorage.getItem("usuario")) ;
-    const email = emailInput.value;
+    // Obtenemos los valores de los inputs
+    const nameUser = nameUserInput.value;
     const password = passwordInput.value;
 
-    if (usuarioRegistrado) {
-        if (email === usuarioRegistrado.email && password === usuarioRegistrado.password) {
-            // Guardar estado de sesión iniciada
-            localStorage.setItem("userLoggedIn", true);
-            // Redirigir a la página principal (o cualquier otra página)
-            window.location.href = "../index.html";
-        } else {
-            alert("Usuario o contraseña incorrectos");
-        }
+    // Recuperamos los usuarios desde localStorage
+    let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+    let usuarioEncontrado = null;
+    console.log(usuarios)
+   
+   
+    // Verificamos si se encontró el usuario
+    if (usuarios[nameUser] && usuarios[nameUser].password === password) {
+        usuarioEncontrado = usuarios[nameUser];
+        alert("¡Inicio de sesión exitoso!");
+        console.log("Usuario encontrado:", usuarioEncontrado);
+        window.location.href = "../index.html"; 
+        localStorage.setItem("usuarioLogueado", JSON.stringify(usuarioEncontrado)); // Redirigimos a la página principal
     } else {
-        alert("No se encontró ningún usuario registrado");
+        alert("Error: Nombre de usuario o contraseña incorrectos.");
     }
 });

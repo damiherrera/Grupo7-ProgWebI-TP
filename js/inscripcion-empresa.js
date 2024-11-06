@@ -149,7 +149,7 @@ function validateForm(errorMessage) {
             if (input.value === '') {
                 input.classList.add('input-error');
                 isValid = false;
-                errorMessages.add('Hay campos sin completar!');
+                errorMessages.add('*Hay campos sin completar!');
             } else {
                 input.classList.remove('input-error');
             }
@@ -159,7 +159,7 @@ function validateForm(errorMessage) {
         if (dni.value.length !== 8 || !/^\d+$/.test(dni.value)) {
             dni.classList.add('input-error');
             isValid = false;
-            errorMessages.add('El Documento debe tener exactamente 8 números!');
+            errorMessages.add('*El Documento debe tener exactamente 8 números!');
         } else {
             dni.classList.remove('input-error');
         }
@@ -169,7 +169,7 @@ function validateForm(errorMessage) {
         if (!/^[a-zA-Z]+$/.test(nombre.value)) {
             nombre.classList.add('input-error');
             isValid = false;
-            errorMessages.add('El nombre solo debe contener letras!');
+            errorMessages.add('*El nombre solo debe contener letras!');
         } else {
             nombre.classList.remove('input-error');
         }
@@ -179,7 +179,7 @@ function validateForm(errorMessage) {
         if (!/^[a-zA-Z]+$/.test(apellido.value)) {
             apellido.classList.add('input-error');
             isValid = false;
-            errorMessages.add('El apellido solo debe contener letras!');
+            errorMessages.add('*El apellido solo debe contener letras!');
         } else {
             apellido.classList.remove('input-error');
         }

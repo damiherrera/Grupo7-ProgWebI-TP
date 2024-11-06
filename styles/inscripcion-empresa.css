@@ -175,3 +175,37 @@
     align-items: end;
     gap: 2em;
 }
+
+@media screen and (max-width:760px){
+    .form__end, .form-row__add{
+        height: auto;
+    }
+
+    .form__end{
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+
+    .js-alert-text{
+        text-wrap: auto;
+    }
+}
+
+@media screen and (max-width:430px) {
+    .monto{
+        flex-direction: column;
+        width: 66vw;
+        text-align: center;
+        gap: .5em;
+    }
+
+    .js-end-form.modal{
+        border-bottom-left-radius: 3px;
+        border-top-left-radius: 3px;
+    }
+
+    .js-monto-total{
+        border-bottom-right-radius: 3px;
+        border-top-right-radius:3px;
+    }
+}
