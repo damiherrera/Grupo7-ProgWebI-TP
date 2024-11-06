@@ -92,10 +92,12 @@ function actualizarTotal(cursos) {
         total += curso.precio;
     });
 
-    totalElement.textContent = `Total: USD ${total}`;
+    // Aseguramos que el total se actualice
+    if (totalElement) {
+        totalElement.textContent = `Total: USD ${total}`;
+    }
+
 }
-
-
 
 
 if (usuarioLogueado) {

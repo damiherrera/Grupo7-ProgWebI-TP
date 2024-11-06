@@ -450,7 +450,7 @@ function mostrarBoton() {
     if (curso.modalidad === "Virtual") {
         botonContainer.innerHTML = `
         <a href="../vistas/carrito.html"><input class="boton-comprarParaMi" type="button" value="Comprar"
-                    data-url="../vistas/carrito.html" id="boton-comprar"></a>`;
+                    data-url="../vistas/carritovacio.html" id="boton-comprar"></a>`;
 
     } else if (curso.modalidad === "Presencial") {
         botonContainer.innerHTML = `
