@@ -92,6 +92,11 @@ function actualizarTotal(cursos) {
         total += curso.precio;
     });
 
+    if (totalElement) {
+        totalElement.textContent = `Total: USD ${total}`;
+        sessionStorage.setItem("totalCarrito", total);
+    }
+
     totalElement.innerHTML ="";
     totalElement.innerHTML= 
     `<p>Total: USD ${total}</p>
