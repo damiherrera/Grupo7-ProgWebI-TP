@@ -128,11 +128,8 @@ button.js-resumen{
     background-color: white;
     text-align: center;
     padding: .5em 0;
-    font-size: clamp(1.5rem, 3vw, 2.5rem);
-}
-
-.js-modal__content p{
-    padding: 0 3em;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    text-wrap: balance;
 }
 
 .js-modal__content-info {
@@ -140,6 +137,22 @@ button.js-resumen{
     flex-direction: column;
     align-items: center;
     gap: 1em;
+}
+
+.js-modal__content-info p, span{
+    padding: 0 .2em;
+}
+
+.js-modal__content-info p{
+    font-size: clamp(1rem, 3vw, 2rem);
+    text-align: justify;
+    hyphens: auto;
+}
+
+.js-modal__content-info span{
+    text-align: center;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    color: rgb(58, 58, 58);
 }
 
 .js-modal__content-info button{
@@ -150,7 +163,7 @@ button.js-resumen{
     font-weight: 550;
     cursor: pointer;
     padding: .4em;
-    font-size: clamp(.6rem, 3vw, 1.1rem);
+    font-size: clamp(1rem, 3vw, 1.2rem);
 }
 
 .js-modal__content-info button:hover{
@@ -169,7 +182,7 @@ button.js-resumen{
     cursor: pointer;
 }
 
-@media screen and (max-width:1089px) {
+@media screen and (max-width:1080px) {
     .calendario__row{
         max-width: 100%;
     }
@@ -188,5 +201,9 @@ button.js-resumen{
 
     .calendario__row__field__event--tiny{
         display: block;
+    }
+
+    .js-modal__content-info p, span{
+        padding: 0;
     }
 }
