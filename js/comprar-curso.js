@@ -31,7 +31,7 @@ descuento.addEventListener("change", function() {
 btnAplicarDescuento.addEventListener("click",function(event){
     event.preventDefault();
     if(montoDescuento > montoAPagar){
-        let confirmar = confirm("El descuento supera el monto a pagar. Si desea continuar, su monto a pagar será de $0 y perderá el resto de su descuento. \n¿Desea continuar de todas formas?");
+        let confirmar = confirm("El descuento supera el importe a pagar. Si desea continuar, el total a pagar será de $0 y perderá el resto de su descuento. \n¿Desea continuar de todas formas?");
         if (confirmar) {
             montoAPagar = 0; // Establecemos el monto a pagar a 0
         }
