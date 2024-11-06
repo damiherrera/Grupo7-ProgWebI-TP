@@ -75,14 +75,14 @@
     text-align: center;
 }
 
-.carrito-container.vacio {
+.carrito-content.vacio {
     padding: 40px;
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: #fff;
 }
 
-.carrito-container.vacio p {
+.carrito-content.vacio p {
     font-size: 18px;
     color: #666;
     margin-bottom: 20px;

@@ -487,9 +487,12 @@ document.addEventListener('DOMContentLoaded', function () {
             mostrarModal(mensaje);
 
             redireccionURL = urlRedireccion;
+
+            agregarAlCarrito(idCurso);
         } else {
             console.error("Curso no encontrado");
         }
+        
     }
 
     function redirigir() {
@@ -526,3 +529,21 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+
+
+function agregarAlCarrito(idCurso)  {
+    const cursosDisponbiles = JSON.parse(localStorage.getItem("cursosOfrecidos"));
+    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+    const cursoSeleccionado = cursosDisponbiles.cursos.find(curso => curso.idCurso === idCurso);
+
+    if(cursoSeleccionado && !carrito.some(curso => curso.idCurso === idCurso)){
+        carrito.push(cursoSeleccionado);
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+        alert("Curso agregado al carrito");
+    } else {
+        alert("Este curso ya está en tu carrito");
+    }
+}
+
