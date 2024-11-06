@@ -62,30 +62,26 @@ document.addEventListener("DOMContentLoaded", function() {
     actualizarEstadoUsuario();
 
     // Agregar el evento de clic para el botón de cerrar sesión
-    if(botonCerrarSesion) {
+   
         botonCerrarSesion.addEventListener("click", function(event) {
             console.log("Clic en botón cerrar sesión desktop");
             localStorage.removeItem("usuarioLogueado");
             console.log("Sesión cerrada");
             window.location.reload(); // Recarga la página actual para que se actualice el estado de los botones.
-            actualizarEstadoUsuario(); // Actualiza los botones después de cerrar sesión
+             // Actualiza los botones después de cerrar sesión
         });
-    } else {
-        console.error("El botón de cerrar sesión desktop no se encontró");
-    }
+   
 
     // Lógica de evento para el botón de cierre de sesión responsive
-    if (liBotonCerrarSesionResponsive) {
+  
         liBotonCerrarSesionResponsive.addEventListener("click", function(event) {
             console.log("Clic en botón cerrar sesión responsive");
             localStorage.removeItem("usuarioLogueado");
             console.log("Sesión cerrada");
             window.location.reload(); 
-            actualizarEstadoUsuario(); // Actualiza los botones después de cerrar sesión
+          // Actualiza los botones después de cerrar sesión
         });
-    } else {
-        console.error("El botón de cerrar sesión responsive no se encontró");
-    }
+  
 });
 
 //Carrusel

@@ -2,7 +2,7 @@ const usuarioLogueado = localStorage.getItem("userLoggedIn");
 const linkProcederAlPago = document.getElementById("proceder-pago");
 const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 const carritoContainer = document.querySelector(".carrito-content");
-const totalElement = document.querySelector(".carrito-resumen p");
+const totalElement = document.querySelector(".carrito-resumen");
 
 // Verificamos si el carrito está vacío
 if (carrito.length === 0) {
