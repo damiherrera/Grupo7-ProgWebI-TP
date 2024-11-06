@@ -455,7 +455,7 @@ function mostrarBoton() {
     } else if (curso.modalidad === "Presencial") {
         botonContainer.innerHTML = `
         <a href="../vistas/inscripcion-empresa.html"><input class="boton-inscripcion-empresa" type="button"
-                    value="Inscribirse" data-url="../vistas/inscripcion-empresa.html" id="inscripcion-empresa"></a>`;
+                    value="Inscribirse" data-url="../vistas/inscripcion-empresa.html?idCurso=${curso.idCurso}" id="inscripcion-empresa"></a>`;
     }
 
 
