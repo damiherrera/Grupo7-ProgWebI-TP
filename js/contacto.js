@@ -1,5 +1,5 @@
-const  form = document.getElementById("contact-us");
-form.addEventListener('submit', validadFormulario);
+const  formContacto = document.getElementById("contactanos");
+formContacto.addEventListener('submit', validadFormulario);
 
 
 const nombre= document.getElementById("name");
@@ -7,7 +7,9 @@ const apellido = document.getElementById("lastname");
 const telefono = document.getElementById("tel");
 const mail = document.getElementById("email");
 const consulta = document.getElementById("consulta");
-const contador = document.getElementById("contador");
+const contadorContactUs = document.getElementById("contadorContact");
+const modal = document.getElementById("modal")
+const buttonModal = document.getElementById("modal-aceptar-button");
 
 
 
@@ -67,7 +69,7 @@ function validadFormulario (e){
 
 
 
-form.addEventListener('submit', (event=>{
+formContacto.addEventListener('submit', (event=>{
     event.preventDefault();
 
     if(validadFormulario()){
@@ -79,9 +81,9 @@ form.addEventListener('submit', (event=>{
             mensaje:consulta.value
         };
         console.log(data);
-        alert("Consulta enviada");
-        form.reset(); 
-        window.location.href = "../index.html";
+        modal.classList.add('show');
+        formContacto.reset(); 
+      
       
     
     }
@@ -94,10 +96,16 @@ consulta.addEventListener ('input' , function (e) {
   
     const longitudMax = consulta.getAttribute("maxlength")
     const longitudAct = consulta.value.length;
-    contador.innerHTML = `${longitudAct}/${longitudMax}`
+    contadorContactUs.innerHTML = `${longitudAct}/${longitudMax}`
 
 });
 
 
 
 
+//function button modal
+
+buttonModal.addEventListener("click", function(event) {
+    modal.classList.remove('show'); // Oculta el modal
+    window.location.href = "../index.html";
+});

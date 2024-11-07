@@ -62,7 +62,7 @@
 <section class="contact-section">
    
     <div class="contact-section__form">
-    <form class="form" action="" method="GET" id="contact-us">
+    <form class="form" action="" method="GET" id="contactanos">
         <h2>CONTACTANOS</h2>
         <div class="form_input">
             
@@ -90,7 +90,7 @@
         <div class="form_input">
            
            <textarea placeholder="Escriba su consulta" name="consulta" rows="6" maxlength= "1000" id="consulta" ></textarea>
-           <div id="contador">0/1000</div>
+           <div id="contadorContact">0/1000</div>
            <p id="error-consulta"></p>
         </div>
           <div class="contenedor-button">
@@ -111,9 +111,21 @@
             </div>
             </div>
       
-             
+            <dialog class="modal" id="modal">
+                <div class="modal__header">
+                    <h3>Consulta Enviada</h3>
+                </div>
+                <div class="model__content">
+                    <p>Su consulta ha sido enviada correctamente, le responderemos en breve</p>
+                </div>
+            
+                    <button class="button-modal" id="modal-aceptar-button">Aceptar</button>
+          
+            </dialog>      
    
 </section>
+
+
 
             
 </div>

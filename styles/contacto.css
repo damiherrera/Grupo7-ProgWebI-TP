@@ -91,6 +91,7 @@ body {
 .contact-section__form h2{
     font-size: 20px;
     background-color: #F9F9F9;
+    position: relative;
   }
 
 .form .form_input input, textarea{
@@ -299,3 +300,64 @@ body {
 
 
 /*****final media queries form-contacto*******/
+
+
+
+/*MODAAAL*/
+
+.modal {
+    display: none;
+   
+
+
+
+}
+
+.modal.show {
+    display:flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 5% 5%;
+    height: 30%;
+
+    position: absolute;
+    top: 5;
+    border-radius: 5px;
+    border: 1px solid black;
+  
+
+
+}
+.modal__header{
+    display: flex;
+    justify-content: center;
+    height: 20%;
+    
+}
+
+
+.model__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    
+    
+}
+
+
+.button-modal {
+    margin:0.5%;
+    width: 20%;
+    flex:1;
+    align-self: center;
+    border: none;
+    border-radius: 5%;
+    cursor: pointer;
+    background-color: #d8d8d8;
+
+}
+
+.button-modal:hover {
+    background-color: #A435F0
+}
