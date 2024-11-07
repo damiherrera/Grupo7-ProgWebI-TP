@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     //console.log(document.getElementById("botonCerrarSesion"));
     // Función que actualiza el estado del usuario
     function actualizarEstadoUsuario() {
-        const usuarioLogueado = JSON.parse(localStorage.getItem("usuarioLogueado"));
+        const usuarioLogueado = JSON.parse(sessionStorage.getItem("usuarioLogueado"));
         console.log("usuariologueado", usuarioLogueado);
 
         // Seleccionar todos los botones "Agregar al carrito"
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function() {
    
         botonCerrarSesion.addEventListener("click", function(event) {
             console.log("Clic en botón cerrar sesión desktop");
-            localStorage.removeItem("usuarioLogueado");
+            sessionStorage.removeItem("usuarioLogueado");
             console.log("Sesión cerrada");
             window.location.reload(); // Recarga la página actual para que se actualice el estado de los botones.
              // Actualiza los botones después de cerrar sesión

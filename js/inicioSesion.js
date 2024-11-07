@@ -13,7 +13,7 @@ formInicioSesion.addEventListener("submit", function(event) {
     // Recuperamos los usuarios desde localStorage
     let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
     let usuarioEncontrado = null;
-    console.log(usuarios)
+    // console.log(usuarios)
    
     errorUserName.style.display = "none";
     errorPassword.style.display = "none";
@@ -23,7 +23,7 @@ formInicioSesion.addEventListener("submit", function(event) {
         if(usuarios[nameUser].password === password) {
             usuarioEncontrado = usuarios[nameUser];
             window.location.href = "../index.html"; 
-            localStorage.setItem("usuarioLogueado", JSON.stringify(usuarioEncontrado)); // Redirigimos a la página principal
+            sessionStorage.setItem("usuarioLogueado", JSON.stringify(usuarioEncontrado)); // Redirigimos a la página principal
         } else {
             errorPassword.textContent = "contraseña incorrecta" ;
             errorPassword.style.display = "inline";
