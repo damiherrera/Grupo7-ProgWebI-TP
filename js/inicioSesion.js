@@ -15,15 +15,29 @@ formInicioSesion.addEventListener("submit", function(event) {
     let usuarioEncontrado = null;
     console.log(usuarios)
    
-   
+    errorUserName.style.display = "none";
+    errorPassword.style.display = "none";
+
     // Verificamos si se encontró el usuario
-    if (usuarios[nameUser] && usuarios[nameUser].password === password) {
-        usuarioEncontrado = usuarios[nameUser];
-        alert("¡Inicio de sesión exitoso!");
-        console.log("Usuario encontrado:", usuarioEncontrado);
-        window.location.href = "../index.html"; 
-        localStorage.setItem("usuarioLogueado", JSON.stringify(usuarioEncontrado)); // Redirigimos a la página principal
-    } else {
-        alert("Error: Nombre de usuario o contraseña incorrectos.");
-    }
-});
+    if (usuarios[nameUser]) {
+        if(usuarios[nameUser].password === password) {
+            usuarioEncontrado = usuarios[nameUser];
+            window.location.href = "../index.html"; 
+            localStorage.setItem("usuarioLogueado", JSON.stringify(usuarioEncontrado)); // Redirigimos a la página principal
+        } else {
+            errorPassword.textContent = "contraseña incorrecta" ;
+            errorPassword.style.display = "inline";
+        } 
+        } else {
+            errorUserName.textContent = "usuario no encontrado";
+            errorUserName.style.display = "inline";
+        }});
+   
+           
+           
+    
+  
+
+//manejo errores, user o passaword no encontrada 
+const errorUserName = document.getElementById("error-nameUser");
+const errorPassword = document.getElementById("error-password");
