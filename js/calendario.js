@@ -39,7 +39,7 @@ function displayCursoResumen(idCurso){
         <h2>${curso.nombreCurso}</h2>
         <p>${resumen}.</p>
         <span>Si estas interesado puedes ir a detalle para ver mas informacion y conseguir este curso! </span>
-        <a href="./detalle-curso.html?idCurso=${curso.idCurso}">
+        <a href="../vistas/detalle-curso.html?idCurso=${curso.idCurso}">
             <button type="button">Ver Detalle</button> 
         </a>
         `

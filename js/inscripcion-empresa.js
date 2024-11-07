@@ -127,9 +127,12 @@ function openModalResumen() {
                 
                  // Borrar mensaje de error si es válido
                 errorMessage.innerHTML = '';
+                previewData();
                 closeModalResumen();
         }
     });
+
+    submitData();
 }
 
 //recibe como parametro el div donde vaya a poner los mensajes de error
@@ -195,3 +198,53 @@ function validateForm(errorMessage) {
     return isValid;
 }
 
+// Para ver las personas que estoy por anotar antes del submit
+function previewData() {
+    let filas = document.querySelectorAll('.form-row');
+    let previewList = [];
+    let previewInfo = document.querySelector('.added-info');
+    previewInfo.innerHTML=``;
+
+    filas.forEach((registro, index) => {
+        let nombre = registro.querySelector('#nombre').value,
+            apellido = registro.querySelector('#Apellido').value,
+            dni = registro.querySelector('#dni').value;
+
+        previewInfo.innerHTML += `
+        <div class="added-info__registro">
+            <h4> Registro N°${index + 1}</h4>
+            <b>Nombre: ${nombre}</b>
+            <b>Apellido: ${apellido}</b>
+            <b>Documento: ${dni}</b>
+        </div>    
+        `
+
+        //Agrego la persona al array temporal donde se muestran quienes estan por ser anotados
+        previewList.push({ nombre, apellido, dni });
+    });
+
+    return previewList;
+}
+
+// le agrega los registros por anotar a la lista de anotados
+function submitData() {
+    const form = document.querySelector('.form');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Guardo la lista preview con los registros/personas por anotar 
+        let listaUpdate = JSON.parse(localStorage.getItem('listaAnotados')) || [];
+        previewData().forEach(registro => listaUpdate.push(registro));
+
+        // Guardo en localstorage
+        localStorage.setItem("listaAnotados", JSON.stringify(listaUpdate)); //de momento vuelco los registros en 'anotadosLista'
+
+        // Verifico en consola
+        console.log("Lista registros por agregar:", previewData());
+        console.log("Lista actualizada:", listaUpdate);
+
+        // Aquí podrías redirigir a otra página o limpiar el formulario
+        
+    });
+}

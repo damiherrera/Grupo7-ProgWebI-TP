@@ -25,7 +25,10 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
-    margin: 1em 0;
+    margin: .5em 0;
+    background-color: #d7bbffa1;
+    padding: .4em 1em;
+    border-radius: 1.5em;
 }
 
 .form-row__input{
@@ -44,7 +47,7 @@
 }
 
 .form-row__input:focus{
-    border-color: #c875ff; 
+    border-color: #39005f; 
     box-shadow: 0 0 .1em rgba(175, 105, 188, 0.334); 
 }
 
@@ -98,6 +101,13 @@
     align-items: center;
     height: 6.4vh;
     margin: 1em;
+}
+
+.form-row__add{
+    border-radius: 5em;
+    height: 2em;
+    color: g;
+    background-color: #00000026;
 }
 
 .form-row__add p{
@@ -157,7 +167,7 @@
 .modal-content{
     display: flex;
     flex-direction: column;
-    background-color:rgb(243, 230, 255);
+    background-color:rgb(255, 255, 255);
     min-width: 70vw;
     min-height: 60vh;
     max-height: 80vh;
@@ -165,8 +175,44 @@
     padding: 1.5em;
 }
 
-.modal-content.added-info{
+.modal-content h3{
+    position: relative;
+    left: -25px;
+    width: fit-content;
+    padding: .3em 1.5em;
+    background-color: #a600ffe7;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    color: white;
+    font-weight: 1000;
+    font-size: clamp(.8rem, 3vw, 1,7rem);
+}
 
+.added-info{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+    height: 40vh;
+    background-color: rgba(0, 0, 0, 0.093);
+    padding: 1em 0;
+    margin: 1.2em 0;
+    border-radius: .3em;
+    overflow-x: auto;
+}
+
+.added-info__registro{
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    padding: .3em .5em;
+    background-color: #5900ff5f;
+    color: white;
+    font-size: clamp(1rem, 3vw, 2rem);
+}
+
+.added-info__registro h4{
+    color: rgb(38, 0, 100);
 }
 
 .modal-content__action{
