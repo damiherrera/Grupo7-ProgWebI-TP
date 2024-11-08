@@ -2,12 +2,23 @@ document.addEventListener("DOMContentLoaded", function() {
     const botonInicioSesion = document.getElementById("botonInicioSesion");
     const botonRegistro = document.getElementById("botonRegistro");
     const botonCerrarSesion = document.getElementById("botonCerrarSesion");
+  
     const liBotenesResponsive = document.querySelectorAll(".li-botonMobile");
-    const liBotonCerrarSesionResponsive = document.getElementById("liCerrarSesion"); // Se repite, asegurarse de que sea el correcto
+   
+
+    const usuarioLogueado = JSON.parse(localStorage.getItem("usuarioLogueado"));
+    const perfilButton = document.getElementById("buton-profile");
+    const action_buttons =  document.getElementsByClassName("action-buttons")[0];
+ 
+
+    //botones para cerrar y eliminar 
+    const botonCerrarSesionResp = document.getElementById("cerrarSesion-resp");
+    const botonEliminarUsuarioResp = document.getElementById("eliminar-resp");
+
     //console.log(document.getElementById("botonCerrarSesion"));
     // Función que actualiza el estado del usuario
     function actualizarEstadoUsuario() {
-        const usuarioLogueado = JSON.parse(sessionStorage.getItem("usuarioLogueado"));
+        
         console.log("usuariologueado", usuarioLogueado);
 
         // Seleccionar todos los botones "Agregar al carrito"
@@ -38,49 +49,155 @@ document.addEventListener("DOMContentLoaded", function() {
             if (botonInicioSesion) botonInicioSesion.style.display = "none";
             if (botonRegistro) botonRegistro.style.display = "none";
             if (botonCerrarSesion) botonCerrarSesion.style.display = 'flex';
-
+            if(botonEliminarUsuarioResp) botonEliminarUsuarioResp.style.display ="block";
             // Mostrar/ocultar botones para la versión responsive
             liBotenesResponsive.forEach(boton => {
                 boton.style.display = 'none'; // Ocultar botones de inicio y registro responsive
             });
-            if (liBotonCerrarSesionResponsive) liBotonCerrarSesionResponsive.style.display = 'flex'; // Mostrar cerrar sesión responsive
-        } else {
-            // Si no está logueado, mostrar los botones de inicio y registro, ocultar cerrar sesión
-            if (botonInicioSesion) botonInicioSesion.style.display = "flex";
-            if (botonRegistro) botonRegistro.style.display = "flex";
-            if (botonCerrarSesion) botonCerrarSesion.style.display = 'none';
+            //if (liBotonCerrarSesionResponsive) liBotonCerrarSesionResponsive.style.display = 'flex'; // Mostrar cerrar sesión responsive
+            
+        
+            
+           
+             perfilButton.style.display = "block" ;
+       
+       
+    
+       const opcionCerrar = document.getElementById ("cerrarSesionSubmenu")
+       const opcionEliminar = document.getElementById("eliminarUserSubmenu")
+       const subMenu = document.getElementById("sub-menu");
 
+   action_buttons.style.position ="relative"
+        
+      // Función para cerrar sesión
+opcionCerrar.addEventListener("click", () => {
+    cerrarSesion();
+});
+
+// Función para eliminar usuario
+opcionEliminar.addEventListener("click", () => {
+    eliminarUsuario();
+});
+
+// Mostrar submenú al pasar el ratón por encima del perfil
+perfilButton.addEventListener("mouseenter", () => {
+    subMenu.style.display = "block"; // Mostrar submenú
+});
+
+// Ocultar submenú cuando el ratón sale del área del submenú
+subMenu.addEventListener("mouseleave", () => {
+    subMenu.style.display = "none"; // Ocultar submenú
+});
+
+// Alternar visibilidad del submenú cuando se haga clic en el botón de perfil
+perfilButton.addEventListener("click", (event) => {
+    event.stopPropagation(); // Prevenir que el clic se propague al document
+    if (subMenu.style.display === "block") {
+        subMenu.style.display = "none"; // Ocultar submenú si está visible
+    } else {
+        subMenu.style.display = "block"; // Mostrar submenú si está oculto
+    }
+});
+
+// Cerrar el submenú si se hace clic fuera de él o del perfilButton
+document.addEventListener("click", (e) => {
+    if (!action_buttons.contains(e.target) && !perfilButton.contains(e.target)) {
+        subMenu.style.display = "none"; // Ocultar el submenú
+    }
+});
+
+    //const actionButtonsMobile = document.querySelector(".action-buttons--mobile");
+/*EVENTOS A LOS BOTONES RESPONSIVE ELIMINAR Y CERRAR SESION*/
+      if(botonEliminarUsuarioResp){
+        botonEliminarUsuarioResp.addEventListener("click", (event)=>{
+            event.preventDefault();
+            eliminarUsuario();
+
+        })
+       }
+        
+     
+     
+        if(botonCerrarSesionResp) {
+            botonCerrarSesionResp.addEventListener("click", (event)=>{
+                event.preventDefault();  // 
+                cerrarSesion();
+              
+       
+            })
+        }
+       
+    /* FIN EVENTOS A LOS BOTONES RESPONSIVE ELIMINAR Y CERRAR SESION*/
+      
+   
+
+
+
+        } else {
+            // Si no está logueado, mostrar los botones de inicio y registro, ocultar cerrar sesión , eliminar y perfil
+             botonInicioSesion.style.display = "flex";
+             botonRegistro.style.display = "flex";
+             botonCerrarSesionResp.style.display = 'none';
+             botonEliminarUsuarioResp.style.display = "none";
+             perfilButton.style.display = "none"
             // Mostrar/ocultar botones para la versión responsive
             liBotenesResponsive.forEach(boton => {
                 boton.style.display = 'flex'; // Mostrar botones de inicio y registro responsive
-            });
-            if (liBotonCerrarSesionResponsive) liBotonCerrarSesionResponsive.style.display = 'none'; // Ocultar cerrar sesión responsive
+            }); // Ocultar cerrar sesión responsive
+           
         }
     }
 
     // Actualiza el estado de los botones cuando la página cargue
     actualizarEstadoUsuario();
 
-    // Agregar el evento de clic para el botón de cerrar sesión
-   
-        botonCerrarSesion.addEventListener("click", function(event) {
-            console.log("Clic en botón cerrar sesión desktop");
-            sessionStorage.removeItem("usuarioLogueado");
-            console.log("Sesión cerrada");
-            window.location.reload(); // Recarga la página actual para que se actualice el estado de los botones.
-             // Actualiza los botones después de cerrar sesión
-        });
-   
-
-    // Lógica de evento para el botón de cierre de sesión responsive
-  
-        liBotonCerrarSesionResponsive.addEventListener("click", function(event) {
-            console.log("Clic en botón cerrar sesión responsive");
+    
+        //function para cerrar sesion
+        function cerrarSesion() {
             localStorage.removeItem("usuarioLogueado");
-            console.log("Sesión cerrada");
-            window.location.reload(); 
-          // Actualiza los botones después de cerrar sesión
-        });
+            window.location.reload();
+            
+        }
+
+        //function eliminar usuario del todo
+        function eliminarUsuario() {
+    
+            let usuarios = JSON.parse(localStorage.getItem("usuarios")) || {};
+        
+            // Obtengo el nombre del usuario logueado desde sessionStorage
+            const usuarioLogueado = JSON.parse(localStorage.getItem("usuarioLogueado"));
+        
+            if (usuarioLogueado) {
+                // Eliminar el usuario logueado del objeto de usuarios
+                const nombreUsuario = usuarioLogueado.nombre;
+        
+                // Comprobar si el usuario existe en el objeto
+                if (usuarios[nombreUsuario]) {
+                    delete usuarios[nombreUsuario];  // Eliminar el usuario usando su nombre
+        
+                    // Guardar el objeto de usuarios actualizado en localStorage
+                    localStorage.setItem("usuarios", JSON.stringify(usuarios));
+        
+                    // Eliminar el usuario logueado de sessionStorage
+                    localStorage.removeItem("usuarioLogueado");
+                    console.log("Usuario eliminado:", nombreUsuario);
+                } else {
+                    console.log("El usuario no existe.");
+                }
+            }
+        
+            // Recargar la página para reflejar los cambios
+            window.location.reload();
+         
+
+        }
+        
+
+      
+
+
+    
+
   
 });
 
@@ -127,3 +244,19 @@ document.addEventListener("DOMContentLoaded", function() {
         arrowRight.addEventListener("click", moverHaciaLaDerecha);
     }
 })
+
+
+
+//crear mi perfil en nav, con sesion  iniciada
+
+
+
+
+
+      
+   
+
+
+       
+
+

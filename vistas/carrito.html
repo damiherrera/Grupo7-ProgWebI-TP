@@ -25,8 +25,8 @@
             </div>
 
             <div class="carrito-container">
-                <a href="#"><img src="../img/carrito (1).png" class="header_carrito" alt="Carrito"></a>
-                <div class="numero">1</div>
+                <a href="./carritovacio.html"><img src="../img/carrito (1).png" class="header_carrito" alt="Carrito"></a>
+                <div class="numero">0</div>
             </div>
         </div>
 
@@ -42,16 +42,21 @@
                 <li class="nav-bar__menu-item"><a  href="../vistas/gift-card.html">Gift Card</a></li>
                 <li class="nav-bar__menu-item"><a  href="../index.html#cursos-destacados">Cursos Destacados</a></li>
                 <div class="action-buttons--mobile">
-                    <li class="nav-bar__menu-item li-botonMobile" ><a href="./vistas/registrarse.html"> Registrarse</a></li>
-                    <li class="nav-bar__menu-item li-botonMobile"><a href="./vistas/inicioSesion.html"> Iniciar Sesión</a></li>
-                    <li class="nav-bar__menu-item" id="liCerrarSesion"><a href="../index.html"> Cerrar Sesion</a></li>
+                    <li class="nav-bar__menu-item li-botonMobile" ><a href="../vistas/registrarse.html"> Registrarse</a></li>
+                    <li class="nav-bar__menu-item li-botonMobile"><a href="../vistas/inicioSesion.html"> Iniciar Sesión</a></li>
+                    <li class="nav-bar__menu-item" id= "cerrarSesion-resp" ><a href="../index.html"> Cerrar Sesion</a></li> 
+                <li class="nav-bar__menu-item" id= "eliminar-resp" ><a href="../index.html"> Eliminar Usuario</a></li> 
                     
                 </div>
             </ul>
             <div class="action-buttons">
-                 <a href="./vistas/registrarse.html" class="button" id="botonRegistro">Registrarse</a>
-                 <a href="./vistas/inicioSesion.html" class="button" id = "botonInicioSesion">Iniciar Sesión</a>
-                 <button class="button buttonCerrarSesion" id="botonCerrarSesion" >Cerrar Sesion</button>
+                 <a href="../vistas/registrarse.html" class="button" id="botonRegistro">Registrarse</a>
+                 <a href="../vistas/inicioSesion.html" class="button" id = "botonInicioSesion">Iniciar Sesión</a>
+                 <button id="buton-profile" class="buton-profile"><i class="fa-solid fa-user"></i></button>
+                 <ul class="sub-menu" id="sub-menu">
+                 <li id="cerrarSesionSubmenu"><a href="../index.html">Cerrar Sesion</a></li>
+                 <li id="eliminarUserSubmenu"><a href="../index.html">Eliminar Usuario</a></li>
+                </ul>
             </div>
         </nav>
     </header>
@@ -125,7 +130,7 @@
             </div>
         </div>
     </footer>
-    <script src="/js/index.js"></script>
+    <script src="../js/index.js"></script>
     <script src="../js/carritoDeCompra.js"></script>
     
 </body>

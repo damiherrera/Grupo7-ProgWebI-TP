@@ -23,7 +23,7 @@ formInicioSesion.addEventListener("submit", function(event) {
         if(usuarios[nameUser].password === password) {
             usuarioEncontrado = usuarios[nameUser];
             window.location.href = "../index.html"; 
-            sessionStorage.setItem("usuarioLogueado", JSON.stringify(usuarioEncontrado)); // Redirigimos a la página principal
+            localStorage.setItem("usuarioLogueado", JSON.stringify(usuarioEncontrado)); // Redirigimos a la página principal
         } else {
             errorPassword.textContent = "contraseña incorrecta" ;
             errorPassword.style.display = "inline";

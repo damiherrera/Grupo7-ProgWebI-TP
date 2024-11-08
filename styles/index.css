@@ -720,7 +720,7 @@ h2 {
 
     .action-buttons--mobile{
         display: flex;
-       
+      
         justify-content: center;
         text-decoration: none;
     }
@@ -910,3 +910,41 @@ h2 {
 }
 
 
+/*PERFIL BUTON - MANEJO CIERRE SESION Y ELIMINACION DE CUENTA*/
+
+.buton-profile {
+    border: none;
+    font-size: 20px;
+    padding: 5px;
+    cursor:pointer;
+
+}
+.sub-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute; /* Se posiciona encima del contenido */
+    top: 100%; /* Justo debajo del contenedor */
+    right: 0;
+    background-color: #EEEEEE;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 150px;
+    display: none; /* Oculto por defecto */
+    z-index: 1111;
+}
+
+.sub-menu li {
+    padding: 10px;
+    cursor: pointer;
+   
+}
+
+.sub-menu li:hover {
+    background-color: #A435F0;
+}
+
+.sub-menu li a{
+    text-decoration: none;
+    color: #000000;
+   
+}
