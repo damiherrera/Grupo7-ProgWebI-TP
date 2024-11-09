@@ -4,6 +4,7 @@ const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 const carritoContainer = document.querySelector(".carrito-content");
 const totalElement = document.querySelector(".carrito-resumen");
 const botonEliminar = document.querySelector("#eliminar-curso");
+let total = 0;
 
 // Verificamos si el carrito está vacío
 if (carrito.length === 0) {
@@ -70,41 +71,75 @@ botonEliminar.forEach(botonEliminar => {
 
         // Actualizar el total
         const carritoActualizado = JSON.parse(localStorage.getItem("carrito")) || [];
+        console.log("Carrito actualizado:", carritoActualizado);
         actualizarTotal(carritoActualizado);
     });
 });
 }
 
+
+
 function eliminarCurso(id) {
     // Obtener el carrito desde localStorage
     const carritoEnStorage = JSON.parse(localStorage.getItem("carrito")) || [];
 
+    console.log("Carrito antes de eliminar:", carritoEnStorage);
+
     // Filtrar el carrito para eliminar el curso con el id correspondiente
     const carritoActualizado = carritoEnStorage.filter(curso => curso.idCurso !== parseInt(id));
+
+    console.log("Carrito después de eliminar:", carritoActualizado);
 
     // Actualizar el carrito en localStorage
     localStorage.setItem("carrito", JSON.stringify(carritoActualizado));
 
-    actualizarTotal(carritoActualizado);
+    console.log("Carrito actualizado:", JSON.parse(localStorage.getItem("carrito")));
+
+    total =0;
+
+    console.log("Total:", total);
+
+    restarCursoEliminado(carritoActualizado);
+    console.log("Actualizar total:", actualizarTotal(carritoActualizado));
+
+}
+
+function restarCursoEliminado(cursos) {
+    cursos.forEach(curso => {
+        total -= curso.precio;
+        console.log("Precio:", curso.precio);
+    });
+
+   /* if (totalElement) {
+        totalElement.textContent = `Total: USD ${total}`;
+        sessionStorage.setItem("totalCarrito", total);
+    }*/
+
+    console.log("Total despues de eliminar:", total);
 }
 
 
 function actualizarTotal(cursos) {
-    let total = 0;
+   
     cursos.forEach(curso => {
         total += curso.precio;
+        console.log("Precio:", curso.precio);
     });
 
-    if (totalElement) {
+    
+
+    /*if (totalElement) {
         totalElement.textContent = `Total: USD ${total}`;
         sessionStorage.setItem("totalCarrito", total);
-    }
+    }*/
 
     totalElement.innerHTML ="";
     totalElement.innerHTML= 
     `<p>Total: USD ${total}</p>
      <a href="../vistas/comprar-curso.html" id="proceder-pago"><button class="btn-comprar" id="proceder-pago">Proceder al Pago</button></a>`;
 
+    console.log("Total:", total);
+    
 }
 
 /*
