@@ -6,7 +6,8 @@ const totalElement = document.querySelector(".carrito-resumen");
 const botonEliminar = document.querySelector("#eliminar-curso");
 let total = 0;
 
-// Verificamos si el carrito está vacío
+
+
 if (carrito.length === 0) {
     carritoContainer.classList.add("vacio");
     carritoContainer.innerHTML = `
@@ -17,7 +18,6 @@ if (carrito.length === 0) {
     carritoContainer.classList.add("carrito-content");
     carritoContainer.innerHTML = "";
 
-    // Generamos el HTML para mostrar los cursos en el carrito
     carrito.forEach(curso => {
         const itemHTML = `
         <div class="curso-carrito">
@@ -35,10 +35,21 @@ if (carrito.length === 0) {
         carritoContainer.innerHTML += itemHTML;
     });
 
-    // Actualizamos el total del carrito
-    actualizarTotal(carrito);
 
-    // Añadimos los eventos de eliminación a los botones
+
+    function sumarCursos(cursos) {
+        cursos.forEach(curso => {
+            total += curso.precio;
+            console.log("Precio:", curso.precio);
+        });
+    }
+
+
+
+    sumarCursos(carrito);
+    mostratTotal(carrito);
+
+
     const botonesEliminar = document.querySelectorAll(".eliminar-curso");
     botonesEliminar.forEach(boton => {
         boton.addEventListener("click", function (event) {
@@ -47,113 +58,58 @@ if (carrito.length === 0) {
             const id = boton.getAttribute("data-id");
             console.log("ID del curso a eliminar:", id);
 
-            eliminarCurso(id, carrito);
+            eliminarCurso(id);
             console.log("Carrito después de la eliminación:", JSON.parse(localStorage.getItem("carrito")));
 
             this.closest('.curso-carrito').remove(); // Eliminamos el curso visualmente
-            actualizarTotal(carrito);
+
+            const carritoActualizado = JSON.parse(localStorage.getItem("carrito")) || [];
+            if (carritoActualizado.length === 0) {
+                verificarSiElCarritoEstaVacio(carritoActualizado);
+            } else {
+                mostratTotal();
+            }
+
         });
     });
 }
 
-if(botonEliminar){
-botonEliminar.forEach(botonEliminar => {
-    boton.addEventListener("click", function (event) {
-        event.preventDefault(); // Prevenir el comportamiento predeterminado
 
-        const id = boton.getAttribute("data-id");
+function eliminarCurso(id) {
 
-        // Eliminar el curso
-        eliminarCurso(id);
+    const carritoEnStorage = JSON.parse(localStorage.getItem("carrito")) || [];
+    const carritoActualizado = carritoEnStorage.filter(curso => curso.idCurso !== parseInt(id));
 
-        // Eliminar el curso visualmente
-        this.closest('.curso-carrito').remove();
+    localStorage.setItem("carrito", JSON.stringify(carritoActualizado));
 
-        // Actualizar el total
-        const carritoActualizado = JSON.parse(localStorage.getItem("carrito")) || [];
-        console.log("Carrito actualizado:", carritoActualizado);
-        actualizarTotal(carritoActualizado);
-    });
-});
+    restarCursoEliminado(carritoActualizado);
+
 }
 
 
+function mostratTotal() {
+    totalElement.innerHTML = "";
+    totalElement.innerHTML =
+        `<p class="carrito-vacio-font">Total: USD ${total}</p>
+     <a href="../vistas/comprar-curso.html" id="proceder-pago"><button class="btn-comprar" id="proceder-pago">Proceder al Pago</button></a>`;
 
-function eliminarCurso(id) {
-    // Obtener el carrito desde localStorage
-    const carritoEnStorage = JSON.parse(localStorage.getItem("carrito")) || [];
-
-    console.log("Carrito antes de eliminar:", carritoEnStorage);
-
-    // Filtrar el carrito para eliminar el curso con el id correspondiente
-    const carritoActualizado = carritoEnStorage.filter(curso => curso.idCurso !== parseInt(id));
-
-    console.log("Carrito después de eliminar:", carritoActualizado);
-
-    // Actualizar el carrito en localStorage
-    localStorage.setItem("carrito", JSON.stringify(carritoActualizado));
-
-    console.log("Carrito actualizado:", JSON.parse(localStorage.getItem("carrito")));
-
-    total =0;
-
-    console.log("Total:", total);
-
-    restarCursoEliminado(carritoActualizado);
-    console.log("Actualizar total:", actualizarTotal(carritoActualizado));
 
 }
 
 function restarCursoEliminado(cursos) {
-    cursos.forEach(curso => {
-        total -= curso.precio;
-        console.log("Precio:", curso.precio);
-    });
-
-   /* if (totalElement) {
-        totalElement.textContent = `Total: USD ${total}`;
-        sessionStorage.setItem("totalCarrito", total);
-    }*/
-
-    console.log("Total despues de eliminar:", total);
+    total = 0;
+    sumarCursos(cursos);
 }
 
-
-function actualizarTotal(cursos) {
-   
-    cursos.forEach(curso => {
-        total += curso.precio;
-        console.log("Precio:", curso.precio);
-    });
-
-    
-
-    /*if (totalElement) {
-        totalElement.textContent = `Total: USD ${total}`;
-        sessionStorage.setItem("totalCarrito", total);
-    }*/
-
-    totalElement.innerHTML ="";
-    totalElement.innerHTML= 
-    `<p>Total: USD ${total}</p>
-     <a href="../vistas/comprar-curso.html" id="proceder-pago"><button class="btn-comprar" id="proceder-pago">Proceder al Pago</button></a>`;
-
-    console.log("Total:", total);
-    
+function verificarSiElCarritoEstaVacio(carrito) {
+    console.log("verificar carrito se esta ejecutando");
+    if (carrito.length === 0) {
+        totalElement.style.display = "none";
+        carritoContainer.classList.add("vacio");
+        carritoContainer.innerHTML = "";
+        carritoContainer.innerHTML = `
+        <p>El carrito está vacío</p>
+        <a href="../index.html#cursos-destacados" class="btn-volver">Ver Cursos Destacados</a>`;
+        
+    }
 }
-
-/*
-if (usuarioLogueado) {
-    linkProcederAlPago.addEventListener("click", function (e) {
-        // Se permite la navegación solo si el usuario está logueado
-        window.location.href = linkProcederAlPago.getAttribute("href");
-        console.log("usuario logueado" + usuarioLogueado);
-
-    });
-} else {
-    linkProcederAlPago.addEventListener("click", function (e) {
-        e.preventDefault();
-        console.log("Usuario no logueado, redirigiendo a registro");
-        window.location.href = "../vistas/registrarse.html";
-    });
-}*/
