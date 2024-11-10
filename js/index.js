@@ -143,12 +143,14 @@ const cursosOfrecidos = {
     ]
 }
 
+
 localStorage.setItem("cursosOfrecidos", JSON.stringify(cursosOfrecidos));
 
+const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+localStorage.setItem("carrito", JSON.stringify(carrito));
 
-
-
-
+const numeroCarrito = document.querySelector(".numero");
+numeroCarrito.textContent = carrito.length;
 
 document.addEventListener("DOMContentLoaded", function() {
     const botonInicioSesion = document.getElementById("botonInicioSesion");

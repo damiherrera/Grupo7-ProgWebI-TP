@@ -1,6 +1,6 @@
 const usuarioLogueado = localStorage.getItem("userLoggedIn");
 const linkProcederAlPago = document.getElementById("proceder-pago");
-const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+const carritoEnUso = JSON.parse(localStorage.getItem("carrito"));
 const carritoContainer = document.querySelector(".carrito-content");
 const totalElement = document.querySelector(".carrito-resumen");
 const botonEliminar = document.querySelector("#eliminar-curso");
@@ -69,6 +69,9 @@ if (carrito.length === 0) {
             } else {
                 mostratTotal();
             }
+
+            const numeroCarrito = document.querySelector(".numero");
+            numeroCarrito.textContent = carritoActualizado.length;
 
         });
     });
