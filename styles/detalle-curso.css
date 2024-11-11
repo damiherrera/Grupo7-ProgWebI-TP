@@ -300,6 +300,22 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
+.boton-ver-detalles {
+    padding: 10px 20px;
+    background-color: #a613e6;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.boton-ver-detalles:hover {
+    background-color: #d87eff;
+}
 
 
 @media screen and (max-width: 768px) {

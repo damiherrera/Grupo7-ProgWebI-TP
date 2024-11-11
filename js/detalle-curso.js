@@ -261,8 +261,7 @@ function displayCursosRelacionados() {
                 <div class="cursos-destacados__info">
                     <div class="cursos-destacados__info-nombre">
                         <h3><span class="horas">${curso.duracion}</span>${curso.nombreCurso}</h3>
-                        <a href="../vistas/detalle-curso.html?idCurso=${curso.idCurso}">Ver detalles</a>
-                        <a href="../vistas/carrito.html"><input class="boton-comprar" type="button" value="Agregar al carrito" id="boton-comprar"></a>
+                      <a href="../vistas/detalle-curso.html?idCurso=${curso.idCurso}"><input class="boton-ver-detalles" type="button" value="Ver detalles" id="ver-detalles"></a>
                     </div>
                 </div>`;
         cursosRelacionadosSection.appendChild(cursoCard);
@@ -274,8 +273,7 @@ function displayCursosRelacionados() {
                 <div class="cursos-destacados__info">
                     <div class="cursos-destacados__info-nombre">
                         <h3><span class="horas">${curso.duracion}</span>${curso.nombreCurso}</h3>
-                        <a href="../vistas/detalle-curso.html?idCurso=${curso.idCurso}">Ver detalles</a>
-                        <a href="../vistas/inscripcion-empresa.html?idCurso=${curso.idCurso}"><input class="boton-comprar" type="button" value="Inscribirse" id="boton-comprar"></a>
+                        <a href="../vistas/detalle-curso.html?idCurso=${curso.idCurso}"><input class="boton-ver-detalles" type="button" value="Ver detalles" id="ver-detalles"></a>
                     </div>
                 </div>`;
         cursosRelacionadosSection.appendChild(cursoCard);
