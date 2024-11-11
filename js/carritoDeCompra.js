@@ -8,6 +8,7 @@ let total = 0;
 
 
 
+
 if (carrito.length === 0) {
     carritoContainer.classList.add("vacio");
     carritoContainer.innerHTML = `
@@ -40,7 +41,7 @@ if (carrito.length === 0) {
     function sumarCursos(cursos) {
         cursos.forEach(curso => {
             total += curso.precio;
-            console.log("Precio:", curso.precio);
+            sessionStorage.setItem("totalCarrito", total);
         });
     }
 
@@ -102,6 +103,7 @@ function mostratTotal() {
 function restarCursoEliminado(cursos) {
     total = 0;
     sumarCursos(cursos);
+    sessionStorage.setItem("totalCarrito", total);
 }
 
 function verificarSiElCarritoEstaVacio(carrito) {
