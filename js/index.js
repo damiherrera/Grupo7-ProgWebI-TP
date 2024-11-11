@@ -177,7 +177,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Seleccionar todos los botones "Agregar al carrito"
         const botonesAgregarACarrito = document.querySelectorAll('.boton-comprar');
-        const linkVerDetalle = document.querySelectorAll(".ver-detalle");
+        const linkVerDetalle = document.querySelectorAll("#ver-detalle");
 
         linkVerDetalle.forEach(boton => {
             boton.addEventListener("click", function(event) {
@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 event.preventDefault(); // Prevenir el comportamiento predeterminado
 
                 if (usuarioLogueado) {
-                    window.location.href = "./vistas/carrito.html"; // Redirigir al carrito
+                    window.location.href = linkVerDetalle.getAttribute("href");
                 } else {
                     window.location.href = "./vistas/registrarse.html"; // Redirigir a registro
                 }

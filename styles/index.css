@@ -432,7 +432,7 @@ h2 {
 
 .boton-comprar {
     padding: 10px 20px;
-    background-color: #28a745;
+    background-color: #a613e6;
     color: white;
     text-align: center;
     border-radius: 5px;
@@ -444,7 +444,7 @@ h2 {
 }
 
 .boton-comprar:hover {
-    background-color: #218838;
+    background-color: #d87eff;
 }
 
 /*MEDIOS DE PAGO*/
